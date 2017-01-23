@@ -1,0 +1,17 @@
+.lg-m-form-block{
+    margin-top:10px;
+    position: relative;
+    label{
+        width: 100px;
+        position: absolute;
+        top:0;
+        line-height: 30px;
+        text-align: right;
+    }
+    label + textarea,label + input[type='text'],label + .lg-m-form-line{
+        margin-left: 100px;
+    } 
+    input + span{
+        margin-right: 5px;
+    }   
+}

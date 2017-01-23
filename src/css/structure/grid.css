@@ -1,0 +1,132 @@
+/* grid 栅格 */
+.lg-grid-container{
+    padding:(@gap / 2);
+}
+
+.lg-grid-row{ 
+    margin-left: -(@gap / 2);
+    margin-right: -(@gap / 2);
+    &:before,&:after{
+        content:' ';
+        display: table;
+        clear: both;
+    } 
+}
+
+.lg-grid-1,.lg-grid-2,.lg-grid-3,.lg-grid-4,.lg-grid-5,.lg-grid-6,
+.lg-grid-7,.lg-grid-8,.lg-grid-9,.lg-grid-10,.lg-grid-11,.lg-grid-12
+{
+    position: relative;
+    box-sizing:border-box;
+    float: left;
+    padding:0 (@gap / 2);
+    min-height: 22px;
+}
+.lg-grid-1{
+    width: 8.333333%;
+}
+.lg-grid-2{
+    width: 16.666666%;
+}
+.lg-grid-3{
+    width: 25%;
+}
+.lg-grid-4{
+    width: 33.333333%;
+}
+.lg-grid-5{
+    width: 41.666666%;
+}
+.lg-grid-6{
+    width: 50%;
+}
+.lg-grid-7{
+    width: 58.333333%;
+}
+.lg-grid-8{
+    width: 66.666666%;
+}
+.lg-grid-9{
+    width: 75%;
+}
+.lg-grid-10{
+    width: 83.333333%;
+}
+.lg-grid-11{
+    width: 91.666666%;
+}
+.lg-grid-12{
+    width: 100%;
+}
+.lg-grid-l-1{
+    margin-left: 8.333333%;
+}
+.lg-grid-l-2{
+    margin-left: 16.666666%;
+}
+.lg-grid-l-3{
+    margin-left: 25%;
+}
+.lg-grid-l-4{
+    margin-left: 33.333333%;
+}
+.lg-grid-l-5{
+    margin-left: 41.666666%;
+}
+.lg-grid-l-6{
+    margin-left: 50%;
+}
+.lg-grid-l-7{
+    margin-left: 58.333333%;
+}
+.lg-grid-l-8{
+    margin-left: 66.666666%;
+}
+.lg-grid-l-9{
+    margin-left: 75%;
+}
+.lg-grid-l-10{
+    margin-left: 83.333333%;
+}
+.lg-grid-l-11{
+    margin-left: 91.666666%;
+}
+.lg-grid-l-12{
+    margin-left: 100%;
+}
+.lg-grid-l-1{
+    margin-left: 8.333333%;
+}
+.lg-grid-l-2{
+    margin-left: 16.666666%;
+}
+.lg-grid-l-3{
+    margin-left: 25%;
+}
+.lg-grid-l-4{
+    margin-left: 33.333333%;
+}
+.lg-grid-l-5{
+    margin-left: 41.666666%;
+}
+.lg-grid-l-6{
+    margin-left: 50%;
+}
+.lg-grid-l-7{
+    margin-left: 58.333333%;
+}
+.lg-grid-l-8{
+    margin-left: 66.666666%;
+}
+.lg-grid-l-9{
+    margin-left: 75%;
+}
+.lg-grid-l-10{
+    margin-left: 83.333333%;
+}
+.lg-grid-l-11{
+    margin-left: 91.666666%;
+}
+.lg-grid-l-12{
+    margin-left: 100%;
+}

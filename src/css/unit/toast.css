@@ -1,0 +1,79 @@
+/* toast & bubble & error & progress*/
+/* toast */
+.lg-u-toast{
+    display: inline-block;
+    max-width: 232px;
+    padding:15px 20px;
+    margin:10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 12px 2px @bordercolor;
+    background-color: white;
+}
+/* bubble */
+.lg-u-bubble{
+    &:extend(.lg-u-toast);
+    color:@maincolor;
+    position: relative;
+    box-shadow: 4px 4px 14px 1px @bordercolor;
+    &:after{
+        content:'';
+        border:8px solid transparent;
+        border-top:8px solid white;
+        position: absolute;
+        bottom: -16px;
+        right: 50%;
+        margin-right: -8px;
+    } 
+}
+/* error */
+.lg-u-error{
+    color: @maincolor;
+}
+.lg-u-error-b{
+    color: @maincolor;
+    display: block;
+    line-height: 30px;
+}
+input:focus + .lg-u-error {
+    display: none;
+}
+input:focus + .lg-u-error-b{
+    visibility: hidden;
+}
+/* progress */
+.lg-u-progress-loop(@n, @i:0) when (@i <= @n) {
+    .lg-@{i} {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        background-color: @backcolor;
+        &:after{
+            content:'';
+            background-color: @linkcolor;
+            height: 100%;
+            position: absolute;
+            width: percentage((@i/100));
+        } 
+    }
+    .lg-u-progress-loop(@n, (@i + 1));
+}
+.lg-u-progress{
+    height: 30px;
+    min-width: 200px; 
+    margin:0 20px 25px 20px; 
+    display: inline-block; 
+    position: relative;
+    .lg-u-progress-loop(100);
+
+    & > label{
+        position: absolute;
+        bottom: -20px;
+        width: 100%; 
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
+
+ 

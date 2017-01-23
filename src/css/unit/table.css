@@ -1,0 +1,96 @@
+.lg-u-table {
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 36px;
+    text-align: center;
+    color: @subcolor;
+    thead {
+        background-color: @basecolor !important;
+        color: white;
+        tr {
+            background-color: @basecolor !important; 
+        }
+        th {
+            font-weight: normal;
+            position: relative;
+            text-align: center;
+            border: none;
+            &.lg-o {
+                cursor: pointer;
+                &:after {
+                    content: '\e644';
+                    font-family: iconfont !important;
+                    position: absolute;
+                    top: -1px;
+                    font-size: 12px;
+                    margin: 0 5px;
+                    color: @backcolor_l;
+                }
+            }
+            &.lg-ro {
+                cursor: pointer;
+                &:after {
+                    content: '\e64a';
+                    font-family: iconfont !important;
+                    position: absolute;
+                    top: 2px;
+                    font-size: 20px;
+                    margin: 0 5px;
+                    color: @backcolor_l;
+                }
+            }
+        }
+    }
+    tr{
+        border:none;
+    }
+    tr:nth-child(2n) {
+        background-color: @backcolor_l;
+    }
+    td {
+        border: none;
+    } 
+    a.lg-action {
+        color: @subcolor;
+        padding: 0 5px;
+        cursor: pointer;
+        position: relative;
+        display: inline-block; 
+        ul {
+            display: none;
+        }
+        &:hover {
+            ul {
+                display: block;
+                border: 1px solid @bordercolor;
+                list-style: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: white;
+                z-index: 1;
+                float: left;
+                li {
+                    border-bottom: 1px solid @bordercolor;
+                    padding: 4px 8px;
+                    font-size: @font_size_S;
+                    line-height: @font_height_M;
+                    white-space: nowrap;
+                    float: left;
+                    &:hover {
+                        color: @maincolor;
+                    }
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lg-u-table-hd {
+    &:extend(.lg-u-table);
+    background-color: @basecolor;
+    color: white;
+}

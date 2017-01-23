@@ -1,0 +1,92 @@
+.lg-m-sidebar{
+    max-height: 100%; 
+    position: relative;
+    background-color: @backcolor_l; 
+    .lg-m-sidebar-l1{  
+        display: block;
+        & > li{ 
+            border-bottom: 1px solid @bordercolor;
+            & > a{
+                display: block;
+                padding:30px 0 30px 44px;
+                color: @basecolor;
+                font-size: 16px;
+                &:after{
+                    content:'\e633';
+                    font-family: "iconfont" !important;
+                    font-size: 18px;
+                    position:  absolute;
+                    right: 20px;
+                }
+                &.active:after{
+                    content:'\e63f';
+                }
+            }
+        }
+        & ul{            
+            margin-top:-10px;
+        }
+    }
+    .lg-m-sidebar-l2{
+        & > li{ 
+            & > a{
+                display: block; 
+                color: @subcolor;
+                font-size: 14px;
+                padding-left: 44px;
+                height: 45px;
+                line-height: 45px;
+            }
+        }
+    }
+    .lg-m-sidebar-l3{
+        & > li{ 
+            & > a{
+                display: block; 
+                color: @subcolor;
+                font-size: 12px;
+                padding-left: 44px;
+                height: 35px;
+                line-height: 35px;
+            }
+        }
+    }
+    .lg-m-sidebar-hand{
+        position: absolute;
+        right: -12px;
+        line-height: 50px;
+        height: 50px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: @linkcolor;
+        &:after{
+            content: "\e66a";
+            font-family: "iconfont" !important;
+            font-size: 12px; 
+            color: white;
+        }
+    }
+    ul{
+        display: none;
+    }
+    .active{ 
+        &+ul{
+            display: block;
+        }
+    }  
+    a{
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+        padding-right: 40px;        
+        &:hover{
+            background-color:@backcolor;
+        }
+    }
+    .cur{        
+        background-color: @backcolor;
+    }
+
+}

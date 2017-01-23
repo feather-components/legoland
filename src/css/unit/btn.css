@@ -1,0 +1,140 @@
+.lg-u-btn{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin:5px;
+    padding:6px 12px;
+    font-size: 14px;
+    font-family: @family;
+    height: 28px;
+    min-width: 20px;
+    line-height: 14px; 
+    cursor: pointer;
+    outline:none;
+    border:1px solid @bordercolor;
+    border-radius: 3px; 
+    color: white;
+    background-color: @bordercolor; 
+    &:last-child{
+        margin-right:0;
+    }
+    &.lg-main{
+        background-color: @linkcolor;
+        border-color: @linkcolor;
+        &:hover{
+            background-color:@hovercolor;
+            border-color: @hovercolor;
+        }
+    } 
+    &.lg-plain{
+        background-color: transparent;
+        border:1px solid transparent;
+        color: #e6e6e6;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    &.lg-plain.lg-main{
+        background-color: transparent;
+        border:1px solid transparent;
+        color: @bordercolor;
+        &:hover{
+            color:#6b6b6b;
+        }
+    } 
+    &.lg-plain-blue{
+        background-color: transparent;
+        border:1px solid transparent;
+        color: @linkcolor;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    &.lg-plain-blue.lg-main{
+        background-color: transparent;
+        border:1px solid transparent;
+        color: @linkcolor;
+        &:hover{
+            color:#6b6b6b;
+        }
+    }
+    &.lg-l{
+        height: 34px;
+        line-height: 16px;
+        font-size: 16px;
+        .iconfont{
+            font-size: 16px;
+        }
+    }
+    &.lg-s{
+        height: 22px;
+        line-height: 12px;
+        font-size: 12px;
+        padding-top:4px;
+        padding-bottom:4px;
+        .iconfont{
+            font-size: 12px;
+        }
+    }
+    .iconfont{
+        margin-right: 5px; 
+        font-size: 14px; 
+    } 
+
+
+} 
+.lg-u-btn-o{
+    &:extend(.lg-u-btn); 
+    color: @bordercolor;
+    border:1px solid @bordercolor;
+    background-color: white; 
+    &:last-child{
+        margin-right:0;
+    }
+    &.lg-main{ 
+        color: @linkcolor;
+        border:1px solid @linkcolor;
+        background-color: white;
+        &:hover{
+            color:@hovercolor;
+            border:1px solid @hovercolor;
+            background-color: white;
+        }
+    }
+    &.lg-l{
+        height: 34px;
+        line-height: 16px;
+        font-size: 16px;
+        .iconfont{
+            font-size: 16px;
+        }
+    } 
+    &.lg-s{
+        height: 22px;
+        line-height: 12px;
+        font-size: 12px;
+        padding-top:4px;
+        padding-bottom:4px;
+        .iconfont{
+            font-size: 12px;
+        }
+    }
+    .iconfont{
+        margin-right: 5px;
+    }
+} 
+.lg-u-btn-group{
+    display: inline-block; 
+    margin:5px;
+    & *{
+        margin:0;
+        border-radius: 0;
+        float: left;
+    }
+    &>*:first-child{
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    &>*:last-child{
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+} 

@@ -1,0 +1,36 @@
+.lg-m-breadcrumb{
+    position: absolute;
+    height: 42px;
+    line-height: 42px;
+    top:0;
+    width: 100%;
+    background-color: @backcolor;  
+    margin: 0;
+    padding-left: (@gap/2);
+    list-style: none;
+    font-size: 14px; 
+    z-index: 1000;
+    & > *{
+        float: left;  
+        &:before{
+            content: "\e66a";
+            font-family: "iconfont" !important;
+            font-size: 12px;
+            padding:0 5px;
+        } 
+        &:first-child{
+            padding-left:0;
+            &:before{
+                content:'';
+                padding:0;
+            }
+        }
+        &:last-child{
+            padding-right:0;
+        }
+        &>*{
+            cursor: pointer;
+            color: @subcolor;
+        }
+    }
+}

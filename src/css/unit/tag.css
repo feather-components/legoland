@@ -1,0 +1,44 @@
+.lg-u-tag{
+    border-radius: 13px;
+    background-color: @bordercolor;
+    color:@subcolor;
+    padding:4px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+    display: inline;
+    font-size: @font_size_M;
+    position: relative;
+    &.lg-active{ 
+        color:@maincolor;
+        background-color: rgb(255,240,219);
+    }
+    &.lg-del{
+        &:after{
+            content:'\e661';
+            font-family: "iconfont" !important;
+            color: red;
+            position: absolute;
+            top: -2px;
+        }
+    }
+} 
+.lg-u-tag-add{ 
+    display: inline-block;
+    &:before{
+        content:'\e670';
+        font-family: "iconfont" !important;
+        color: @bordercolor; 
+        font-size: 25px;
+        vertical-align: sub;
+        margin-right: 5px;
+    } 
+    .lg-u-btn{
+        padding:4px 0;
+    }
+    .icon-zhengque{
+        color:@successcolor; 
+    }
+    .icon-cuowu{
+        color:@maincolor; 
+    }
+} 

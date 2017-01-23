@@ -1,0 +1,46 @@
+.lg-u-tab {
+    display: block;
+    list-style: none;
+    height: @font_height_L;
+    line-height: @font_height_L;
+    background-color: rgb(247, 249, 254);
+    font-size: @font_size_L;
+    border-bottom: 1px solid @linkcolor;
+    box-sizing: content-box;
+    .lg-u-tab-li {
+        float: left;
+        color: @titlecolor;
+        padding: 0 20px;
+        position: relative;
+        cursor: pointer;
+        &:after {
+            content: '';
+            border-right: 1px solid @bordercolor;
+            height: 36%;
+            position: absolute;
+            top: 32%;
+            left: 0;
+        }
+        &:first-child:after {
+            height: 0;
+        }
+    }
+    .lg-active {
+        background-color: white;
+        border: 1px solid @linkcolor;
+        border-bottom: none;
+        color: rgb(105, 115, 169);
+        font-weight: bold;
+        &:after {
+            height: 0;
+        }
+    }
+    .lg-active + .lg-u-tab-li:after {
+        height: 0;
+    }
+}
+
+.lg-u-tab-bd {
+    border: 1px solid @linkcolor;
+    border-top: none;
+}

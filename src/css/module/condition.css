@@ -29,7 +29,7 @@
             }
             input[type='radio']:checked+label,
             input[type='checkbox']:checked+label {
-                color: @maincolor;
+                color: @highlightcolor;
             }
         }
         .lg-u-label + .lg-con-group {

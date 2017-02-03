@@ -12,7 +12,7 @@
 /* bubble */
 .lg-u-bubble{
     &:extend(.lg-u-toast);
-    color:@maincolor;
+    color:@highlightcolor;
     position: relative;
     box-shadow: 4px 4px 14px 1px @bordercolor;
     &:after{
@@ -27,10 +27,10 @@
 }
 /* error */
 .lg-u-error{
-    color: @maincolor;
+    color: @highlightcolor;
 }
 .lg-u-error-b{
-    color: @maincolor;
+    color: @highlightcolor;
     display: block;
     line-height: 30px;
 }

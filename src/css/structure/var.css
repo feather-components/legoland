@@ -1,7 +1,7 @@
 /* ------- color -------
 *color:[titlecolor:标题(黑),subcolor:副标题/内容(深灰),tipcolor:次级文本(浅灰),bordercolor:边框]
 *color:[backcolor:页面背景,backcolor_l:浅色背景,basecolor:页头(紫色),linkcolor:按钮链接(蓝色),hovercolor:划过颜色(深蓝)]
-*color:[maincolor:高亮(橙色),dangercolor:警示色,successcolor:健康(绿色)]
+*color:[highlightcolor:高亮(橙色),dangercolor:警示色,successcolor:健康(绿色)]
 */
 @titlecolor:#333;
 @subcolor:#666;
@@ -12,7 +12,7 @@
 @basecolor:#464e78;
 @linkcolor:#5986e1;
 @hovercolor:#3e6bc5;
-@maincolor:#ff8447;
+@highlightcolor:#ff8447;
 @dangercolor:#d05538;
 @successcolor:#8bb455;
 

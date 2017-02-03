@@ -9,7 +9,7 @@
     font-size: @font_size_M;
     position: relative;
     &.lg-active{ 
-        color:@maincolor;
+        color:@highlightcolor;
         background-color: rgb(255,240,219);
     }
     &.lg-del{
@@ -39,6 +39,6 @@
         color:@successcolor; 
     }
     .icon-cuowu{
-        color:@maincolor; 
+        color:@highlightcolor; 
     }
 } 

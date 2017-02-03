@@ -41,9 +41,9 @@
                 border-bottom: 3px solid @linkcolor; 
             }
             &:hover{
-                border-bottom: 3px solid @maincolor; 
+                border-bottom: 3px solid @highlightcolor; 
                 & a{
-                   color: @maincolor; 
+                   color: @highlightcolor; 
                 }
             }      
         }

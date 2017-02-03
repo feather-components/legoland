@@ -78,7 +78,7 @@
                     white-space: nowrap;
                     float: left;
                     &:hover {
-                        color: @maincolor;
+                        color: @highlightcolor;
                     }
                     &:last-child {
                         border-bottom: none;

@@ -1,7 +1,7 @@
-.lg-m-nav{
+.lg-nav{
     height: 100%;
     background-color: @basecolor;
-    .lg-m-nav-hd{
+    .lg-nav-hd{
         width: @menuW;
         height: 100%;
         /*background-image: url('img/logo.png');*/
@@ -11,7 +11,7 @@
         position: relative;
         float: left;
 
-        .lg-m-nav-title{
+        .lg-nav-title{
             color: white; 
             text-align: center;
             letter-spacing: 7px;
@@ -22,7 +22,7 @@
             left: 0;
         }
     }
-    .lg-m-nav-by{
+    .lg-nav-by{
         position: absolute;
         left: @menuW; 
         right: 50px;
@@ -48,7 +48,7 @@
             }      
         }
     }
-    .lg-m-nav-tl{
+    .lg-nav-tl{
         display: none;
         float: right;
         height: 100%;
@@ -66,7 +66,7 @@
             content: "\e63f";
         }
     }
-    .lg-m-nav-bytab{
+    .lg-nav-bytab{
         display: none;
         z-index: 1001;
         position: absolute;
@@ -93,7 +93,7 @@
             }
         }
     }
-    .lg-m-nav-right{
+    .lg-nav-right{
         position: absolute;
         padding:10px;
         right: 0;

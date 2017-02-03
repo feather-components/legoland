@@ -1,8 +1,8 @@
-.lg-m-sidebar{
+.lg-sidebar{
     max-height: 100%; 
     position: relative;
     background-color: @backcolor_l; 
-    .lg-m-sidebar-l1{  
+    .lg-sidebar-l1{  
         display: block;
         & > li{ 
             border-bottom: 1px solid @bordercolor;
@@ -27,7 +27,7 @@
             margin-top:-10px;
         }
     }
-    .lg-m-sidebar-l2{
+    .lg-sidebar-l2{
         & > li{ 
             & > a{
                 display: block; 
@@ -39,7 +39,7 @@
             }
         }
     }
-    .lg-m-sidebar-l3{
+    .lg-sidebar-l3{
         & > li{ 
             & > a{
                 display: block; 
@@ -51,7 +51,7 @@
             }
         }
     }
-    .lg-m-sidebar-hand{
+    .lg-sidebar-hand{
         position: absolute;
         right: -12px;
         line-height: 50px;

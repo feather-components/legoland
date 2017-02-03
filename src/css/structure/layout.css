@@ -1,27 +1,27 @@
-.lg-s-wrapper{
+.lg-wrapper{
     background-color: @backcolor;
     width: 100%;
     height: 100%;
     overflow-x:hidden; 
 
-    .lg-s-head{
+    .lg-head{
         width:100%;
         height: @navH; 
     }
-    .lg-s-content{
+    .lg-content{
         background-color: @backcolor;
         position: absolute;
         top: @navH;
         right: 0;
         left: 0;
         bottom: 0;
-        .lg-s-content-l{
+        .lg-content-left{
             background-color: @backcolor_l;
             width: @menuW;
             height: 100%;
             position: absolute;
         }
-        .lg-s-content-r{
+        .lg-content-right{
             background-color: @backcolor; 
             margin-left: @menuW; 
             height: 100%;
@@ -31,39 +31,39 @@
     } 
 }
 
-.lg-s-body{
+.lg-body{
     background-color: white;
     padding:0 10px;
     margin-top:@gap;
     border-radius: 3px;
     min-height: 100%;
 
-    .lg-s-body-hd{
+    .lg-body-hd{
         clear: both;
         margin:0 10px;
         padding:5px 0;
         border-bottom:1px solid @basecolor;
     }
-    .lg-s-body-by{
+    .lg-body-by{
         clear: both;
         margin:0 10px;  
     }
-    .lg-s-body-tl{
+    .lg-body-tl{
         clear: both;
         margin:0 10px; 
         padding:10px 0;
         border-top:1px solid @bordercolor;
     }
-    .lg-s-blank{
+    .lg-blank{
         height: 10px;
         width: 100%;
         clear: both;
     }
 }
-
-.lg-s-pull-r{
+ 
+.lg-pull-right{
     float: right;
 }
-.lg-s-pull-l{
+.lg-pull-left{
     float: left;
 }

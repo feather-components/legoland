@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <div class="lg-s-wrapper">
-        <div class="lg-s-head">
-            <div class="lg-m-nav">
-                <div class="lg-m-nav-hd"><span class='lg-m-nav-title'>Legoland Admin</span></div>
-                <div class="lg-m-nav-by">
+    <div class="lg-wrapper">
+        <div class="lg-head">
+            <div class="lg-nav">
+                <div class="lg-nav-hd"><span class='lg-nav-title'>Legoland Admin</span></div>
+                <div class="lg-nav-by">
                     <ul>
                         <li><a>Sunday</a></li>
                         <li class="active"><a>Monday</a></li>
@@ -25,18 +25,18 @@
                         <li><a>Saturday</a></li>
                     </ul>
                 </div>
-                <div class="lg-m-nav-tl"></div>
+                <div class="lg-nav-tl"></div>
             </div>
         </div>
-        <div class="lg-s-content">
-            <div class="lg-s-content-l">
-                <div class="lg-m-sidebar">
-                    <ul class="lg-m-sidebar-l1">
+        <div class="lg-content">
+            <div class="lg-content-left">
+                <div class="lg-sidebar">
+                    <ul class="lg-sidebar-l1">
                         <li>
                             <a class="active" href="javascript:;">
                                 <span class="nav-label">元件Unit</span>
                             </a>
-                            <ul class="lg-m-sidebar-l2">
+                            <ul class="lg-sidebar-l2">
                                 <li>
                                     <a href="typography.html">文字Typography</a>
                                 </li>
@@ -67,31 +67,31 @@
                             <a class="active" href="javascript:;">
                                 <span class="nav-label">示例Page</span>
                             </a>
-                            <ul class="lg-m-sidebar-l2">
+                            <ul class="lg-sidebar-l2">
                                 <li>
                                     <a href="listpage.html">列表</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
-                    <div class="lg-m-sidebar-hand"></div>
+                    <div class="lg-sidebar-hand"></div>
                 </div>
             </div>
-            <div class="lg-s-content-r">
-                <ul class="lg-m-breadcrumb">
+            <div class="lg-content-right">
+                <ul class="lg-breadcrumb">
                     <li><a>元件Unit</a></li>
                     <li><a>输入框Text</a></li>
                 </ul>
                 <div class="lg-grid-container">
                     <div class="lg-grid-row">
                         <div class="lg-grid-12">
-                            <div class="lg-s-body lg-s-body-full">
-                                <div class="lg-s-body-hd">
+                            <div class="lg-body lg-body-full">
+                                <div class="lg-body-hd">
                                     <p class="lg-u-title-main">输入框Text</p>
                                 </div>
-                                <div class="lg-s-body-by">
+                                <div class="lg-body-by">
                                     <div class="lg-grid-row">
-                                        <div class="lg-grid-6 lg-m-form-block">
+                                        <div class="lg-grid-6 lg-form-block">
                                             <label>选填文本框：</label>
                                             <input type="text" />
                                             <span>-</span>
@@ -99,25 +99,25 @@
                                             <span>万元/㎡</span>
                                             <input type="text" />
                                         </div>
-                                        <div class="lg-grid-6 lg-m-form-block">
+                                        <div class="lg-grid-6 lg-form-block">
                                             <label class="lg-require">必填文本框：</label>
                                             <input type="text" />
                                         </div>
                                     </div>
                                     <div class="lg-grid-row">
-                                        <div class="lg-grid-6 lg-m-form-block">
+                                        <div class="lg-grid-6 lg-form-block">
                                             <label>选填多行框：</label>
                                             <textarea></textarea>
                                         </div>
-                                        <div class="lg-grid-6 lg-m-form-block">
+                                        <div class="lg-grid-6 lg-form-block">
                                             <label class="lg-require">必填多行框：</label>
                                             <textarea></textarea>
                                         </div>
                                     </div>
                                     <div class="lg-grid-row">
-                                        <div class="lg-grid-6 lg-m-form-block">
+                                        <div class="lg-grid-6 lg-form-block">
                                             <label>多选框：</label>
-                                            <div class="lg-m-form-line">
+                                            <div class="lg-form-line">
                                                 <span class="lg-u-check">
                                                     <input type="checkbox" id="c_1" />
                                                     <label for="c_1">可用</label>
@@ -138,9 +138,9 @@
                                         </div>
                                     </div>
                                     <div class="lg-grid-row">
-                                        <div class="lg-grid-6 lg-m-form-block">
+                                        <div class="lg-grid-6 lg-form-block">
                                             <label>单选框：</label>
-                                            <div class="lg-m-form-line">
+                                            <div class="lg-form-line">
                                                 <span class="lg-u-radio">
                                                     <input type="radio" id="r_1" name="r" />
                                                     <label for="r_1">可用1</label>
@@ -173,7 +173,7 @@
 <script src="../js/nav.js"></script>
 <script src="../js/sidebar.js"></script>
 <script>
-$('.lg-m-sidebar').LegolandMenu();
+$('.lg-sidebar').LegolandMenu();
 </script>
 
 </html>

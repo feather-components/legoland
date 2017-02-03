@@ -1,9 +1,9 @@
-.lg-m-con {
+.lg-con {
     background-color: @backcolor_l;
     border-top: 1px solid @bordercolor;
     border-bottom: 1px solid @bordercolor;
     padding: 0 10px;
-    .lg-m-con-box {
+    .lg-con-box {
         border-top: 1px solid @bordercolor;
         padding: 5px 0;
         &:first-child {
@@ -15,7 +15,7 @@
         & >li> .lg-u-label {
             position: absolute;
         }
-        .lg-m-con-group {
+        .lg-con-group {
             line-height: 30px;
             label {
                 color: @linkcolor;
@@ -32,7 +32,7 @@
                 color: @maincolor;
             }
         }
-        .lg-u-label + .lg-m-con-group {
+        .lg-u-label + .lg-con-group {
             margin-left: 100px;
         }
     }

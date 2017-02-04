@@ -16,7 +16,7 @@
         left: 0;
         bottom: 0;
         .lg-content-left{
-            background-color: @backcolor_l;
+            background-color: @backcolor_light;
             width: @menuW;
             height: 100%;
             position: absolute;

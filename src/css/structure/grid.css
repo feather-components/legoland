@@ -1,11 +1,15 @@
 /* grid 栅格 */
 .lg-grid-container{
     padding:(@gap / 2);
+    margin-top: -(@gap / 2);
+    margin-bottom: -(@gap / 2);
 }
 
 .lg-grid-row{ 
     margin-left: -(@gap / 2);
     margin-right: -(@gap / 2);
+    margin-top:(@gap / 2);
+    margin-bottom:(@gap / 2);
     &:before,&:after{
         content:' ';
         display: table;

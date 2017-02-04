@@ -1,4 +1,4 @@
-.lg-u-tag{
+.lg-tag{
     border-radius: 13px;
     background-color: @bordercolor;
     color:@subcolor;
@@ -22,7 +22,7 @@
         }
     }
 } 
-.lg-u-tag-add{ 
+.lg-tag-add{ 
     display: inline-block;
     &:before{
         content:'\e670';
@@ -32,7 +32,7 @@
         vertical-align: sub;
         margin-right: 5px;
     } 
-    .lg-u-btn{
+    .lg-btn{
         padding:4px 0;
     }
     .icon-zhengque{

@@ -1,5 +1,5 @@
 .lg-con {
-    background-color: @backcolor_l;
+    background-color: @backcolor_light;
     border-top: 1px solid @bordercolor;
     border-bottom: 1px solid @bordercolor;
     padding: 0 10px;
@@ -12,7 +12,7 @@
         & > li {
             padding: 5px 0;
         }
-        & >li> .lg-u-label {
+        & >li> .lg-label {
             position: absolute;
         }
         .lg-con-group {
@@ -32,7 +32,7 @@
                 color: @highlightcolor;
             }
         }
-        .lg-u-label + .lg-con-group {
+        .lg-label + .lg-con-group {
             margin-left: 100px;
         }
     }

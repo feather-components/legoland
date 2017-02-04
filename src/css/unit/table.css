@@ -1,4 +1,4 @@
-.lg-u-table {
+.lg-table {
     width: 100%;
     border-collapse: collapse;
     line-height: 36px;
@@ -15,7 +15,7 @@
             position: relative;
             text-align: center;
             border: none;
-            &.lg-o {
+            &.lg-asc {
                 cursor: pointer;
                 &:after {
                     content: '\e644';
@@ -24,10 +24,10 @@
                     top: -1px;
                     font-size: 12px;
                     margin: 0 5px;
-                    color: @backcolor_l;
+                    color: @backcolor_light;
                 }
             }
-            &.lg-ro {
+            &.lg-desc {
                 cursor: pointer;
                 &:after {
                     content: '\e64a';
@@ -36,7 +36,7 @@
                     top: 2px;
                     font-size: 20px;
                     margin: 0 5px;
-                    color: @backcolor_l;
+                    color: @backcolor_light;
                 }
             }
         }
@@ -45,12 +45,12 @@
         border:none;
     }
     tr:nth-child(2n) {
-        background-color: @backcolor_l;
+        background-color: @backcolor_light;
     }
     td {
         border: none;
     } 
-    a.lg-action {
+    a.lg-dropdown {
         color: @subcolor;
         padding: 0 5px;
         cursor: pointer;
@@ -89,8 +89,8 @@
     }
 }
 
-.lg-u-table-hd {
-    &:extend(.lg-u-table);
+.lg-table-hd {
+    &:extend(.lg-table);
     background-color: @basecolor;
     color: white;
 }

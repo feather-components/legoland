@@ -1,4 +1,4 @@
-.lg-u-tab {
+.lg-tab {
     display: block;
     list-style: none;
     height: @font_height_L;
@@ -7,7 +7,7 @@
     font-size: @font_size_L;
     border-bottom: 1px solid @linkcolor;
     box-sizing: content-box;
-    .lg-u-tab-li {
+    .lg-tab-li {
         float: left;
         color: @titlecolor;
         padding: 0 20px;
@@ -35,12 +35,12 @@
             height: 0;
         }
     }
-    .lg-active + .lg-u-tab-li:after {
+    .lg-active + .lg-tab-li:after {
         height: 0;
     }
 }
 
-.lg-u-tab-bd {
+.lg-tab-bd {
     border: 1px solid @linkcolor;
     border-top: none;
 }

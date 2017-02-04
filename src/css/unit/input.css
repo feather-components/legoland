@@ -38,7 +38,7 @@ input[type='text'] {
     &:focus {
         border: 1px solid @linkcolor;
     }
-    &.lg-u-date{
+    &.lg-date{
         
     }
 }
@@ -96,7 +96,7 @@ input[type='radio'] {
 
 /* checkbox */
 
-.lg-u-check {
+.lg-checkbox {
     label {
         white-space: nowrap;
     }
@@ -170,7 +170,7 @@ input[type='radio'] {
 
 /* radio */
 
-.lg-u-radio {
+.lg-radio {
     label {
         white-space: nowrap;
     }
@@ -236,8 +236,8 @@ input[type='radio'] {
 }
 
 .lg-plain {
-    .lg-u-check,
-    .lg-u-radio {
+    .lg-checkbox,
+    .lg-radio {
         & > label:before {
             display: none !important;
         }
@@ -250,7 +250,7 @@ input[type='radio'] {
 
 /* switchbox */
 
-.lg-u-switch {
+.lg-switch {
     input[type='checkbox'] + label {
         color: white;
         background-color: @bordercolor;

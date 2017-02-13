@@ -1,24 +1,24 @@
 .lg-title{
     font-size: @font_size_L;
     line-height: @font_height_L; 
-    color: @titlecolor;
+    color: @color_title;
     display: inline;
     margin-right: @gap; 
 }
 .lg-title-main{
     &:extend(.lg-title); 
-    color:@basecolor;
+    color:@color_sys;
     font-size: @font_size_xL;
 }
 .lg-text{
     font-size: @font_size_M;
     line-height: @font_height_M;
-    color: @subcolor;
+    color: @color_text;
 }
 .lg-subtext{
     font-size: @font_size_S;
     line-height: @font_height_S;
-    color: @tipcolor;
+    color: @color_subtext;
 }
 
 /* 未整理 */
@@ -35,7 +35,7 @@
 .lg-text-s{ 
     font-size: 14px;
     line-height: 18px;
-    color: @tipcolor;
+    color: @color_subtext;
 }
 .lg-label{
     text-align: right;

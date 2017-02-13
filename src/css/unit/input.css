@@ -29,14 +29,14 @@ label.lg-require {
 /* text */
 
 input[type='text'] {
-    border: 1px solid @bordercolor;
+    border: 1px solid @color_border;
     padding: 3px 5px;
     font-size: 14px;
-    color: @subcolor;
+    color: @color_text;
     height: 30px;
     &:active,
     &:focus {
-        border: 1px solid @linkcolor;
+        border: 1px solid @color_main;
     }
     &.lg-date{
         
@@ -47,16 +47,16 @@ input[type='text'] {
 /* textarea */
 
 textarea {
-    border: 1px solid @bordercolor;
+    border: 1px solid @color_border;
     padding: 3px 5px;
     font-size: 14px;
-    color: @subcolor;
+    color: @color_text;
     width: 80%;
     min-height: 100px;
     resize: none;
     &:active,
     &:focus {
-        border: 1px solid @linkcolor;
+        border: 1px solid @color_main;
     }
 }
 
@@ -64,20 +64,20 @@ textarea {
 /* select */
 
 select {
-    border: 1px solid @bordercolor;
+    border: 1px solid @color_border;
     appearance: none;
     padding: 5px;
     font-size: 14px;
-    color: @subcolor;
+    color: @color_text;
     &:active,
     &:focus {
-        border: 1px solid @linkcolor;
+        border: 1px solid @color_main;
     }
     option:hover {
-        background-color: @linkcolor;
+        background-color: @color_main;
     }
     option[selected] {
-        background-color: @linkcolor;
+        background-color: @color_main;
     }
 }
 
@@ -96,7 +96,7 @@ input[type='radio'] {
 
 /* checkbox */
 
-.lg-checkbox {
+.lg-checkbox,.lg-checkbox-all,.lg-checkbox-part {
     label {
         white-space: nowrap;
     }
@@ -107,11 +107,11 @@ input[type='radio'] {
         position: static;
         display: inline !important; 
         &:hover {
-            color: @linkcolor;
+            color: @color_main;
         }
         &:before {
             content: '';
-            border: 1px solid @tipcolor;
+            border: 1px solid @color_subtext;
             border-radius: 4px;
             margin-right: 6px;
             width: 16px;
@@ -122,47 +122,51 @@ input[type='radio'] {
         }
     }
     input[type='checkbox']:checked + label {
-        color: @linkcolor;
+        color: @color_main;
         &:before {
             color: white;
             content: "\e65d";
             font-family: "iconfont" !important;
-            background-color: @linkcolor;
-            border-color: @linkcolor;
+            background-color: @color_main;
+            border-color: @color_main;
             line-height: 12px;
         }
     }
     input[type='checkbox']:disabled + label {
-        color: @tipcolor;
+        color: @color_subtext;
         &:before {
-            border-color: @tipcolor;
+            border-color: @color_subtext;
         }
         &:hover {
-            color: @tipcolor;
+            color: @color_subtext;
         }
     }
     input[type='checkbox']:disabled:checked + label {
-        color: @tipcolor;
+        color: @color_subtext;
         &:before {
-            color: @tipcolor;
+            color: @color_subtext;
             background-color: transparent;
-            border-color: @tipcolor;
+            border-color: @color_subtext;
         }
-    }
-    input[type='checkbox'].lg-parent:disabled:checked + label {
-        color: @tipcolor;
+    }  
+}
+.lg-checkbox-all{
+    input[type='checkbox']:disabled:checked + label {
+        color: @color_subtext;
         &:before {
             color: white;
-            background-color: @tipcolor;
-            border-color: @tipcolor;
+            background-color: @color_subtext;
+            border-color: @color_subtext;
         }
     }
-    input[type='checkbox'].lg-parent-part:checked + label {
-        color: @linkcolor;
+}
+.lg-checkbox-part{
+    input[type='checkbox']:checked + label {
+        color: @color_main;
         &:before {
-            color: @linkcolor;
+            color: @color_main;
             background-color: transparent;
-            border-color: @linkcolor;
+            border-color: @color_main;
         }
     }
 }
@@ -181,11 +185,11 @@ input[type='radio'] {
         position: static;
         display: inline !important; 
         &:hover {
-            color: @linkcolor;
+            color: @color_main;
         }
         &:before {
             content: '';
-            border: 1px solid @tipcolor;
+            border: 1px solid @color_subtext;
             border-radius: 8px;
             margin-right: 6px;
             width: 16px;
@@ -196,16 +200,16 @@ input[type='radio'] {
         }
     }
     input[type='radio']:checked + label {
-        color: @linkcolor;
+        color: @color_main;
         position: relative;
         &:before {
-            border-color: @linkcolor;
+            border-color: @color_main;
         }
         &:after {
             content: "";
             width: 10px;
             height: 10px;
-            background-color: @linkcolor;
+            background-color: @color_main;
             border-radius: 5px;
             position: absolute;
             top: 3px;
@@ -213,24 +217,24 @@ input[type='radio'] {
         }
     }
     input[type='radio']:disabled + label {
-        color: @tipcolor;
+        color: @color_subtext;
         &:before {
-            border-color: @tipcolor;
+            border-color: @color_subtext;
         }
         &:hover {
-            color: @tipcolor;
+            color: @color_subtext;
         }
     }
     input[type='radio']:disabled:checked + label {
-        color: @tipcolor;
+        color: @color_subtext;
         &:before {
-            color: @tipcolor;
+            color: @color_subtext;
             background-color: transparent;
-            border-color: @tipcolor;
+            border-color: @color_subtext;
         }
         &:after {
             content: "";
-            background-color: @tipcolor;
+            background-color: @color_subtext;
         }
     }
 }
@@ -253,7 +257,7 @@ input[type='radio'] {
 .lg-switch {
     input[type='checkbox'] + label {
         color: white;
-        background-color: @bordercolor;
+        background-color: @color_border;
         height: 22px;
         line-height: 22px;
         border-radius: 20px;
@@ -281,7 +285,7 @@ input[type='radio'] {
     input[type='checkbox']:checked + label +label {
         cursor: pointer;
         color: white;
-        background-color: @successcolor;
+        background-color: @color_success;
         height: 22px;
         line-height: 22px;
         border-radius: 20px;
@@ -307,6 +311,6 @@ input[type='radio'] {
         display: none !important;
     }
     .lg-main:checked + label + label {
-        background-color: @basecolor !important;
+        background-color: @color_sys !important;
     }
 }

@@ -6,15 +6,15 @@
     padding:15px 20px;
     margin:10px;
     border-radius: 4px;
-    box-shadow: 2px 2px 12px 2px @bordercolor;
+    box-shadow: 2px 2px 12px 2px @color_border;
     background-color: white;
 }
 /* bubble */
 .lg-bubble{
     &:extend(.lg-toast);
-    color:@highlightcolor;
+    color:@color_highlight;
     position: relative;
-    box-shadow: 4px 4px 14px 1px @bordercolor;
+    box-shadow: 4px 4px 14px 1px @color_border;
     &:after{
         content:'';
         border:8px solid transparent;
@@ -27,10 +27,10 @@
 }
 /* error */
 .lg-error{
-    color: @highlightcolor;
+    color: @color_highlight;
 }
 .lg-error-b{
-    color: @highlightcolor;
+    color: @color_highlight;
     display: block;
     line-height: 30px;
 }
@@ -48,10 +48,10 @@ input:focus + .lg-error-b{
         height: 100%;
         width: 100%;
         border-radius: 15px;
-        background-color: @backcolor;
+        background-color: @color_bg;
         &:after{
             content:'';
-            background-color: @linkcolor;
+            background-color: @color_main;
             height: 100%;
             position: absolute;
             width: percentage((@i/100));

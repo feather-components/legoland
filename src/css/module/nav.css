@@ -1,16 +1,19 @@
 .lg-nav{
     height: 100%;
-    background-color: @basecolor;
+    background-color: @color_sys;
     .lg-nav-hd{
         width: @menuW;
         height: 100%;
-        /*background-image: url('img/logo.png');*/
         background-position:center 10px;
         background-repeat: no-repeat;
         display: inline-block;
         position: relative;
         float: left;
 
+        img{
+            width: 64%;
+            margin-left:18%;
+        }
         .lg-nav-title{
             color: white; 
             text-align: center;
@@ -37,13 +40,13 @@
                 cursor: pointer;
                 color: @navTcolor; 
             } 
-            &.active{ 
-                border-bottom: 3px solid @linkcolor; 
+            &.active,&.lg-fn-active{ 
+                border-bottom: 3px solid @color_main; 
             }
             &:hover{
-                border-bottom: 3px solid @highlightcolor; 
+                border-bottom: 3px solid @color_highlight; 
                 & a{
-                   color: @highlightcolor; 
+                   color: @color_highlight; 
                 }
             }      
         }
@@ -84,7 +87,7 @@
             line-height: 36px;
             cursor: pointer; 
             &.active,&:hover{
-                background-color: @linkcolor;
+                background-color: @color_main;
                 border-radius: 3px;
             }
             a{

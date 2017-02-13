@@ -3,12 +3,23 @@
     border-collapse: collapse;
     line-height: 36px;
     text-align: center;
-    color: @subcolor;
-    thead {
-        background-color: @basecolor !important;
-        color: white;
+    color: @color_text;
+    thead { 
         tr {
-            background-color: @basecolor !important; 
+            background-color: @color_sys ; 
+            color: white;
+            &.lg-color-danger-bg{
+                background-color: @color_danger; 
+            }
+            &.lg-color-success-bg{
+                background-color: @color_success; 
+            }
+            &.lg-color-plain-bg{
+                background-color: @color_border; 
+            }
+            &.lg-color-highlight-bg{
+                background-color: @color_highlight; 
+            }
         }
         th {
             font-weight: normal;
@@ -24,7 +35,7 @@
                     top: -1px;
                     font-size: 12px;
                     margin: 0 5px;
-                    color: @backcolor_light;
+                    color: @color_bglight;
                 }
             }
             &.lg-desc {
@@ -36,7 +47,7 @@
                     top: 2px;
                     font-size: 20px;
                     margin: 0 5px;
-                    color: @backcolor_light;
+                    color: @color_bglight;
                 }
             }
         }
@@ -45,13 +56,13 @@
         border:none;
     }
     tr:nth-child(2n) {
-        background-color: @backcolor_light;
+        background-color: @color_bglight;
     }
     td {
         border: none;
     } 
     a.lg-dropdown {
-        color: @subcolor;
+        color: @color_text;
         padding: 0 5px;
         cursor: pointer;
         position: relative;
@@ -62,7 +73,7 @@
         &:hover {
             ul {
                 display: block;
-                border: 1px solid @bordercolor;
+                border: 1px solid @color_border;
                 list-style: none;
                 position: absolute;
                 top: 100%;
@@ -71,14 +82,14 @@
                 z-index: 1;
                 float: left;
                 li {
-                    border-bottom: 1px solid @bordercolor;
+                    border-bottom: 1px solid @color_border;
                     padding: 4px 8px;
                     font-size: @font_size_S;
                     line-height: @font_height_M;
                     white-space: nowrap;
                     float: left;
                     &:hover {
-                        color: @highlightcolor;
+                        color: @color_highlight;
                     }
                     &:last-child {
                         border-bottom: none;
@@ -91,6 +102,6 @@
 
 .lg-table-hd {
     &:extend(.lg-table);
-    background-color: @basecolor;
+    background-color: @color_sys;
     color: white;
 }

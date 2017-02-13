@@ -1,20 +1,17 @@
-/* ------- color -------
-*color:[titlecolor:标题(黑),subcolor:副标题/内容(深灰),tipcolor:次级文本(浅灰),bordercolor:边框]
-*color:[backcolor:页面背景,backcolor_l:浅色背景,basecolor:页头(紫色),linkcolor:按钮链接(蓝色),hovercolor:划过颜色(深蓝)]
-*color:[highlightcolor:高亮(橙色),dangercolor:警示色,successcolor:健康(绿色)]
-*/
-@titlecolor:#333;
-@subcolor:#666;
-@tipcolor:#999;
-@bordercolor:#e1e1e1;
-@backcolor:#ededed;
-@backcolor_light:#f8f8f8;
-@basecolor:#464e78;
-@linkcolor:#5986e1;
-@hovercolor:#3e6bc5;
-@highlightcolor:#ff8447;
-@dangercolor:#d05538;
-@successcolor:#8bb455;
+/* ------- color -------*/
+@color_main:#5986e1;/*蓝*/
+@color_mainly:#3e6bc5;/*深蓝*/
+@color_highlight:#ff8447;/*橙*/
+@color_danger:#d05538;/*红*/
+@color_success:#8bb455;/*绿*/ 
+@color_sys:#464e78;/*紫*/
+@color_title:#333;/*深灰*/
+@color_text:#666;/*灰*/
+@color_subtext:#999;/*浅灰*/
+@color_border:#e1e1e1;/*灰*/
+@color_bg:#ededed;/*灰黄*/
+@color_bglight:#f8f8f8;/*浅灰黄*/
+
 
 /* ------- font -------*/
 @family:Arial,"Microsoft Yahei","Helvetica Neue","Hiragino Sans GB",sans-serif; 
@@ -26,10 +23,11 @@
 @font_height_M:22px;
 @font_height_S:18px;
 
-/* ------- gap -------*/
+/* ------- grid -------*/
 @gap:30px;
+@column:12;
 
 /* ------- structure -------*/
-@navH:80px;/* 导航高度 */
+@navH:60px;/* 导航高度 */
 @menuW:200px;/* 菜单宽度 */
 @navTcolor:white;/* 导航文字颜色 */

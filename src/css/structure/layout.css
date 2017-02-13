@@ -1,28 +1,28 @@
-.lg-wrapper{
-    background-color: @backcolor;
+.wrapper{
+    background-color: @color_bg;
     width: 100%;
     height: 100%;
     overflow-x:hidden; 
 
-    .lg-head{
+    .head{
         width:100%;
         height: @navH; 
     }
-    .lg-content{
-        background-color: @backcolor;
+    .content{
+        background-color: @color_bg;
         position: absolute;
         top: @navH;
         right: 0;
         left: 0;
         bottom: 0;
-        .lg-content-left{
-            background-color: @backcolor_light;
+        .content-left{
+            background-color: @color_bglight;
             width: @menuW;
             height: 100%;
             position: absolute;
         }
-        .lg-content-right{
-            background-color: @backcolor; 
+        .content-right{
+            background-color: @color_bg; 
             margin-left: @menuW; 
             height: 100%;
             overflow: auto;
@@ -31,28 +31,27 @@
     } 
 }
 
-.lg-body{
+.page{
     background-color: white;
     padding:0 10px;
-    margin-top:@gap;
     border-radius: 3px;
     min-height: 100%;
 
-    .lg-body-hd{
+    .page-head{
         clear: both;
         margin:0 10px;
         padding:5px 0;
-        border-bottom:1px solid @basecolor;
+        border-bottom:1px solid @color_sys;
     }
-    .lg-body-by{
+    .page-body{
         clear: both;
         margin:0 10px;  
     }
-    .lg-body-tl{
+    .page-tail{
         clear: both;
         margin:0 10px; 
         padding:10px 0;
-        border-top:1px solid @bordercolor;
+        border-top:1px solid @color_border;
     }
     .lg-blank{
         height: 10px;

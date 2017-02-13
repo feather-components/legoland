@@ -13,7 +13,7 @@ iframe{
 a{
     box-sizing:border-box;
     text-decoration: none !important;
-    color: @linkcolor;
+    color: @color_main;
     cursor: pointer;
 }
 ul{
@@ -26,6 +26,6 @@ p{
     margin:0; 
 }
 label,span{
-    color: @subcolor;
+    color: @color_text;
     font-size: 14px;
 }

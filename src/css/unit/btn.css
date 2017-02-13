@@ -1,4 +1,4 @@
-.lg-btn{
+.lg-btn , .lg-btn-large , .lg-btn-small , .lg-btn-o , .lg-btn-o-large , .lg-btn-o-small{
     display: inline-block;
     text-align: center;
     vertical-align: middle;
@@ -11,120 +11,147 @@
     line-height: 14px; 
     cursor: pointer;
     outline:none;
-    border:1px solid @bordercolor;
+    border:1px solid @color_main;
     border-radius: 3px; 
     color: white;
-    background-color: @bordercolor; 
+    background-color: @color_main; 
+    -webkit-text-stroke-width:0;
     &:last-child{
         margin-right:0;
+    }   
+    &:before{ 
+        margin-right: 3px;
+        margin-left: 2px;
+        font-size: 14px;
     }
-    &.lg-main{
-        background-color: @linkcolor;
-        border-color: @linkcolor;
-        &:hover{
-            background-color:@hovercolor;
-            border-color: @hovercolor;
-        }
+    &:hover{
+        background-color: darken(@color_main,10%);
+        border-color:darken(@color_main,10%);
+        color: white;
     } 
-    &.lg-plain{
-        background-color: transparent;
-        border:1px solid transparent;
-        color: #e6e6e6;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    &.lg-plain.lg-main{
-        background-color: transparent;
-        border:1px solid transparent;
-        color: @bordercolor;
-        &:hover{
-            color:#6b6b6b;
-        }
-    } 
-    &.lg-plain-blue{
-        background-color: transparent;
-        border:1px solid transparent;
-        color: @linkcolor;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    &.lg-plain-blue.lg-main{
-        background-color: transparent;
-        border:1px solid transparent;
-        color: @linkcolor;
-        &:hover{
-            color:#6b6b6b;
-        }
-    }
-    &.lg-large{
-        height: 34px;
-        line-height: 16px;
-        font-size: 16px;
-        .iconfont{
-            font-size: 16px;
-        }
-    }
-    &.lg-small{
-        height: 22px;
-        line-height: 12px;
-        font-size: 12px;
-        padding-top:4px;
-        padding-bottom:4px;
-        .iconfont{
-            font-size: 12px;
-        }
-    }
-    .iconfont{
-        margin-right: 5px; 
-        font-size: 14px; 
-    } 
+}
+
+  
+.lg-btn-large{ 
+    height: 34px;
+    line-height: 20px;
+    font-size: 16px;
     &:before{
-        margin-right: 5px;
+        font-size: 16px;
     } 
-} 
-.lg-btn-o{
-    &:extend(.lg-btn); 
-    color: @bordercolor;
-    border:1px solid @bordercolor;
-    background-color: white; 
-    &:last-child{
-        margin-right:0;
+}
+.lg-btn-small{ 
+    height: 22px;
+    line-height: 12px;
+    font-size: 12px;
+    padding-top:4px;
+    padding-bottom:4px;
+    &:before{
+        font-size: 12px;
+    } 
+}
+
+/* o */
+.lg-btn-o-constructor(@baseclass,@color:@color_main){
+    .@{baseclass}-o{
+        color: @color;
+        border:1px solid @color;
+        background-color: white !important;
+        &:hover{
+            color: darken(@color,10%);
+            border:1px solid darken(@color,10%);
+        }
+        .fn-btn-extend(@baseclass);
     }
-    &.lg-main{ 
-        color: @linkcolor;
-        border:1px solid @linkcolor;
+}
+.lg-btn-o-constructor(lg-btn);
+.lg-btn-o-constructor(lg-btn-small);
+.lg-btn-o-constructor(lg-btn-large);
+
+/* color */
+.lg-btn-color-constructor(@baseclass,@color,@name){
+    .@{baseclass}.lg-color-@{name}{
+        background-color: @color;
+        border-color: @color;
+        &:hover{
+            color:white;
+            background-color:darken(@color,10%);
+            border-color:darken(@color,10%);
+        }
+    } 
+    .@{baseclass}-o.lg-color-@{name},.@{baseclass}-o.@{baseclass}-@{name}{
         background-color: white;
+        border-color: @color;
+        color: @color;
         &:hover{
-            color:@hovercolor;
-            border:1px solid @hovercolor;
-            background-color: white;
+            background-color:white;
+            color:darken(@color,10%) !important;
+            border-color:darken(@color,10%);
         }
     }
-    &.lg-large{
-        height: 34px;
-        line-height: 16px;
-        font-size: 16px;
-        .iconfont{
-            font-size: 16px;
+    .@{baseclass}-@{name}{
+        background-color: @color;
+        border-color: @color;
+        &:hover{
+            color:white;
+            background-color:darken(@color,10%);
+            border-color:darken(@color,10%);
         }
+        .fn-btn-base(@baseclass); 
+    }
+    .@{baseclass}-o-@{name}{
+        background-color: white;
+        border-color: @color;
+        color: @color;
+        &:hover{
+            background-color:white;
+            color:darken(@color,10%);
+            border-color:darken(@color,10%);
+        }
+        .fn-btn-extend(@baseclass); 
     } 
-    &.lg-small{
-        height: 22px;
-        line-height: 12px;
-        font-size: 12px;
-        padding-top:4px;
-        padding-bottom:4px;
-        .iconfont{
-            font-size: 12px;
-        }
-    }
-    .iconfont{
+}
+
+.fn-btn-base(@baseclass) when (@baseclass = lg-btn){
+    &:extend(.lg-btn);
+}
+.fn-btn-base(@baseclass) when (@baseclass = lg-btn-large){ 
+    &:extend(.lg-btn-large);
+}
+.fn-btn-base(@baseclass) when (@baseclass = lg-btn-small){
+    &:extend(.lg-btn-small);
+}
+.fn-btn-extend(@baseclass){
+    .fn-btn-base(@baseclass);
+    &:last-child{
+        margin-right:0;
+    }  
+    &:before{ 
         margin-right: 5px;
+        font-size: 14px;
     }
-    &:before{
-        margin-right: 5px;
-    } 
-} 
+}
+
+.lg-btn-color-constructor(lg-btn,@color_main,main);
+.lg-btn-color-constructor(lg-btn,@color_danger,danger);
+.lg-btn-color-constructor(lg-btn,@color_success,success);
+.lg-btn-color-constructor(lg-btn,@color_sys,sys);
+.lg-btn-color-constructor(lg-btn,@color_border,plain);
+.lg-btn-color-constructor(lg-btn,@color_highlight,highlight);
+.lg-btn-color-constructor(lg-btn-large,@color_main,main);
+.lg-btn-color-constructor(lg-btn-large,@color_danger,danger);
+.lg-btn-color-constructor(lg-btn-large,@color_success,success);
+.lg-btn-color-constructor(lg-btn-large,@color_sys,sys);
+.lg-btn-color-constructor(lg-btn-large,@color_border,plain);
+.lg-btn-color-constructor(lg-btn-large,@color_highlight,highlight);
+.lg-btn-color-constructor(lg-btn-small,@color_main,main);
+.lg-btn-color-constructor(lg-btn-small,@color_danger,danger);
+.lg-btn-color-constructor(lg-btn-small,@color_success,success);
+.lg-btn-color-constructor(lg-btn-small,@color_sys,sys);
+.lg-btn-color-constructor(lg-btn-small,@color_border,plain);
+.lg-btn-color-constructor(lg-btn-small,@color_highlight,highlight);
+
+/* group */
 .lg-btn-group{
     display: inline-block; 
     margin:5px;
@@ -141,7 +168,27 @@
         border-top-right-radius: 3px;
         border-bottom-right-radius: 3px;
     }
-    .lg-btn-o + .lg-btn-o{
+    *[class^='lg-btn'][class*='-o'] + *[class^='lg-btn'][class*='-o']{ 
         border-left: none;
+    }
+}
+
+/* disable */
+*[class^="lg-btn"][disabled='disabled']{
+    border-color: @color_border !important;
+    background-color: @color_border !important;
+    &:hover{
+        border-color: @color_border !important;
+        background-color: @color_border !important;
+    }
+}
+*[class^="lg-btn-"][class*="-o"][disabled='disabled']{
+    border-color: @color_border !important;
+    background-color: white !important;
+    color: @color_border !important;
+    &:hover{
+        border-color: @color_border !important;
+        background-color: white !important;
+        color: @color_border !important;
     }
 } 

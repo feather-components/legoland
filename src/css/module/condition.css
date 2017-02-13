@@ -1,10 +1,10 @@
 .lg-con {
-    background-color: @backcolor_light;
-    border-top: 1px solid @bordercolor;
-    border-bottom: 1px solid @bordercolor;
+    background-color: @color_bglight;
+    border-top: 1px solid @color_border;
+    border-bottom: 1px solid @color_border;
     padding: 0 10px;
     .lg-con-box {
-        border-top: 1px solid @bordercolor;
+        border-top: 1px solid @color_border;
         padding: 5px 0;
         &:first-child {
             border-top: none;
@@ -18,7 +18,7 @@
         .lg-con-group {
             line-height: 30px;
             label {
-                color: @linkcolor;
+                color: @color_main;
                 display: inline-block;
                 line-height: 30px;
                 margin: 0 5px;
@@ -29,7 +29,7 @@
             }
             input[type='radio']:checked+label,
             input[type='checkbox']:checked+label {
-                color: @highlightcolor;
+                color: @color_highlight;
             }
         }
         .lg-label + .lg-con-group {

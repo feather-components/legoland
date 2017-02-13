@@ -1,10 +1,5 @@
-.lg-breadcrumb{
-    position: absolute;
-    height: 42px;
-    line-height: 42px;
-    top:0;
-    width: 100%;
-    background-color: @backcolor;  
+.lg-breadcrumb{    
+    width: 100%; 
     margin: 0;
     padding-left: (@gap/2);
     list-style: none;
@@ -30,7 +25,10 @@
         }
         &>*{
             cursor: pointer;
-            color: @subcolor;
+            color: @color_text;
+        }
+        a:hover{
+            color: @color_main;
         }
     }
 }

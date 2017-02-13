@@ -1,0 +1,13 @@
+.lg-dropdown{
+    position: relative;
+    & > ul{
+        display: none;
+        width:100%;
+        position: absolute;
+        top:100%;
+    }
+    &:hover > ul{
+        display: block;
+    }
+
+}

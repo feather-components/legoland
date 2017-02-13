@@ -1,7 +1,7 @@
 .lg-tag{
     border-radius: 13px;
-    background-color: @bordercolor;
-    color:@subcolor;
+    background-color: @color_border;
+    color:@color_text;
     padding:4px 12px;
     margin-right: 5px;
     cursor: pointer;
@@ -9,7 +9,7 @@
     font-size: @font_size_M;
     position: relative;
     &.lg-active{ 
-        color:@highlightcolor;
+        color:@color_highlight;
         background-color: rgb(255,240,219);
     }
     &.lg-del{
@@ -18,7 +18,8 @@
             font-family: "iconfont" !important;
             color: red;
             position: absolute;
-            top: -2px;
+            top: -5px;
+            right: -5px;
         }
     }
 } 
@@ -27,18 +28,15 @@
     &:before{
         content:'\e670';
         font-family: "iconfont" !important;
-        color: @bordercolor; 
+        color: @color_border; 
         font-size: 25px;
         vertical-align: sub;
         margin-right: 5px;
-    } 
-    .lg-btn{
-        padding:4px 0;
-    }
+    }  
     .icon-zhengque{
-        color:@successcolor; 
+        color:@color_success; 
     }
     .icon-cuowu{
-        color:@highlightcolor; 
+        color:@color_highlight; 
     }
 } 

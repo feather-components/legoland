@@ -1,0 +1,74 @@
+.lg-color-main{
+    color: @color_main;
+}
+.lg-color-main-bg{
+    background-color: @color_main;
+}
+
+.lg-color-highlight{
+    color: @color_highlight;
+}
+.lg-color-highlight-bg{
+    background-color: @color_highlight;
+}
+
+.lg-color-danger{
+    color: @color_danger;
+}
+.lg-color-danger-bg{
+    background-color: @color_danger;
+}
+
+.lg-color-success{
+    color: @color_success;
+}
+.lg-color-success-bg{
+    background-color: @color_success;
+}
+
+.lg-color-plain{
+    color: @color_border;
+}
+.lg-color-plain-bg{
+    background-color: @color_border;
+}
+
+.lg-color-sys{
+    color: @color_sys;
+}
+.lg-color-sys-bg{
+    background-color: @color_sys;
+}
+
+.lg-color-title{
+    color: @color_title;
+}
+.lg-color-title-bg{
+    background-color: @color_title;
+}
+
+.lg-color-text{
+    color: @color_text;
+}
+.lg-color-text-bg{
+    background-color: @color_text;
+}
+
+.lg-color-subtext{
+    color: @color_subtext;
+}
+.lg-color-subtext-bg{
+    background-color: @color_subtext;
+}
+
+.lg-color-border{
+    color: @color_border;
+    border:1px solid @color_border;
+}
+.lg-color-border-bg{
+    background-color: @color_border;
+}
+
+.lg-color-bg{
+    background-color: @color_bg;
+}

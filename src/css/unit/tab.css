@@ -5,17 +5,17 @@
     line-height: @font_height_L;
     background-color: rgb(247, 249, 254);
     font-size: @font_size_L;
-    border-bottom: 1px solid @linkcolor;
+    border-bottom: 1px solid @color_main;
     box-sizing: content-box;
     .lg-tab-li {
         float: left;
-        color: @titlecolor;
+        color: @color_title;
         padding: 0 20px;
         position: relative;
         cursor: pointer;
         &:after {
             content: '';
-            border-right: 1px solid @bordercolor;
+            border-right: 1px solid @color_border;
             height: 36%;
             position: absolute;
             top: 32%;
@@ -27,7 +27,7 @@
     }
     .lg-active {
         background-color: white;
-        border: 1px solid @linkcolor;
+        border: 1px solid @color_main;
         border-bottom: none;
         color: rgb(105, 115, 169);
         font-weight: bold;
@@ -41,6 +41,6 @@
 }
 
 .lg-tab-bd {
-    border: 1px solid @linkcolor;
+    border: 1px solid @color_main;
     border-top: none;
 }

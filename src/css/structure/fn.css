@@ -1,0 +1,36 @@
+.lg-fn-hide,
+.hide {
+    display: none !important;
+}
+
+.lg-fn-show,
+.show {
+    display: block !important;
+}
+
+.lg-fn-invisible,
+.invisible {
+    visibility: hidden;
+}
+
+.lg-fn-right,
+.right {
+    float: right !important;
+}
+
+.lg-fn-left,
+.left {
+    float: left !important;
+}
+
+.lg-fn-clear,
+.clear {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}

@@ -92,6 +92,31 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        copy: {
+            build: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/css/icon',
+                    src: 'iconfont.*',
+                    dest: 'release'
+                },{
+                    expand: true,
+                    cwd: 'src/img',
+                    src: '*.*',
+                    dest: 'release/img'
+                },{
+                    expand: true,
+                    cwd: 'src/js',
+                    src: '*.*',
+                    dest: 'release/js'
+                },{
+                    expand: true,
+                    cwd: 'demo',
+                    src: '*.*',
+                    dest: 'release/demo'
+                }]
+            }
+        },
 
         concat: {
             js: {
@@ -150,7 +175,8 @@ module.exports = function(grunt) {
                     cleancss: true // 压缩css文件 
                 },
                 files: {
-                    "dist/legoland.min.css": "src/legoland.css"
+                    "dist/legoland.min.css": "src/legoland.css",
+                    "../new/doc-backend/doc/legoland/legoland.min.css": "src/legoland.css"
                 }
             }
         },
@@ -172,4 +198,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask('default', ['less','copy','watch']);
+    grunt.registerTask('release',['less','release']);
 };

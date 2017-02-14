@@ -1,7 +1,7 @@
 {
   "name": "legoland",
   "desc": "适用于管理后台的前端UI模块化框架",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "dependencies": {
     "jquery": "~1.12.0"
   },

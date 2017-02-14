@@ -1,15 +1,4 @@
 module.exports = function(grunt) {
-    var jsFiles = getJsFiles(grunt),
-        cssFiles = [];
-    //console.log(jsFiles);
-    jsFiles.forEach(function(file) {
-        file = file.replace('.js', '.css');
-
-        if (grunt.file.exists(file)) {
-            cssFiles.push(file);
-        }
-    });
-
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -19,17 +8,17 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'src/css/icon',
                     src: 'iconfont.ttf',
-                    dest: 'tests'
+                    dest: 'test'
                 }, {
                     expand: true,
                     cwd: 'src/css/icon',
                     src: 'iconfont.woff',
-                    dest: 'tests'
+                    dest: 'test'
                 }, {
                     expand: true,
                     cwd: 'examples',
                     src: '*.*',
-                    dest: 'tests/examples'
+                    dest: 'test/examples'
                 }]
             },
             release: {
@@ -37,41 +26,49 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'src/css/icon',
                     src: 'iconfont.ttf',
-                    dest: 'dists'
+                    dest: 'dist'
                 }, {
                     expand: true,
                     cwd: 'src/css/icon',
                     src: 'iconfont.woff',
-                    dest: 'dists'
+                    dest: 'dist'
                 }, {
                     expand: true,
                     cwd: 'examples',
                     src: '*.*',
-                    dest: 'dists/examples'
+                    dest: 'dist/examples'
                 }]
             },
         },
 
-        //压缩CSS
-        cssmin: {
-            build: {
+        less: {
+            debug: {
+                options: {
+                    cleancss: false // 压缩css文件 
+                },
                 files: {
-                    'dist/<%=pkg.name%>-min.css': 'dist/<%=pkg.name%>.css'
+                    "test/legoland.css": "src/legoland.css"
+                }
+            },
+
+            release: {
+                options: {
+                    cleancss: false // 压缩css文件 
+                },
+                files: {
+                    "dist/legoland.css": "src/legoland.css"
                 }
             }
         },
 
-        less: {
-            build: {
-                options: {
-                    //paths: ["assets/css"], // @import 加载文件的路径
-                    cleancss: true // 压缩css文件 
-                },
+        cssmin: {
+            release: {
                 files: {
-                    "dist/legoland.min.css": "src/legoland.css"
+                    "dist/legoland.min.css": "dist/legoland.css"
                 }
             }
         },
+
         watch: {
             start: {
                 files: ['src/css/*/*.css', 'src/js/*.js', 'examples/*.*'],
@@ -87,6 +84,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.registerTask('default', ['less', 'copy:dev', 'watch']);
-    grunt.registerTask('release', ['less', 'copy:release']);
+    grunt.registerTask('default', ['copy:debug', 'less:debug', 'watch']);
+    grunt.registerTask('release', ['copy:release', 'less:release', 'cssmin:release']);
 };

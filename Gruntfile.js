@@ -1,57 +1,3 @@
-function getJsFiles(grunt) {
-    var requires = [];
-    var path = require('path');
-    var jsFiles = grunt.file.expand('src/**/*.js');
-    var pass = {};
-
-    function getDeps(file) {
-        var rs = [];
-
-        if (pass[file]) {
-            return [];
-        }
-
-        pass[file] = true;
-
-        var reg = /require\(['"]([^'"]+)['"]\)/g;
-        var content = grunt.file.read(file),
-            result, rs = [];
-
-        while (result = reg.exec(content)) {
-            if (result[1]) {
-                var dep = path.join(path.dirname(file), result[1]).replace(/\\+/g, '/') + '.js';
-
-                if (!grunt.file.exists(dep)) {
-                    continue;
-                }
-
-                rs = rs.concat(getDeps(dep));
-                rs.push(dep);
-            }
-        }
-
-        rs.push(file);
-
-        return rs;
-    }
-
-    jsFiles.map(function(file) {
-        var deps = getDeps(file);
-        requires = requires.concat(deps);
-    });
-
-    var exists = {};
-
-    return requires.concat(jsFiles).filter(function(file) {
-        if (!exists[file]) {
-            exists[file] = true;
-            return true;
-        }
-
-        return false;
-    });
-}
-
 module.exports = function(grunt) {
     var jsFiles = getJsFiles(grunt),
         cssFiles = [];
@@ -68,85 +14,42 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         copy: {
-            dev: {
+            debug: {
                 files: [{
                     expand: true,
                     cwd: 'src/css/icon',
                     src: 'iconfont.ttf',
-                    dest: 'dist'
+                    dest: 'tests'
                 }, {
                     expand: true,
                     cwd: 'src/css/icon',
                     src: 'iconfont.woff',
-                    dest: 'dist'
+                    dest: 'tests'
                 }, {
                     expand: true,
-                    cwd: 'src/js',
+                    cwd: 'examples',
                     src: '*.*',
-                    dest: 'dist/js'
-                }, {
-                    expand: true,
-                    cwd: 'demo',
-                    src: '*.*',
-                    dest: 'dist/demo'
+                    dest: 'tests/examples'
                 }]
             },
             release: {
-
                 files: [{
                     expand: true,
-                    cwd: 'dist',
-                    src: '*/*.*',
-                    dest: 'release'
-                },{
+                    cwd: 'src/css/icon',
+                    src: 'iconfont.ttf',
+                    dest: 'dists'
+                }, {
                     expand: true,
-                    cwd: 'dist',
+                    cwd: 'src/css/icon',
+                    src: 'iconfont.woff',
+                    dest: 'dists'
+                }, {
+                    expand: true,
+                    cwd: 'examples',
                     src: '*.*',
-                    dest: 'release'
+                    dest: 'dists/examples'
                 }]
             },
-        },
-  
-        concat: {
-            js: {
-                options: {
-                    separator: ';',
-                    process: function(content) {
-                        return content.replace(/if\s*\(\s*typeof\s+define[\s\S]+?\}\s*else\s*\{([\s\S]*?)\}\s*(?=\}\)|$)/, function(all, $1) {
-                            return '\t' + $1.trim() + '\n';
-                        });
-                    }
-                },
-
-                files: {
-                    'dist/<%=pkg.name%>.js': jsFiles
-                }
-            },
-
-            css: {
-                options: {
-                    process: function(content, file) {
-                        return content.replace(/\.\//g, function(all) {
-                            return all + file.split('/')[1] + '/';
-                        });
-                    }
-                },
-
-                files: {
-                    'dist/<%=pkg.name%>.css': cssFiles
-                }
-            }
-        },
-
-        uglify: {
-            options: {
-                sourceMap: true,
-                sourceMapName: 'dist/<%=pkg.name%>-min.js.map'
-            },
-            build: {
-                src: 'dist/<%=pkg.name%>.js',
-                dest: 'dist/<%=pkg.name%>-min.js'
-            }
         },
 
         //压缩CSS
@@ -157,6 +60,7 @@ module.exports = function(grunt) {
                 }
             }
         },
+
         less: {
             build: {
                 options: {
@@ -164,14 +68,13 @@ module.exports = function(grunt) {
                     cleancss: true // 压缩css文件 
                 },
                 files: {
-                    "dist/legoland.min.css": "src/legoland.css",
-                    "../new/doc-backend/doc/legoland/legoland.min.css": "src/legoland.css"
+                    "dist/legoland.min.css": "src/legoland.css"
                 }
             }
         },
         watch: {
             start: {
-                files: ['src/css/*/*.css', 'src/js/*.js', 'demo/*.*'],
+                files: ['src/css/*/*.css', 'src/js/*.js', 'examples/*.*'],
                 tasks: ['less', 'copy']
             }
         }
@@ -181,11 +84,9 @@ module.exports = function(grunt) {
         grunt.log.writeln(target + ': ' + filepath + ' has ' + action);
     });
     grunt.loadNpmTasks('grunt-contrib-copy');
-    // grunt.loadNpmTasks('grunt-contrib-concat');
-    // grunt.loadNpmTasks('grunt-contrib-uglify');
-    // grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask('default', ['less', 'copy:dev', 'watch']);
-    grunt.registerTask('rel', ['less', 'copy:dev','copy:release']);
+    grunt.registerTask('release', ['less', 'copy:release']);
 };

@@ -1,4 +1,4 @@
-# About legoland:超轻量web前端UI框架 
+# About legoland: 超轻量级的css框架
 
 >  适用于管理后台的前端UI模块化框架(css+html+js)
 
@@ -7,8 +7,6 @@
 >  约定模块化的样式命名和组织规范; 依赖legoland.css实现的JS组件库legoland.js
 
 >  建议的DTD: HTML5 文档类型
-
->  当前版本：v0.1
 
 
 ## 特性
@@ -23,4 +21,3 @@
 ## 兼容性
 
 > - 暂不支持ie8及以下版本
-

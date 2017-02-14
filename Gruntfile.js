@@ -91,5 +91,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask('default', ['copy:debug', 'less:debug', 'clean:debug', 'watch']);
-    grunt.registerTask('release', ['copy:release', 'less:release', 'cssmin:release', 'clean:release']);
+    grunt.registerTask('release', ['clean:release', 'copy:release', 'less:release', 'cssmin:release']);
 };

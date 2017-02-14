@@ -74,6 +74,11 @@ module.exports = function(grunt) {
                 files: ['src/css/*/*.css', 'src/js/*.js', 'examples/*.*'],
                 tasks: ['less', 'copy']
             }
+        },
+
+        clean: {
+            debug: ['./dist'],
+            release: ['./test', './dist']
         }
     });
 
@@ -83,7 +88,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.registerTask('default', ['copy:debug', 'less:debug', 'watch']);
-    grunt.registerTask('release', ['copy:release', 'less:release', 'cssmin:release']);
+    grunt.registerTask('default', ['copy:debug', 'less:debug', 'clean:debug', 'watch']);
+    grunt.registerTask('release', ['copy:release', 'less:release', 'cssmin:release', 'clean:release']);
 };

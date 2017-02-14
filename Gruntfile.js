@@ -68,56 +68,45 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         copy: {
-            build: {
+            dev: {
                 files: [{
                     expand: true,
                     cwd: 'src/css/icon',
-                    src: 'iconfont.*',
+                    src: 'iconfont.ttf',
                     dest: 'dist'
-                },{
+                }, {
                     expand: true,
-                    cwd: 'src/img',
-                    src: '*.*',
-                    dest: 'dist/img'
-                },{
+                    cwd: 'src/css/icon',
+                    src: 'iconfont.woff',
+                    dest: 'dist'
+                }, {
                     expand: true,
                     cwd: 'src/js',
                     src: '*.*',
                     dest: 'dist/js'
-                },{
+                }, {
                     expand: true,
                     cwd: 'demo',
                     src: '*.*',
                     dest: 'dist/demo'
                 }]
-            }
-        },
-        copy: {
-            build: {
+            },
+            release: {
+
                 files: [{
                     expand: true,
-                    cwd: 'src/css/icon',
-                    src: 'iconfont.*',
+                    cwd: 'dist',
+                    src: '*/*.*',
                     dest: 'release'
                 },{
                     expand: true,
-                    cwd: 'src/img',
+                    cwd: 'dist',
                     src: '*.*',
-                    dest: 'release/img'
-                },{
-                    expand: true,
-                    cwd: 'src/js',
-                    src: '*.*',
-                    dest: 'release/js'
-                },{
-                    expand: true,
-                    cwd: 'demo',
-                    src: '*.*',
-                    dest: 'release/demo'
+                    dest: 'release'
                 }]
-            }
+            },
         },
-
+  
         concat: {
             js: {
                 options: {
@@ -168,7 +157,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        less: { 
+        less: {
             build: {
                 options: {
                     //paths: ["assets/css"], // @import 加载文件的路径
@@ -180,16 +169,16 @@ module.exports = function(grunt) {
                 }
             }
         },
-        watch:{
-            start:{
-                files: ['src/css/*/*.css','src/js/*.js','demo/*.*'],
-                tasks: ['less','copy']
+        watch: {
+            start: {
+                files: ['src/css/*/*.css', 'src/js/*.js', 'demo/*.*'],
+                tasks: ['less', 'copy']
             }
         }
     });
 
     grunt.event.on('watch', function(action, filepath, target) {
-          grunt.log.writeln(target + ': ' + filepath + ' has ' + action);
+        grunt.log.writeln(target + ': ' + filepath + ' has ' + action);
     });
     grunt.loadNpmTasks('grunt-contrib-copy');
     // grunt.loadNpmTasks('grunt-contrib-concat');
@@ -197,6 +186,6 @@ module.exports = function(grunt) {
     // grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.registerTask('default', ['less','copy','watch']);
-    grunt.registerTask('release',['less','release']);
+    grunt.registerTask('default', ['less', 'copy:dev', 'watch']);
+    grunt.registerTask('rel', ['less', 'copy:dev','copy:release']);
 };

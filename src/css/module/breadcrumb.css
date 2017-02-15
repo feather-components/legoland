@@ -15,7 +15,9 @@
         &:before {
             content: ">";
             font-family: consolas;
-            font-size: 18px;
+            font-size: 16px;
+            position: relative;
+            top: -1px;
             padding: 0 5px;
         }
 

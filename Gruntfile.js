@@ -57,7 +57,8 @@ module.exports = function(grunt) {
                     cleancss: false // 压缩css文件 
                 },
                 files: {
-                    "dist/legoland.css": "src/legoland.css"
+                    "dist/legoland.css": "src/legoland.css",
+                    "test/style.css": "src/style.css"
                 }
             }
         },

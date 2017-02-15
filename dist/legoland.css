@@ -3902,8 +3902,6 @@ input:focus + .lg-error-b {
   padding-left: 15px;
   list-style: none;
   font-size: 14px;
-  line-height: 20px;
-  height: 20px;
   z-index: 1000;
 }
 .lg-breadcrumb > * {
@@ -3913,9 +3911,7 @@ input:focus + .lg-error-b {
 .lg-breadcrumb > *:before {
   content: ">";
   font-family: consolas;
-  font-size: 16px;
-  position: relative;
-  top: -1px;
+  font-size: 18px;
   padding: 0 5px;
 }
 .lg-breadcrumb > *:first-child {

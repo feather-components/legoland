@@ -94,9 +94,10 @@ input[type='radio'] {
 }
 
 
+
 /* checkbox */
 
-.lg-checkbox,.lg-checkbox-all,.lg-checkbox-part {
+.lg-checkbox,.lg-checkbox-all,.lg-checkbox-part,.lg-checkbox-plain {
     label {
         white-space: nowrap;
     }
@@ -174,7 +175,7 @@ input[type='radio'] {
 
 /* radio */
 
-.lg-radio {
+.lg-radio,.lg-radio-plain {
     label {
         white-space: nowrap;
     }
@@ -249,6 +250,14 @@ input[type='radio'] {
             display: none !important;
         }
     }
+}
+
+.lg-radio-plain,.lg-checkbox-plain{
+    input[type='radio'],input[type='checkbox']{
+        & + label:before,& + label:after{
+            display:none;
+        }
+    }  
 }
 
 

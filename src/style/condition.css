@@ -1,0 +1,56 @@
+.lg-condition {
+    padding: 0 10px;
+    border-top: 1px solid @color_border;
+    border-bottom: 1px solid @color_border;
+    background-color: @color_bglight;
+    
+    .lg-condition-box {
+        border-top: 1px solid @color_border;
+        padding: 10px 0;
+        &:first-child {
+            border-top: none;
+        }
+        & > li {
+            padding: 5px 0;
+        }
+        & >li> .lg-label {
+            position: absolute;
+        }
+        .lg-condition-group {
+            line-height: 30px;
+        }
+         
+        span { 
+            margin-right: 5px;
+        }
+        label{
+            text-align: right;
+            line-height: 30px;
+            width: 100px;
+        }
+        .lg-radio label,.lg-checkbox label,.lg-radio-plain label,.lg-checkbox-plain label {
+            color: @color_main;
+            display: inline-block;
+            line-height: 30px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .lg-radio input[type='radio']:checked+label,
+        .lg-checkbox input[type='checkbox']:checked+label {
+            color: @color_highlight;
+            &:after {
+                background-color:@color_highlight;
+            }
+            &:before{
+                border-color: @color_highlight;
+            }
+        }
+        .lg-checkbox input[type='checkbox']:checked+label:before { 
+            background-color:@color_highlight; 
+        }
+        .lg-radio-plain input[type='radio']:checked+label,
+        .lg-checkbox-plain input[type='checkbox']:checked+label {
+            color: @color_highlight; 
+        } 
+    }
+}

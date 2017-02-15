@@ -1,0 +1,68 @@
+.wrapper{
+    background-color: @color_bg;
+    width: 100%;
+    height: 100%;
+    overflow-x:hidden; 
+
+    .head{
+        width:100%;
+        height: @navH; 
+    }
+    .content{
+        background-color: @color_bg;
+        position: absolute;
+        top: @navH;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        .content-left{
+            background-color: @color_bglight;
+            width: @menuW;
+            height: 100%;
+            position: absolute;
+        }
+        .content-right{
+            background-color: @color_bg; 
+            margin-left: @menuW; 
+            height: 100%;
+            overflow: auto;
+            padding-left: 10px;
+        } 
+    } 
+}
+
+.page{
+    background-color: white;
+    padding:10px;
+    border-radius: 3px;
+    min-height: 500px; 
+
+    .page-head{
+        clear: both;
+        margin:0 10px;
+        padding:5px 0;
+        border-bottom:1px solid @color_sys;
+    }
+    .page-body{
+        clear: both;
+        margin:0 10px;  
+    }
+    .page-tail{
+        clear: both;
+        margin:0 10px; 
+        padding:10px 0;
+        border-top:1px solid @color_border;
+    }
+    .lg-blank{
+        height: 10px;
+        width: 100%;
+        clear: both;
+    }
+}
+ 
+.lg-pull-right{
+    float: right;
+}
+.lg-pull-left{
+    float: left;
+}

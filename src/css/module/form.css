@@ -1,22 +1,26 @@
-.lg-form{
-    
-}
-
-
-.lg-form-block{
-    margin-top:10px;
+.lg-form-line {
+    margin-top: 10px;
+    padding-left: 100px;
     position: relative;
-    label{
+    label {
         width: 100px;
         position: absolute;
-        top:0;
+        top: 0;
+        left: 0;
         line-height: 30px;
         text-align: right;
     }
-    label + textarea,label + input[type='text'],label + .lg-form-line{
-        margin-left: 100px;
-    } 
-    input + span{
+    input + span {
         margin-right: 5px;
-    }   
+    }
+    label + span{
+        line-height: 30px;
+        margin-left: 5px;
+        display: inline-block;
+    }
+}
+
+input[type='text'],
+select {
+    margin-bottom: 5px;
 }

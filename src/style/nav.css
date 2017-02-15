@@ -1,0 +1,117 @@
+.lg-nav{
+    height: 100%;
+    background-color: @color_sys;
+    .lg-nav-hd{
+        width: @menuW;
+        height: 100%;
+        background-position:center 10px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        float: left;
+
+        img{
+            width: 64%;
+            margin-left:18%;
+        }
+        .lg-nav-title{
+            color: white; 
+            text-align: center;
+            letter-spacing: 7px;
+            font-size: 12px;
+            position: absolute;
+            bottom: 5px;
+            right: 0;
+            left: 0;
+        }
+    }
+    .lg-nav-by{
+        position: absolute;
+        left: @menuW; 
+        right: 50px;
+        li{            
+            line-height: @navH - 3;
+            float: left;
+            padding:0 20px; 
+            color: @navTcolor;
+            font-size: 16px;  
+            border-bottom: 3px solid transparent;  
+            a{ 
+                cursor: pointer;
+                color: @navTcolor; 
+            } 
+            &.active,&.lg-fn-active{ 
+                border-bottom: 3px solid @color_main; 
+            }
+            &:hover{
+                border-bottom: 3px solid @color_highlight; 
+                & a{
+                   color: @color_highlight; 
+                }
+            }      
+        }
+    }
+    .lg-nav-tl{
+        display: none;
+        float: right;
+        height: 100%;
+        line-height: @navH;
+        margin-right: 20px; 
+        &:after{
+            content: "\e633";
+            font-family: "iconfont" !important;
+            font-size: 22px;
+            padding:0 5px;
+            color: @navTcolor;
+            cursor: pointer;
+        }
+        &.active:after{
+            content: "\e63f";
+        }
+    }
+    .lg-nav-bytab{
+        display: none;
+        z-index: 1001;
+        position: absolute;
+        top:@navH;
+        right: 0;
+        left: 0;
+        min-height: @navH;
+        padding: 10px 50px 10px @menuW; 
+        background-color: rgba(70,78,120,0.8);
+
+        li{
+            float: left; 
+            padding:0 10px;
+            margin: 2px 10px;
+            line-height: 36px;
+            cursor: pointer; 
+            &.active,&:hover{
+                background-color: @color_main;
+                border-radius: 3px;
+            }
+            a{
+                color: @navTcolor;
+
+            }
+        }
+    }
+    .lg-nav-right{
+        position: absolute;
+        padding:10px;
+        right: 0;
+        & *{
+            color: @navTcolor;
+            font-size: 12px;
+            float: right;
+        }
+        li:before{
+            content: '|';
+            color: white;
+            padding:0 5px;
+        }
+        li:last-child:before{
+            content: '';
+        }
+    }
+}

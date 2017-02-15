@@ -2,12 +2,10 @@
 @import (less) 'css/structure/var.css';/* 变量 */
 @import (less) 'css/structure/base.css';/* 全局设置 */
 @import (less) 'css/icon/iconfont.css';/* 图标 */
-
-/* 结构模块 */
-@import (less) 'css/structure/layout.css';/* 框架结构 */
-@import (less) 'css/structure/grid.css';/* 栅格 */
 @import (less) 'css/structure/color.css';/* 颜色 */
-@import (less) 'css/structure/fn.css';/* 功能 */
+
+/* 结构模块 */ 
+@import (less) 'css/structure/grid.css';/* 栅格 */ 
 
 /* 元件 */ 
 @import (less) 'css/unit/typography.css';/* 文字内容 */
@@ -20,10 +18,6 @@
 @import (less) 'css/unit/dropdown.css';/* 下拉 */ 
 @import (less) 'css/unit/tree.css';/* 树 */ 
  
-/* 功能组件模块 */
-@import (less) 'css/module/nav.css';/* 导航 */
-@import (less) 'css/module/breadcrumb.css';/* 面包屑 */
-@import (less) 'css/module/sidebar.css';/* 侧边栏 */ 
-@import (less) 'css/module/condition.css';/* 筛选框 */ 
-@import (less) 'css/module/form.css';/* 表单 */ 
-@import (less) 'css/module/dialog.css';/* 弹窗 */ 
+/* 功能组件模块 */ 
+@import (less) 'css/module/breadcrumb.css';/* 面包屑 */ 
+@import (less) 'css/module/form.css';/* 表单 */  

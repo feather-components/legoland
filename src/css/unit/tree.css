@@ -13,11 +13,13 @@
 @level:6;
 
 
-.lg-treelevel-loop(@n, @i:1) when (@i <= @n) {     
+.lg-treelevel-loop(@n, @i:1) when (@i <= @n) {  
+    & > li {
+        height: unit(@base_lineheight - @lineheight_path * ( @i - 1), px);
+    }   
     & > li > a{
         padding-left: unit(@base_padding + @padding_path * ( @i - 1), px); 
-        line-height: unit(@base_lineheight - @lineheight_path * ( @i - 1), px); 
-        height: unit(@base_lineheight - @lineheight_path * ( @i - 1), px);
+        line-height: unit(@base_lineheight - @lineheight_path * ( @i - 1), px);  
         font-size:  unit(@base_font * pow(@font_percent / 100, ( @i - 1)), px);
         color:lighten(@color_title,percentage( @color_path * ( @i - 1) ));
         & > i, & > i:before,& > i:after{

@@ -3665,6 +3665,119 @@ input:focus + .lg-error-b {
   display: block;
 }
 /* 下拉 */
+.lg-tree {
+  height: 100%;
+  max-height: 100%;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #e1e1e1;
+  border-bottom: none;
+  margin-bottom: 20px;
+}
+.lg-tree a {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-bottom: 1px solid #ededed;
+  display: block;
+  color: #333;
+}
+.lg-tree a:hover {
+  background-color: #ededed;
+  color: #464e78;
+}
+.lg-tree a:hover:before,
+.lg-tree a:hover:after {
+  color: #464e78;
+}
+.lg-tree a.current,
+.lg-tree a.lg-fn-current {
+  background-color: #ededed;
+  color: #464e78;
+}
+.lg-tree ul {
+  display: none;
+}
+.lg-tree .lg-fn-active + ul,
+.lg-tree .active + ul {
+  display: block;
+}
+.lg-tree > li > a {
+  padding-left: 20px;
+  line-height: 60px;
+  height: 60px;
+  font-size: 18px;
+  color: #333333;
+}
+.lg-tree > li > a > i,
+.lg-tree > li > a > i:before,
+.lg-tree > li > a > i:after {
+  font-size: 18px;
+}
+.lg-tree > li > ul > li > a {
+  padding-left: 40px;
+  line-height: 55px;
+  height: 55px;
+  font-size: 16.2px;
+  color: #404040;
+}
+.lg-tree > li > ul > li > a > i,
+.lg-tree > li > ul > li > a > i:before,
+.lg-tree > li > ul > li > a > i:after {
+  font-size: 16.2px;
+}
+.lg-tree > li > ul > li > ul > li > a {
+  padding-left: 60px;
+  line-height: 50px;
+  height: 50px;
+  font-size: 14.58px;
+  color: #4d4d4d;
+}
+.lg-tree > li > ul > li > ul > li > a > i,
+.lg-tree > li > ul > li > ul > li > a > i:before,
+.lg-tree > li > ul > li > ul > li > a > i:after {
+  font-size: 14.58px;
+}
+.lg-tree > li > ul > li > ul > li > ul > li > a {
+  padding-left: 80px;
+  line-height: 45px;
+  height: 45px;
+  font-size: 13.122px;
+  color: #595959;
+}
+.lg-tree > li > ul > li > ul > li > ul > li > a > i,
+.lg-tree > li > ul > li > ul > li > ul > li > a > i:before,
+.lg-tree > li > ul > li > ul > li > ul > li > a > i:after {
+  font-size: 13.122px;
+}
+.lg-tree > li > ul > li > ul > li > ul > li > ul > li > a {
+  padding-left: 100px;
+  line-height: 40px;
+  height: 40px;
+  font-size: 11.8098px;
+  color: #666666;
+}
+.lg-tree > li > ul > li > ul > li > ul > li > ul > li > a > i,
+.lg-tree > li > ul > li > ul > li > ul > li > ul > li > a > i:before,
+.lg-tree > li > ul > li > ul > li > ul > li > ul > li > a > i:after {
+  font-size: 11.8098px;
+}
+.lg-tree > li > ul > li > ul > li > ul > li > ul > li > ul > li > a {
+  padding-left: 120px;
+  line-height: 35px;
+  height: 35px;
+  font-size: 10.62882px;
+  color: #737373;
+}
+.lg-tree > li > ul > li > ul > li > ul > li > ul > li > ul > li > a > i,
+.lg-tree > li > ul > li > ul > li > ul > li > ul > li > ul > li > a > i:before,
+.lg-tree > li > ul > li > ul > li > ul > li > ul > li > ul > li > a > i:after {
+  font-size: 10.62882px;
+}
+/* 树 */
 /* 功能组件模块 */
 .lg-nav {
   height: 100%;
@@ -3789,15 +3902,20 @@ input:focus + .lg-error-b {
   padding-left: 15px;
   list-style: none;
   font-size: 14px;
+  line-height: 20px;
+  height: 20px;
   z-index: 1000;
 }
 .lg-breadcrumb > * {
   float: left;
+  color: #666;
 }
 .lg-breadcrumb > *:before {
-  content: "\e66a";
-  font-family: "iconfont" !important;
-  font-size: 12px;
+  content: ">";
+  font-family: consolas;
+  font-size: 16px;
+  position: relative;
+  top: -1px;
   padding: 0 5px;
 }
 .lg-breadcrumb > *:first-child {

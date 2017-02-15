@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legoland</title>
     <link rel="shortcut icon" type="image/x-icon" href="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
-    <link href="../legoland.min.css" rel="stylesheet">
+    <link href="../legoland.css" rel="stylesheet">
 </head>
 
 <body>
@@ -31,32 +31,27 @@
                 <div class="lg-sidebar">
                     <ul> 
                         <li>
-                            <a class="active" href="javascript:;">
-                                <span>二级菜单</span>
+                            <a class="active" href="#breadcrumb">
+                                <span>面包屑</span>
                             </a>
-                            <ul> 
-                                <li>
-                                    <a href="listpage.html">三级菜单</a>
-                                </li> 
-                            </ul>
+                            <a class="active" href="#btn">
+                                <span>按钮</span>
+                            </a>
                         </li>
                     </ul>
                     <div class="lg-sidebar-hand"></div>
                 </div>
             </div>
             <div class="content-right">
-                <ul class="lg-breadcrumb">
+                <ul class="lg-breadcrumb" id="breadcrumb" style="padding-top: 20px; padding-bottom: 20px;">
                     <li><a>面包屑</a></li>
                     <li><a>首页</a></li>
                     <li><a>详情</a></li>
+                    <li>12333</li>
                 </ul>
-                <div class="lg-grid-container"> 
-                    <div class="lg-grid-row">
-                        <div class="lg-grid-12">
-                            <div class="page page-full"> 
-                            </div> 
-                        </div> 
-                    </div>
+
+                <div id="btn">
+                    <a href="" class="lg-btn">1233</a>
                 </div>
             </div>
         </div>

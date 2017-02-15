@@ -4,8 +4,6 @@
     padding-left: (@gap/2);
     list-style: none;
     font-size: 14px;
-    line-height: 20px;
-    height: 20px;
     z-index: 1000;
 
     & > * {
@@ -15,9 +13,7 @@
         &:before {
             content: ">";
             font-family: consolas;
-            font-size: 16px;
-            position: relative;
-            top: -1px;
+            font-size: 18px;
             padding: 0 5px;
         }
 

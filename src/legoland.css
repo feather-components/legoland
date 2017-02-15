@@ -18,6 +18,7 @@
 @import (less) 'css/unit/toast.css';/* 提示 */  
 @import (less) 'css/unit/table.css';/* 表格 */ 
 @import (less) 'css/unit/dropdown.css';/* 下拉 */ 
+@import (less) 'css/unit/tree.css';/* 树 */ 
  
 /* 功能组件模块 */
 @import (less) 'css/module/nav.css';/* 导航 */

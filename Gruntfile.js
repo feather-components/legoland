@@ -58,7 +58,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     "dist/legoland.css": "src/legoland.css",
-                    "test/style.css": "src/style.css"
+                    "dist/style.css": "src/style.css"
                 }
             }
         },

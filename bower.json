@@ -1,11 +1,5 @@
 {
   "name": "legoland",
-  "desc": "适用于管理后台的前端UI模块化框架",
-  "version": "0.1.0",
-  "dependencies": {
-    "jquery": "~1.12.0"
-  },
-  "devDependencies": {
-    "qunit": "~2.0.1"
-  }
+  "desc": "适用于管理后台的前端css框架",
+  "version": "0.2.1"
 }

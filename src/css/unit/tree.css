@@ -1,0 +1,88 @@
+@base_padding:20;
+@padding_path:20; 
+
+@base_lineheight:60;
+@lineheight_path:5;
+
+@base_color:@color_title;
+@color_path:0.05; 
+
+@base_font:18;
+@font_percent:90;
+
+@level:6;
+
+
+.lg-treelevel-loop(@n, @i:1) when (@i <= @n) {     
+    & > li > a{
+        padding-left: unit(@base_padding + @padding_path * ( @i - 1), px); 
+        line-height: unit(@base_lineheight - @lineheight_path * ( @i - 1), px); 
+        height: unit(@base_lineheight - @lineheight_path * ( @i - 1), px);
+        font-size:  unit(@base_font * pow(@font_percent / 100, ( @i - 1)), px);
+        color:lighten(@color_title,percentage( @color_path * ( @i - 1) ));
+        & > i, & > i:before,& > i:after{
+            font-size: unit(@base_font * pow(@font_percent / 100, ( @i - 1)), px); 
+        }            
+    }
+    & > li > ul {
+        .lg-treelevel-loop(@n, (@i + 1));
+    }
+}
+
+.lg-tree {
+    height: 100%;
+    max-height: 100%;
+    position: relative; 
+    overflow-y: auto;
+    overflow-x: hidden; 
+    border:1px solid @color_border;
+    border-bottom: none;
+    margin-bottom: 20px;
+    a {
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; 
+        border-bottom: 1px solid @color_bg; 
+        display: block;
+        color: @color_title;    
+        &:hover {
+            background-color: @color_bg;
+            color: @color_sys;
+        }
+        &:hover:before,&:hover:after {
+            color: @color_sys;
+        } 
+        
+        &.current,
+        &.lg-fn-current {
+            background-color: @color_bg;
+            color: @color_sys;
+        }
+    }
+    ul {
+        display: none;
+    }
+         
+    .lg-fn-active,
+    .active {
+        &+ul {
+            display: block;
+        }
+    }
+    .lg-treelevel-loop(@level); 
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+

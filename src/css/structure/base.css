@@ -3,6 +3,7 @@ html, body{
     margin:0; height:100%; 
     font-family: @family;
     overflow-x: hidden;
+    color:@color_text;
 }
 iframe{
     width:100%;
@@ -28,4 +29,4 @@ p{
 label,span{
     color: @color_text;
     font-size: 14px;
-}
+} 

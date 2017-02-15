@@ -1,0 +1,22 @@
+.lg-scrollbar{
+    &::-webkit-scrollbar {
+        border: 1px solid @color_border;
+        border-top: none;
+        border-bottom: none;
+        width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #c1c1c1;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-button:start:decrement,
+    &::-webkit-scrollbar-button:end:increment,
+    {
+        display: block;
+    }
+    &::-webkit-scrollbar-button:end:decrement,
+    &::-webkit-scrollbar-button:start:increment,
+    {
+        display: none;
+    }
+}

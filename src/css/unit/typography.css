@@ -1,15 +1,10 @@
 .lg-title{
-    font-size: @font_size_L;
+    font-size: @font_size_xL;
     line-height: @font_height_L; 
     color: @color_title;
     display: inline;
     margin-right: @gap; 
-}
-.lg-title-main{
-    &:extend(.lg-title); 
-    color:@color_sys;
-    font-size: @font_size_xL;
-}
+} 
 .lg-text{
     font-size: @font_size_M;
     line-height: @font_height_M;
@@ -37,9 +32,4 @@
     line-height: 18px;
     color: @color_subtext;
 }
-.lg-label{
-    text-align: right;
-    width: 100px; 
-    display: inline-block;
-    line-height: 30px;
-}
+ 

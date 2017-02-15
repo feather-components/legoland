@@ -8,11 +8,12 @@
     display: inline;
     font-size: @font_size_M;
     position: relative;
-    &.lg-active{ 
+    white-space: nowrap;
+    &.active,&.lg-fn-active{ 
         color:@color_highlight;
         background-color: rgb(255,240,219);
     }
-    &.lg-del{
+    &.lg-diy{
         &:after{
             content:'\e661';
             font-family: "iconfont" !important;
@@ -21,7 +22,7 @@
             top: -5px;
             right: -5px;
         }
-    }
+    } 
 } 
 .lg-tag-add{ 
     display: inline-block;

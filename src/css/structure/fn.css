@@ -1,0 +1,52 @@
+.lg-fn-hide,
+.hide {
+    display: none;
+}
+
+.lg-fn-show,
+.show {
+    display: block;
+}
+
+.lg-fn-invisible,
+.invisible {
+    visibility: hidden;
+}
+
+.lg-fn-right,
+.right {
+    float: right;
+}
+
+.lg-fn-left,
+.left {
+    float: left;
+}
+
+.lg-fn-clear,
+.clear {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.lg-blank-10{
+    display: block;
+    width: 100%;
+    height: 10px;
+}
+.lg-blank-20{
+    display: block;
+    width: 100%;
+    height: 20px;
+}
+.lg-blank-50{
+    display: block;
+    width: 100%;    
+    height: 50px;
+}

@@ -1,10 +1,9 @@
-.lg-condition {
+.wp-condition {
     padding: 0 10px;
     border-top: 1px solid @color_border;
     border-bottom: 1px solid @color_border;
     background-color: @color_bglight;
-    
-    .lg-condition-box {
+    .wp-condition-box {
         border-top: 1px solid @color_border;
         padding: 10px 0;
         &:first-child {
@@ -16,19 +15,22 @@
         & >li> .lg-label {
             position: absolute;
         }
-        .lg-condition-group {
+        .wp-condition-group {
             line-height: 30px;
         }
-         
-        span { 
+        span {
             margin-right: 5px;
+            color: @color_subtext;
         }
-        label{
+        label {
             text-align: right;
             line-height: 30px;
             width: 100px;
         }
-        .lg-radio label,.lg-checkbox label,.lg-radio-plain label,.lg-checkbox-plain label {
+        .lg-radio label,
+        .lg-checkbox label,
+        .lg-radio-plain label,
+        .lg-checkbox-plain label {
             color: @color_main;
             display: inline-block;
             line-height: 30px;
@@ -39,18 +41,22 @@
         .lg-checkbox input[type='checkbox']:checked+label {
             color: @color_highlight;
             &:after {
-                background-color:@color_highlight;
+                background-color: @color_highlight;
             }
-            &:before{
+            &:before {
                 border-color: @color_highlight;
             }
         }
-        .lg-checkbox input[type='checkbox']:checked+label:before { 
-            background-color:@color_highlight; 
+        .lg-checkbox input[type='checkbox']:checked+label:before {
+            background-color: @color_highlight;
         }
         .lg-radio-plain input[type='radio']:checked+label,
         .lg-checkbox-plain input[type='checkbox']:checked+label {
-            color: @color_highlight; 
-        } 
+            color: @color_highlight;
+        }
+        & *[class^='lg-btn'] {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
     }
 }

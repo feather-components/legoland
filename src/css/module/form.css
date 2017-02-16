@@ -18,6 +18,10 @@
         margin-left: 5px;
         display: inline-block;
     }
+    & *[class^='lg-btn']{
+        margin-top:0;
+        margin-bottom:0;
+    }
 }
 
 input[type='text'],

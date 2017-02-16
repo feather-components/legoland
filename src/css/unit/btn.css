@@ -6,8 +6,8 @@
     padding:6px 12px;
     font-size: 14px;
     font-family: @family;
-    height: 28px;
-    min-width: 20px;
+    height: 30px;
+    min-width: 100px;
     line-height: 14px; 
     cursor: pointer;
     outline:none;
@@ -33,19 +33,21 @@
 
   
 .lg-btn-large{ 
-    height: 34px;
-    line-height: 20px;
-    font-size: 16px;
+    font-size: 20px;
+    line-height: 24px;
+    height: 40px; 
+    min-width: 176px;
     &:before{
         font-size: 16px;
     } 
 }
 .lg-btn-small{ 
-    height: 22px;
-    line-height: 12px;
+    height: 24px;
+    line-height: 14px;
     font-size: 12px;
     padding-top:4px;
     padding-bottom:4px;
+    min-width: 66px;
     &:before{
         font-size: 12px;
     } 

@@ -513,8 +513,8 @@ span {
   padding: 6px 12px;
   font-size: 14px;
   font-family: Arial, "Microsoft Yahei", "Helvetica Neue", "Hiragino Sans GB", sans-serif;
-  height: 28px;
-  min-width: 20px;
+  height: 30px;
+  min-width: 100px;
   line-height: 14px;
   cursor: pointer;
   outline: none;
@@ -566,9 +566,10 @@ span {
 .lg-btn-large-o-plain,
 .lg-btn-large-highlight,
 .lg-btn-large-o-highlight {
-  height: 34px;
-  line-height: 20px;
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 24px;
+  height: 40px;
+  min-width: 176px;
 }
 .lg-btn-large:before {
   font-size: 16px;
@@ -587,11 +588,12 @@ span {
 .lg-btn-small-o-plain,
 .lg-btn-small-highlight,
 .lg-btn-small-o-highlight {
-  height: 22px;
-  line-height: 12px;
+  height: 24px;
+  line-height: 14px;
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
+  min-width: 66px;
 }
 .lg-btn-small:before {
   font-size: 12px;
@@ -1538,11 +1540,12 @@ input,
 select,
 textarea {
   outline: none;
+  border-radius: 3px;
 }
 input,
 select {
   box-sizing: border-box;
-  width: 150px;
+  width: 120px;
   margin-right: 5px;
   line-height: 22px;
 }
@@ -1807,8 +1810,8 @@ input[type='radio'] {
 .lg-switch input[type='checkbox'] + label {
   color: white;
   background-color: #e1e1e1;
-  height: 22px;
-  line-height: 22px;
+  height: 26px;
+  line-height: 26px;
   border-radius: 20px;
   display: inline-block !important;
   padding: 2px 8px 2px 2px;
@@ -1816,8 +1819,8 @@ input[type='radio'] {
 }
 .lg-switch input[type='checkbox'] + label:before {
   content: "";
-  height: 20px;
-  width: 20px;
+  height: 24px;
+  width: 24px;
   margin-right: 6px;
   border-radius: 11px;
   background-color: white;
@@ -1835,8 +1838,8 @@ input[type='radio'] {
   cursor: pointer;
   color: white;
   background-color: #8bb455;
-  height: 22px;
-  line-height: 22px;
+  height: 26px;
+  line-height: 26px;
   border-radius: 20px;
   display: inline-block !important;
   padding: 2px 2px 2px 8px;
@@ -1844,8 +1847,8 @@ input[type='radio'] {
 }
 .lg-switch input[type='checkbox']:checked + label + label:after {
   content: "";
-  height: 20px;
-  width: 20px;
+  height: 24px;
+  width: 24px;
   margin-left: 6px;
   border-radius: 11px;
   background-color: white;
@@ -3789,7 +3792,7 @@ input:focus + .lg-error-b {
   content: ">";
   font-family: consolas;
   font-size: 18px;
-  padding: 0 5px;
+  padding: 0 8px;
 }
 .lg-breadcrumb > *:first-child {
   padding-left: 0;
@@ -3829,6 +3832,10 @@ input:focus + .lg-error-b {
   line-height: 30px;
   margin-left: 5px;
   display: inline-block;
+}
+.lg-form-line *[class^='lg-btn'] {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 input[type='text'],
 select {

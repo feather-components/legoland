@@ -14,7 +14,7 @@
             content: ">";
             font-family: consolas;
             font-size: 18px;
-            padding: 0 5px;
+            padding: 0 8px;
         }
 
         &:first-child {

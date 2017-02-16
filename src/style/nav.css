@@ -1,7 +1,7 @@
-.lg-nav{
+.wp-nav{
     height: 100%;
     background-color: @color_sys;
-    .lg-nav-hd{
+    .wp-nav-hd{
         width: @menuW;
         height: 100%;
         background-position:center 10px;
@@ -14,7 +14,7 @@
             width: 64%;
             margin-left:18%;
         }
-        .lg-nav-title{
+        .wp-nav-title{
             color: white; 
             text-align: center;
             letter-spacing: 7px;
@@ -25,7 +25,7 @@
             left: 0;
         }
     }
-    .lg-nav-by{
+    .wp-nav-by{
         position: absolute;
         left: @menuW; 
         right: 50px;
@@ -51,7 +51,7 @@
             }      
         }
     }
-    .lg-nav-tl{
+    .wp-nav-tl{
         display: none;
         float: right;
         height: 100%;
@@ -69,7 +69,7 @@
             content: "\e63f";
         }
     }
-    .lg-nav-bytab{
+    .wp-nav-bytab{
         display: none;
         z-index: 1001;
         position: absolute;
@@ -96,7 +96,7 @@
             }
         }
     }
-    .lg-nav-right{
+    .wp-nav-right{
         position: absolute;
         padding:10px;
         right: 0;

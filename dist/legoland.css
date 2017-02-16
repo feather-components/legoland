@@ -3671,12 +3671,10 @@ input:focus + .lg-error-b {
 .lg-tree .active + ul {
   display: block;
 }
-.lg-tree > li {
-  height: 60px;
-}
 .lg-tree > li > a {
   padding-left: 20px;
   line-height: 60px;
+  height: 60px;
   font-size: 18px;
   color: #333333;
 }
@@ -3685,12 +3683,10 @@ input:focus + .lg-error-b {
 .lg-tree > li > a > i:after {
   font-size: 18px;
 }
-.lg-tree > li > ul > li {
-  height: 55px;
-}
 .lg-tree > li > ul > li > a {
   padding-left: 40px;
   line-height: 55px;
+  height: 55px;
   font-size: 16.2px;
   color: #404040;
 }
@@ -3699,12 +3695,10 @@ input:focus + .lg-error-b {
 .lg-tree > li > ul > li > a > i:after {
   font-size: 16.2px;
 }
-.lg-tree > li > ul > li > ul > li {
-  height: 50px;
-}
 .lg-tree > li > ul > li > ul > li > a {
   padding-left: 60px;
   line-height: 50px;
+  height: 50px;
   font-size: 14.58px;
   color: #4d4d4d;
 }
@@ -3713,12 +3707,10 @@ input:focus + .lg-error-b {
 .lg-tree > li > ul > li > ul > li > a > i:after {
   font-size: 14.58px;
 }
-.lg-tree > li > ul > li > ul > li > ul > li {
-  height: 45px;
-}
 .lg-tree > li > ul > li > ul > li > ul > li > a {
   padding-left: 80px;
   line-height: 45px;
+  height: 45px;
   font-size: 13.122px;
   color: #595959;
 }
@@ -3727,12 +3719,10 @@ input:focus + .lg-error-b {
 .lg-tree > li > ul > li > ul > li > ul > li > a > i:after {
   font-size: 13.122px;
 }
-.lg-tree > li > ul > li > ul > li > ul > li > ul > li {
-  height: 40px;
-}
 .lg-tree > li > ul > li > ul > li > ul > li > ul > li > a {
   padding-left: 100px;
   line-height: 40px;
+  height: 40px;
   font-size: 11.8098px;
   color: #666666;
 }
@@ -3741,12 +3731,10 @@ input:focus + .lg-error-b {
 .lg-tree > li > ul > li > ul > li > ul > li > ul > li > a > i:after {
   font-size: 11.8098px;
 }
-.lg-tree > li > ul > li > ul > li > ul > li > ul > li > ul > li {
-  height: 35px;
-}
 .lg-tree > li > ul > li > ul > li > ul > li > ul > li > ul > li > a {
   padding-left: 120px;
   line-height: 35px;
+  height: 35px;
   font-size: 10.62882px;
   color: #737373;
 }

@@ -20,17 +20,17 @@
 /* 导航文字颜色 */
 /* 变量 */
 /* 结构模块 */
-.wrapper {
+.wp-wrapper {
   background-color: #ededed;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
 }
-.wrapper .head {
+.wp-wrapper .head {
   width: 100%;
   height: 60px;
 }
-.wrapper .content {
+.wp-wrapper .content {
   background-color: #ededed;
   position: absolute;
   top: 60px;
@@ -38,42 +38,42 @@
   left: 0;
   bottom: 0;
 }
-.wrapper .content .content-left {
+.wp-wrapper .content .content-left {
   background-color: #f8f8f8;
   width: 200px;
   height: 100%;
   position: absolute;
 }
-.wrapper .content .content-right {
+.wp-wrapper .content .content-right {
   background-color: #ededed;
   margin-left: 200px;
   height: 100%;
   overflow: auto;
   padding-left: 10px;
 }
-.page {
+.wp-page {
   background-color: white;
   padding: 10px;
   border-radius: 3px;
   min-height: 500px;
 }
-.page .page-head {
+.wp-page .page-head {
   clear: both;
   margin: 0 10px;
   padding: 5px 0;
   border-bottom: 1px solid #464e78;
 }
-.page .page-body {
+.wp-page .page-body {
   clear: both;
   margin: 0 10px;
 }
-.page .page-tail {
+.wp-page .page-tail {
   clear: both;
   margin: 0 10px;
   padding: 10px 0;
   border-top: 1px solid #e1e1e1;
 }
-.page .lg-blank {
+.wp-page .wp-blank {
   height: 10px;
   width: 100%;
   clear: both;
@@ -86,11 +86,11 @@
 }
 /* 框架结构 */
 /* 功能组件模块 */
-.lg-nav {
+.wp-nav {
   height: 100%;
   background-color: #464e78;
 }
-.lg-nav .lg-nav-hd {
+.wp-nav .wp-nav-hd {
   width: 200px;
   height: 100%;
   background-position: center 10px;
@@ -99,11 +99,11 @@
   position: relative;
   float: left;
 }
-.lg-nav .lg-nav-hd img {
+.wp-nav .wp-nav-hd img {
   width: 64%;
   margin-left: 18%;
 }
-.lg-nav .lg-nav-hd .lg-nav-title {
+.wp-nav .wp-nav-hd .wp-nav-title {
   color: white;
   text-align: center;
   letter-spacing: 7px;
@@ -113,12 +113,12 @@
   right: 0;
   left: 0;
 }
-.lg-nav .lg-nav-by {
+.wp-nav .wp-nav-by {
   position: absolute;
   left: 200px;
   right: 50px;
 }
-.lg-nav .lg-nav-by li {
+.wp-nav .wp-nav-by li {
   line-height: 57px;
   float: left;
   padding: 0 20px;
@@ -126,28 +126,28 @@
   font-size: 16px;
   border-bottom: 3px solid transparent;
 }
-.lg-nav .lg-nav-by li a {
+.wp-nav .wp-nav-by li a {
   cursor: pointer;
   color: white;
 }
-.lg-nav .lg-nav-by li.active,
-.lg-nav .lg-nav-by li.lg-fn-active {
+.wp-nav .wp-nav-by li.active,
+.wp-nav .wp-nav-by li.lg-fn-active {
   border-bottom: 3px solid #5986e1;
 }
-.lg-nav .lg-nav-by li:hover {
+.wp-nav .wp-nav-by li:hover {
   border-bottom: 3px solid #ff8447;
 }
-.lg-nav .lg-nav-by li:hover a {
+.wp-nav .wp-nav-by li:hover a {
   color: #ff8447;
 }
-.lg-nav .lg-nav-tl {
+.wp-nav .wp-nav-tl {
   display: none;
   float: right;
   height: 100%;
   line-height: 60px;
   margin-right: 20px;
 }
-.lg-nav .lg-nav-tl:after {
+.wp-nav .wp-nav-tl:after {
   content: "\e633";
   font-family: "iconfont" !important;
   font-size: 22px;
@@ -155,10 +155,10 @@
   color: white;
   cursor: pointer;
 }
-.lg-nav .lg-nav-tl.active:after {
+.wp-nav .wp-nav-tl.active:after {
   content: "\e63f";
 }
-.lg-nav .lg-nav-bytab {
+.wp-nav .wp-nav-bytab {
   display: none;
   z-index: 1001;
   position: absolute;
@@ -169,41 +169,41 @@
   padding: 10px 50px 10px 200px;
   background-color: rgba(70, 78, 120, 0.8);
 }
-.lg-nav .lg-nav-bytab li {
+.wp-nav .wp-nav-bytab li {
   float: left;
   padding: 0 10px;
   margin: 2px 10px;
   line-height: 36px;
   cursor: pointer;
 }
-.lg-nav .lg-nav-bytab li.active,
-.lg-nav .lg-nav-bytab li:hover {
+.wp-nav .wp-nav-bytab li.active,
+.wp-nav .wp-nav-bytab li:hover {
   background-color: #5986e1;
   border-radius: 3px;
 }
-.lg-nav .lg-nav-bytab li a {
+.wp-nav .wp-nav-bytab li a {
   color: white;
 }
-.lg-nav .lg-nav-right {
+.wp-nav .wp-nav-right {
   position: absolute;
   padding: 10px;
   right: 0;
 }
-.lg-nav .lg-nav-right * {
+.wp-nav .wp-nav-right * {
   color: white;
   font-size: 12px;
   float: right;
 }
-.lg-nav .lg-nav-right li:before {
+.wp-nav .wp-nav-right li:before {
   content: '|';
   color: white;
   padding: 0 5px;
 }
-.lg-nav .lg-nav-right li:last-child:before {
+.wp-nav .wp-nav-right li:last-child:before {
   content: '';
 }
 /* 导航 */
-.lg-sidebar {
+.wp-sidebar {
   height: 100%;
   max-height: 100%;
   position: relative;
@@ -212,10 +212,10 @@
   overflow-x: hidden;
   /* level 1*/
 }
-.lg-sidebar ul {
+.wp-sidebar ul {
   display: none;
 }
-.lg-sidebar a {
+.wp-sidebar a {
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -224,14 +224,14 @@
   padding-right: 20px;
   border-bottom: 1px solid #ededed;
 }
-.lg-sidebar a:hover {
+.wp-sidebar a:hover {
   background-color: #ededed;
   color: #464e78;
 }
-.lg-sidebar a:hover:before {
+.wp-sidebar a:hover:before {
   color: #464e78;
 }
-.lg-sidebar a:before {
+.wp-sidebar a:before {
   content: '\e648';
   font-family: "iconfont" !important;
   font-size: 14px;
@@ -240,33 +240,33 @@
   margin-top: -1px;
   color: #999;
 }
-.lg-sidebar a.active:before,
-.lg-sidebar a.lg-fn-active:before {
+.wp-sidebar a.active:before,
+.wp-sidebar a.lg-fn-active:before {
   content: '\e644';
   margin-top: -3px;
 }
-.lg-sidebar a.current,
-.lg-sidebar a.lg-fn-current {
+.wp-sidebar a.current,
+.wp-sidebar a.lg-fn-current {
   background-color: #ededed;
   color: #464e78;
 }
-.lg-sidebar > ul {
+.wp-sidebar > ul {
   display: block;
 }
-.lg-sidebar > ul > li {
+.wp-sidebar > ul > li {
   /* level 2 */
 }
-.lg-sidebar > ul > li > a {
+.wp-sidebar > ul > li > a {
   display: block;
   padding-left: 40px;
   line-height: 65px;
   color: #333;
   font-size: 16px;
 }
-.lg-sidebar > ul > li > ul > li {
+.wp-sidebar > ul > li > ul > li {
   /* level 3 */
 }
-.lg-sidebar > ul > li > ul > li > a {
+.wp-sidebar > ul > li > ul > li > a {
   display: block;
   color: #666;
   font-size: 14px;
@@ -274,10 +274,10 @@
   height: 50px;
   line-height: 50px;
 }
-.lg-sidebar > ul > li > ul > li > a:before {
+.wp-sidebar > ul > li > ul > li > a:before {
   left: 36px;
 }
-.lg-sidebar > ul > li > ul > li > ul > li > a {
+.wp-sidebar > ul > li > ul > li > ul > li > a {
   display: block;
   color: #666;
   font-size: 14px;
@@ -285,33 +285,33 @@
   height: 50px;
   line-height: 50px;
 }
-.lg-sidebar > ul > li > ul > li > ul > li > a:before {
+.wp-sidebar > ul > li > ul > li > ul > li > a:before {
   left: 52px;
   font-size: 12px;
 }
-.lg-sidebar .lg-fn-active + ul,
-.lg-sidebar .active + ul {
+.wp-sidebar .lg-fn-active + ul,
+.wp-sidebar .active + ul {
   display: block;
 }
-.lg-sidebar::-webkit-scrollbar {
+.wp-sidebar::-webkit-scrollbar {
   border: 1px solid #e1e1e1;
   border-top: none;
   border-bottom: none;
   width: 8px;
 }
-.lg-sidebar::-webkit-scrollbar-thumb {
+.wp-sidebar::-webkit-scrollbar-thumb {
   background-color: #c1c1c1;
   border-radius: 10px;
 }
-.lg-sidebar::-webkit-scrollbar-button:start:decrement,
-.lg-sidebar::-webkit-scrollbar-button:end:increment {
+.wp-sidebar::-webkit-scrollbar-button:start:decrement,
+.wp-sidebar::-webkit-scrollbar-button:end:increment {
   display: block;
 }
-.lg-sidebar::-webkit-scrollbar-button:end:decrement,
-.lg-sidebar::-webkit-scrollbar-button:start:increment {
+.wp-sidebar::-webkit-scrollbar-button:end:decrement,
+.wp-sidebar::-webkit-scrollbar-button:start:increment {
   display: none;
 }
-.lg-sidebar-hand {
+.wp-sidebar-hand {
   position: absolute;
   right: -12px;
   top: 50%;
@@ -322,74 +322,78 @@
   background-color: #5986e1;
   cursor: pointer;
 }
-.lg-sidebar-hand:after {
+.wp-sidebar-hand:after {
   content: "\e62d";
   font-family: "iconfont" !important;
   font-size: 12px;
   color: white;
 }
-.lg-sidebar-hand.lg-fn-close:after {
+.wp-sidebar-hand.lg-fn-close:after {
   content: "\e66a";
 }
 /* 侧边栏 */
-.lg-condition {
+.wp-condition {
   padding: 0 10px;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
   background-color: #f8f8f8;
 }
-.lg-condition .lg-condition-box {
+.wp-condition .wp-condition-box {
   border-top: 1px solid #e1e1e1;
   padding: 10px 0;
 }
-.lg-condition .lg-condition-box:first-child {
+.wp-condition .wp-condition-box:first-child {
   border-top: none;
 }
-.lg-condition .lg-condition-box > li {
+.wp-condition .wp-condition-box > li {
   padding: 5px 0;
 }
-.lg-condition .lg-condition-box > li > .lg-label {
+.wp-condition .wp-condition-box > li > .lg-label {
   position: absolute;
 }
-.lg-condition .lg-condition-box .lg-condition-group {
+.wp-condition .wp-condition-box .wp-condition-group {
   line-height: 30px;
 }
-.lg-condition .lg-condition-box span {
+.wp-condition .wp-condition-box span {
   margin-right: 5px;
+  color: #999;
 }
-.lg-condition .lg-condition-box label {
+.wp-condition .wp-condition-box label {
   text-align: right;
   line-height: 30px;
   width: 100px;
 }
-.lg-condition .lg-condition-box .lg-radio label,
-.lg-condition .lg-condition-box .lg-checkbox label,
-.lg-condition .lg-condition-box .lg-radio-plain label,
-.lg-condition .lg-condition-box .lg-checkbox-plain label {
+.wp-condition .wp-condition-box .lg-radio label,
+.wp-condition .wp-condition-box .lg-checkbox label,
+.wp-condition .wp-condition-box .lg-radio-plain label,
+.wp-condition .wp-condition-box .lg-checkbox-plain label {
   color: #5986e1;
   display: inline-block;
   line-height: 30px;
   margin: 0 5px;
   cursor: pointer;
 }
-.lg-condition .lg-condition-box .lg-radio input[type='radio']:checked + label,
-.lg-condition .lg-condition-box .lg-checkbox input[type='checkbox']:checked + label {
+.wp-condition .wp-condition-box .lg-radio input[type='radio']:checked + label,
+.wp-condition .wp-condition-box .lg-checkbox input[type='checkbox']:checked + label {
   color: #ff8447;
 }
-.lg-condition .lg-condition-box .lg-radio input[type='radio']:checked + label:after,
-.lg-condition .lg-condition-box .lg-checkbox input[type='checkbox']:checked + label:after {
+.wp-condition .wp-condition-box .lg-radio input[type='radio']:checked + label:after,
+.wp-condition .wp-condition-box .lg-checkbox input[type='checkbox']:checked + label:after {
   background-color: #ff8447;
 }
-.lg-condition .lg-condition-box .lg-radio input[type='radio']:checked + label:before,
-.lg-condition .lg-condition-box .lg-checkbox input[type='checkbox']:checked + label:before {
+.wp-condition .wp-condition-box .lg-radio input[type='radio']:checked + label:before,
+.wp-condition .wp-condition-box .lg-checkbox input[type='checkbox']:checked + label:before {
   border-color: #ff8447;
 }
-.lg-condition .lg-condition-box .lg-checkbox input[type='checkbox']:checked + label:before {
+.wp-condition .wp-condition-box .lg-checkbox input[type='checkbox']:checked + label:before {
   background-color: #ff8447;
 }
-.lg-condition .lg-condition-box .lg-radio-plain input[type='radio']:checked + label,
-.lg-condition .lg-condition-box .lg-checkbox-plain input[type='checkbox']:checked + label {
+.wp-condition .wp-condition-box .lg-radio-plain input[type='radio']:checked + label,
+.wp-condition .wp-condition-box .lg-checkbox-plain input[type='checkbox']:checked + label {
   color: #ff8447;
 }
+.wp-condition .wp-condition-box *[class^='lg-btn'] {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 /* 筛选框 */
-/* 弹窗 */

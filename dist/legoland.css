@@ -3800,12 +3800,16 @@ input:focus + .lg-error-b {
   color: #5986e1;
 }
 /* 面包屑 */
-.lg-form-line {
+.lg-form-line,
+.lg-form-block,
+.lg-form-box {
   margin-top: 10px;
   padding-left: 100px;
   position: relative;
 }
-.lg-form-line label {
+.lg-form-line label,
+.lg-form-block label,
+.lg-form-box label {
   width: 100px;
   position: absolute;
   top: 0;
@@ -3813,15 +3817,21 @@ input:focus + .lg-error-b {
   line-height: 30px;
   text-align: right;
 }
-.lg-form-line input + span {
+.lg-form-line input + span,
+.lg-form-block input + span,
+.lg-form-box input + span {
   margin-right: 5px;
 }
-.lg-form-line label + span {
+.lg-form-line label + span,
+.lg-form-block label + span,
+.lg-form-box label + span {
   line-height: 30px;
   margin-left: 5px;
   display: inline-block;
 }
-.lg-form-line *[class^='lg-btn'] {
+.lg-form-line *[class^='lg-btn'],
+.lg-form-block *[class^='lg-btn'],
+.lg-form-box *[class^='lg-btn'] {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -3830,3 +3840,88 @@ select {
   margin-bottom: 5px;
 }
 /* 表单 */
+.lg-condition {
+  padding: 0 10px;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  background-color: #f8f8f8;
+}
+.lg-condition .lg-condition-box,
+.lg-condition .lg-condition-block {
+  border-top: 1px solid #e1e1e1;
+  padding: 10px 0;
+}
+.lg-condition .lg-condition-box:first-child,
+.lg-condition .lg-condition-block:first-child {
+  border-top: none;
+}
+.lg-condition .lg-condition-box > li,
+.lg-condition .lg-condition-block > li {
+  padding: 5px 0;
+}
+.lg-condition .lg-condition-box > li > .lg-label,
+.lg-condition .lg-condition-block > li > .lg-label {
+  position: absolute;
+}
+.lg-condition .lg-condition-box .wp-condition-group,
+.lg-condition .lg-condition-block .wp-condition-group {
+  line-height: 30px;
+}
+.lg-condition .lg-condition-box span,
+.lg-condition .lg-condition-block span {
+  margin-right: 5px;
+  color: #999;
+}
+.lg-condition .lg-condition-box label,
+.lg-condition .lg-condition-block label {
+  text-align: right;
+  line-height: 30px;
+  width: 100px;
+}
+.lg-condition .lg-condition-box .lg-radio label,
+.lg-condition .lg-condition-block .lg-radio label,
+.lg-condition .lg-condition-box .lg-checkbox label,
+.lg-condition .lg-condition-block .lg-checkbox label,
+.lg-condition .lg-condition-box .lg-radio-plain label,
+.lg-condition .lg-condition-block .lg-radio-plain label,
+.lg-condition .lg-condition-box .lg-checkbox-plain label,
+.lg-condition .lg-condition-block .lg-checkbox-plain label {
+  color: #5986e1;
+  display: inline-block;
+  line-height: 30px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.lg-condition .lg-condition-box .lg-radio input[type='radio']:checked + label,
+.lg-condition .lg-condition-block .lg-radio input[type='radio']:checked + label,
+.lg-condition .lg-condition-box .lg-checkbox input[type='checkbox']:checked + label,
+.lg-condition .lg-condition-block .lg-checkbox input[type='checkbox']:checked + label {
+  color: #ff8447;
+}
+.lg-condition .lg-condition-box .lg-radio input[type='radio']:checked + label:after,
+.lg-condition .lg-condition-block .lg-radio input[type='radio']:checked + label:after,
+.lg-condition .lg-condition-box .lg-checkbox input[type='checkbox']:checked + label:after,
+.lg-condition .lg-condition-block .lg-checkbox input[type='checkbox']:checked + label:after {
+  background-color: #ff8447;
+}
+.lg-condition .lg-condition-box .lg-radio input[type='radio']:checked + label:before,
+.lg-condition .lg-condition-block .lg-radio input[type='radio']:checked + label:before,
+.lg-condition .lg-condition-box .lg-checkbox input[type='checkbox']:checked + label:before,
+.lg-condition .lg-condition-block .lg-checkbox input[type='checkbox']:checked + label:before {
+  border-color: #ff8447;
+}
+.lg-condition .lg-condition-box .lg-checkbox input[type='checkbox']:checked + label:before,
+.lg-condition .lg-condition-block .lg-checkbox input[type='checkbox']:checked + label:before {
+  background-color: #ff8447;
+}
+.lg-condition .lg-condition-box .lg-radio-plain input[type='radio']:checked + label,
+.lg-condition .lg-condition-block .lg-radio-plain input[type='radio']:checked + label,
+.lg-condition .lg-condition-box .lg-checkbox-plain input[type='checkbox']:checked + label,
+.lg-condition .lg-condition-block .lg-checkbox-plain input[type='checkbox']:checked + label {
+  color: #ff8447;
+}
+.lg-condition .lg-condition-box *[class^='lg-btn'],
+.lg-condition .lg-condition-block *[class^='lg-btn'] {
+  margin-top: 0;
+  margin-bottom: 0;
+}

@@ -1,4 +1,4 @@
-.lg-form-line {
+.lg-form-line, .lg-form-block, .lg-form-box {
     margin-top: 10px;
     padding-left: 100px;
     position: relative;

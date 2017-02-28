@@ -1,7 +1,7 @@
 {
   "name": "legoland",
   "desc": "适用于管理后台的前端css框架",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-concat": "^1.0.1",

@@ -3,7 +3,7 @@
     background-color: @color_border;
     color:@color_text;
     padding:4px 12px;
-    margin-right: 5px;
+    margin-right: 15px;
     cursor: pointer;
     display: inline;
     font-size: @font_size_M;

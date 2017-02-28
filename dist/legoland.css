@@ -105,10 +105,10 @@ span {
 .icon-upfn:before {
   content: "\e62c";
 }
-.icon-yuanxingjiantoushang:before {
+.icon-arrow-up-o:before {
   content: "\e641";
 }
-.icon-yuanxingjiantouxia:before {
+.icon-arrow-down-o:before {
   content: "\e642";
 }
 .icon-jiantou:before {
@@ -161,6 +161,9 @@ span {
 }
 .icon-squarecheck:before {
   content: "\e66e";
+}
+.icon-edit:before {
+  content: "\e600";
 }
 /* 图标 */
 .lg-color-main {
@@ -1871,7 +1874,7 @@ input[type='radio'] {
   background-color: #e1e1e1;
   color: #666;
   padding: 4px 12px;
-  margin-right: 5px;
+  margin-right: 15px;
   cursor: pointer;
   display: inline;
   font-size: 14px;
@@ -1957,8 +1960,7 @@ input[type='radio'] {
 /* 切换页 */
 /* toast & bubble & error & progress*/
 /* toast */
-.lg-toast,
-.lg-bubble {
+.lg-toast {
   display: inline-block;
   max-width: 232px;
   padding: 15px 20px;
@@ -1968,17 +1970,45 @@ input[type='radio'] {
   background-color: white;
 }
 /* bubble */
-.lg-bubble {
+.lg-toast,
+.lg-bubble,
+.lg-bubble-top,
+.lg-bubble-bottom {
+  display: inline-block;
+  max-width: 232px;
+  padding: 15px 20px;
+  margin: 10px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 12px 2px #e1e1e1;
+  background-color: white;
+}
+.lg-bubble,
+.lg-bubble-top {
   color: #ff8447;
   position: relative;
   box-shadow: 4px 4px 14px 1px #e1e1e1;
 }
-.lg-bubble:after {
+.lg-bubble:after,
+.lg-bubble-top:after {
   content: '';
   border: 8px solid transparent;
   border-top: 8px solid white;
   position: absolute;
   bottom: -16px;
+  right: 50%;
+  margin-right: -8px;
+}
+.lg-bubble-bottom {
+  color: #ff8447;
+  position: relative;
+  box-shadow: -4px -4px 14px 1px #e1e1e1;
+}
+.lg-bubble-bottom:after {
+  content: '';
+  border: 8px solid transparent;
+  border-bottom: 8px solid white;
+  position: absolute;
+  top: -15px;
   right: 50%;
   margin-right: -8px;
 }
@@ -3581,10 +3611,13 @@ input:focus + .lg-error-b {
   margin: 0 5px;
   color: #f8f8f8;
 }
+.lg-table thead tr.lg-table-tr th {
+  border: 1px solid white;
+}
 .lg-table tr {
   border: none;
 }
-.lg-table tr:nth-child(2n) {
+.lg-table tbody tr:nth-child(2n) {
   background-color: #f8f8f8;
 }
 .lg-table td {
@@ -3800,12 +3833,17 @@ input:focus + .lg-error-b {
   color: #5986e1;
 }
 /* 面包屑 */
-.lg-form-line {
-  margin-top: 10px;
+.lg-form-line,
+.lg-form-block,
+.lg-form-box {
+  margin-top: 5px;
   padding-left: 100px;
   position: relative;
+  min-height: 30px;
 }
-.lg-form-line label {
+.lg-form-line label,
+.lg-form-block label,
+.lg-form-box label {
   width: 100px;
   position: absolute;
   top: 0;
@@ -3813,20 +3851,115 @@ input:focus + .lg-error-b {
   line-height: 30px;
   text-align: right;
 }
-.lg-form-line input + span {
+.lg-form-line input + span,
+.lg-form-block input + span,
+.lg-form-box input + span {
   margin-right: 5px;
 }
-.lg-form-line label + span {
+.lg-form-line label + span,
+.lg-form-block label + span,
+.lg-form-box label + span {
   line-height: 30px;
   margin-left: 5px;
   display: inline-block;
 }
-.lg-form-line *[class^='lg-btn'] {
+.lg-form-line *[class^='lg-btn'],
+.lg-form-block *[class^='lg-btn'],
+.lg-form-box *[class^='lg-btn'] {
   margin-top: 0;
   margin-bottom: 0;
 }
-input[type='text'],
-select {
+.lg-form-line input[type='text'],
+.lg-form-block input[type='text'],
+.lg-form-box input[type='text'],
+.lg-form-line select,
+.lg-form-block select,
+.lg-form-box select {
   margin-bottom: 5px;
 }
 /* 表单 */
+.lg-condition {
+  padding: 0 10px;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  background-color: #f8f8f8;
+}
+.lg-condition .lg-condition-box,
+.lg-condition .lg-condition-block {
+  border-top: 1px solid #e1e1e1;
+  padding: 10px 0;
+}
+.lg-condition .lg-condition-box:first-child,
+.lg-condition .lg-condition-block:first-child {
+  border-top: none;
+}
+.lg-condition .lg-condition-box > li,
+.lg-condition .lg-condition-block > li {
+  padding: 5px 0;
+}
+.lg-condition .lg-condition-box > li > .lg-label,
+.lg-condition .lg-condition-block > li > .lg-label {
+  position: absolute;
+}
+.lg-condition .lg-condition-box .wp-condition-group,
+.lg-condition .lg-condition-block .wp-condition-group {
+  line-height: 30px;
+}
+.lg-condition .lg-condition-box span,
+.lg-condition .lg-condition-block span {
+  margin-right: 5px;
+  color: #999;
+}
+.lg-condition .lg-condition-box label,
+.lg-condition .lg-condition-block label {
+  text-align: right;
+  line-height: 30px;
+  width: 100px;
+}
+.lg-condition .lg-condition-box .lg-radio label,
+.lg-condition .lg-condition-block .lg-radio label,
+.lg-condition .lg-condition-box .lg-checkbox label,
+.lg-condition .lg-condition-block .lg-checkbox label,
+.lg-condition .lg-condition-box .lg-radio-plain label,
+.lg-condition .lg-condition-block .lg-radio-plain label,
+.lg-condition .lg-condition-box .lg-checkbox-plain label,
+.lg-condition .lg-condition-block .lg-checkbox-plain label {
+  color: #5986e1;
+  display: inline-block;
+  line-height: 30px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.lg-condition .lg-condition-box .lg-radio input[type='radio']:checked + label,
+.lg-condition .lg-condition-block .lg-radio input[type='radio']:checked + label,
+.lg-condition .lg-condition-box .lg-checkbox input[type='checkbox']:checked + label,
+.lg-condition .lg-condition-block .lg-checkbox input[type='checkbox']:checked + label {
+  color: #ff8447;
+}
+.lg-condition .lg-condition-box .lg-radio input[type='radio']:checked + label:after,
+.lg-condition .lg-condition-block .lg-radio input[type='radio']:checked + label:after,
+.lg-condition .lg-condition-box .lg-checkbox input[type='checkbox']:checked + label:after,
+.lg-condition .lg-condition-block .lg-checkbox input[type='checkbox']:checked + label:after {
+  background-color: #ff8447;
+}
+.lg-condition .lg-condition-box .lg-radio input[type='radio']:checked + label:before,
+.lg-condition .lg-condition-block .lg-radio input[type='radio']:checked + label:before,
+.lg-condition .lg-condition-box .lg-checkbox input[type='checkbox']:checked + label:before,
+.lg-condition .lg-condition-block .lg-checkbox input[type='checkbox']:checked + label:before {
+  border-color: #ff8447;
+}
+.lg-condition .lg-condition-box .lg-checkbox input[type='checkbox']:checked + label:before,
+.lg-condition .lg-condition-block .lg-checkbox input[type='checkbox']:checked + label:before {
+  background-color: #ff8447;
+}
+.lg-condition .lg-condition-box .lg-radio-plain input[type='radio']:checked + label,
+.lg-condition .lg-condition-block .lg-radio-plain input[type='radio']:checked + label,
+.lg-condition .lg-condition-box .lg-checkbox-plain input[type='checkbox']:checked + label,
+.lg-condition .lg-condition-block .lg-checkbox-plain input[type='checkbox']:checked + label {
+  color: #ff8447;
+}
+.lg-condition .lg-condition-box *[class^='lg-btn'],
+.lg-condition .lg-condition-block *[class^='lg-btn'] {
+  margin-top: 0;
+  margin-bottom: 0;
+}

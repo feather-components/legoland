@@ -56,12 +56,14 @@
   padding: 10px;
   border-radius: 3px;
   min-height: 500px;
+  overflow: hidden;
 }
 .wp-page .page-head {
   clear: both;
   margin: 0 10px;
   padding: 5px 0;
   border-bottom: 1px solid #464e78;
+  min-height: 40px;
 }
 .wp-page .page-body {
   clear: both;
@@ -204,7 +206,6 @@
 }
 /* 导航 */
 .wp-sidebar {
-  height: 100%;
   max-height: 100%;
   position: relative;
   background-color: #f8f8f8;

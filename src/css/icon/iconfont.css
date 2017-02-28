@@ -15,7 +15,7 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-
+ 
 .icon-sousuo:before { content: "\e60a"; }
 .icon-yonghu:before { content: "\e60b"; } 
 .icon-roundadd:before { content: "\e670"; }
@@ -28,8 +28,8 @@
 .icon-zuosanjiao:before { content: "\e646"; }
 .icon-yousanjiao:before { content: "\e648"; } 
 .icon-upfn:before { content: "\e62c"; } 
-.icon-yuanxingjiantoushang:before { content: "\e641"; }
-.icon-yuanxingjiantouxia:before { content: "\e642"; }  
+.icon-arrow-up-o:before { content: "\e641"; }
+.icon-arrow-down-o:before { content: "\e642"; }  
 .icon-jiantou:before { content: "\e62f"; } 
 .icon-check:before { content: "\e65d"; }
 .icon-close:before { content: "\e65e"; }
@@ -47,3 +47,4 @@
 .icon-squarecheckfill:before { content: "\e66c"; }
 .icon-square:before { content: "\e66d"; }
 .icon-squarecheck:before { content: "\e66e"; }
+.icon-edit:before { content: "\e600"; }

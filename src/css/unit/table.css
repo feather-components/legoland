@@ -4,21 +4,21 @@
     line-height: 36px;
     text-align: center;
     color: @color_text;
-    thead { 
+    thead {
         tr {
-            background-color: @color_sys ; 
+            background-color: @color_sys ;
             color: white;
-            &.lg-color-danger-bg{
-                background-color: @color_danger; 
+            &.lg-color-danger-bg {
+                background-color: @color_danger;
             }
-            &.lg-color-success-bg{
-                background-color: @color_success; 
+            &.lg-color-success-bg {
+                background-color: @color_success;
             }
-            &.lg-color-plain-bg{
-                background-color: @color_border; 
+            &.lg-color-plain-bg {
+                background-color: @color_border;
             }
-            &.lg-color-highlight-bg{
-                background-color: @color_highlight; 
+            &.lg-color-highlight-bg {
+                background-color: @color_highlight;
             }
         }
         th {
@@ -51,19 +51,22 @@
                 }
             }
         }
+        tr.lg-table-tr th{
+            border:1px solid white;
+        }
     }
-    tr{
-        border:none;
+    tr {
+        border: none;
     }
-    tr:nth-child(2n) {
-        background-color: @color_bglight;
+    tbody {
+        tr:nth-child(2n) {
+            background-color: @color_bglight;
+        }
     }
     td {
         border: none;
-    } 
+    }
     a.lg-dropdown {
-        color: @color_text;    
+        color: @color_text;
     }
 }
-
-

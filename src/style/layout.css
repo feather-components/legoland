@@ -36,12 +36,14 @@
     padding:10px;
     border-radius: 3px;
     min-height: 500px; 
+    overflow: hidden;
 
     .page-head{
         clear: both;
         margin:0 10px;
         padding:5px 0;
         border-bottom:1px solid @color_sys;
+        min-height: 40px;
     }
     .page-body{
         clear: both;

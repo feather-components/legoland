@@ -19,6 +19,11 @@ module.exports = function(grunt) {
                     cwd: 'examples',
                     src: '*.*',
                     dest: 'test/examples'
+                }, {
+                    expand: true,
+                    cwd: 'src/js',
+                    src: '*.*',
+                    dest: 'test/js'
                 }]
             },
             release: {
@@ -37,6 +42,11 @@ module.exports = function(grunt) {
                     cwd: 'examples',
                     src: '*.*',
                     dest: 'dist/examples'
+                }, {
+                    expand: true,
+                    cwd: 'src/js',
+                    src: '*.*',
+                    dest: 'dist/js'
                 }]
             },
         },

@@ -1,11 +1,10 @@
-/* 基础模块 */
-@import (less) 'css/structure/var.css';/* 变量 */  
+@import (less) 'css/structure/var.css';
 
-/* 结构模块 */
-@import (less) 'style/layout.css';/* 框架结构 */  
+
+@import (less) 'style/layout.css';
  
- 
-/* 功能组件模块 */
-@import (less) 'style/nav.css';/* 导航 */ 
-@import (less) 'style/sidebar.css';/* 侧边栏 */ 
-@import (less) 'style/condition.css';/* 筛选框 */  
+
+@import (less) 'style/nav.css';
+@import (less) 'style/sidebar.css'; 
+@import (less) 'style/scrollbar.css';  
+@import (less) 'style/condition.css'; 

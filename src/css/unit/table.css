@@ -4,6 +4,7 @@
     line-height: 36px;
     text-align: center;
     color: @color_text;
+
     thead {
         tr {
             background-color: @color_sys ;
@@ -65,8 +66,13 @@
     }
     td {
         border: none;
+        font-size: 12px;
     }
     a.lg-dropdown {
         color: @color_text;
     }
+}
+
+.lg-table-scroll{
+    overflow-x:auto; 
 }

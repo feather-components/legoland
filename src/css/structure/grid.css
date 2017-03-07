@@ -33,3 +33,9 @@
 }
 
 .lg-grid-loop(@column);
+
+
+.lg-grid-blank{
+    display: block;
+    height: 10px;
+}

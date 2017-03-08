@@ -1,4 +1,3 @@
-/* 基础模块 */
 /* ------- color -------*/
 /*蓝*/
 /*深蓝*/
@@ -18,7 +17,6 @@
 /* 导航高度 */
 /* 菜单宽度 */
 /* 导航文字颜色 */
-/* 变量 */
 /*  base 公共基础 */
 html,
 body {
@@ -53,7 +51,6 @@ span {
   color: #666;
   font-size: 14px;
 }
-/* 全局设置 */
 @font-face {
   font-family: "iconfont";
   src: url('iconfont.eot?t=1477549960');
@@ -165,7 +162,6 @@ span {
 .icon-edit:before {
   content: "\e600";
 }
-/* 图标 */
 .lg-color-main {
   color: #5986e1;
 }
@@ -230,7 +226,6 @@ span {
 .lg-color-bg {
   background-color: #ededed;
 }
-/* 颜色 */
 .lg-fn-hide,
 .hide {
   display: none;
@@ -277,8 +272,6 @@ span {
   width: 100%;
   height: 50px;
 }
-/* 功能 */
-/* 结构模块 */
 /* grid 栅格 */
 .lg-grid-container {
   padding: 15px;
@@ -429,8 +422,10 @@ span {
 .lg-grid-offset-12 {
   margin-left: 100%;
 }
-/* 栅格 */
-/* 元件 */
+.lg-grid-blank {
+  display: block;
+  height: 10px;
+}
 .lg-title,
 .lg-title-m,
 .lg-title-r {
@@ -463,7 +458,6 @@ span {
   line-height: 18px;
   color: #999;
 }
-/* 文字内容 */
 .lg-btn,
 .lg-btn-large,
 .lg-btn-small,
@@ -555,6 +549,15 @@ span {
   border-color: #2e67d9;
   color: white;
 }
+.lg-btn .iconfont,
+.lg-btn-large .iconfont,
+.lg-btn-small .iconfont,
+.lg-btn-o .iconfont,
+.lg-btn-o-large .iconfont,
+.lg-btn-o-small .iconfont {
+  font-size: 14px;
+  margin-right: 5px;
+}
 .lg-btn-large,
 .lg-btn-large-o,
 .lg-btn-large-main,
@@ -575,7 +578,10 @@ span {
   min-width: 176px;
 }
 .lg-btn-large:before {
-  font-size: 16px;
+  font-size: 20px;
+}
+.lg-btn-large .iconfont {
+  font-size: 20px;
 }
 .lg-btn-small,
 .lg-btn-small-o,
@@ -599,6 +605,9 @@ span {
   min-width: 66px;
 }
 .lg-btn-small:before {
+  font-size: 12px;
+}
+.lg-btn-small .iconfont {
   font-size: 12px;
 }
 /* o */
@@ -1537,7 +1546,6 @@ span {
   background-color: white !important;
   color: #e1e1e1 !important;
 }
-/* 按钮 */
 /* text + textarea + select + checkbox + radio + switchbox */
 input,
 select,
@@ -1868,7 +1876,6 @@ input[type='radio'] {
 .lg-switch .lg-main:checked + label + label {
   background-color: #464e78 !important;
 }
-/* 输入框等 */
 .lg-tag {
   border-radius: 13px;
   background-color: #e1e1e1;
@@ -1911,7 +1918,6 @@ input[type='radio'] {
 .lg-tag-add .icon-cuowu {
   color: #ff8447;
 }
-/* 标签 */
 .lg-tab {
   display: block;
   list-style: none;
@@ -1940,24 +1946,28 @@ input[type='radio'] {
 .lg-tab .lg-tab-li:first-child:after {
   height: 0;
 }
-.lg-tab .lg-active {
+.lg-tab .lg-active,
+.lg-tab .lg-fn-active,
+.lg-tab .active {
   background-color: white;
   border: 1px solid #5986e1;
   border-bottom: none;
   color: #6973a9;
   font-weight: bold;
 }
-.lg-tab .lg-active:after {
+.lg-tab .lg-active:after,
+.lg-tab .lg-fn-active:after,
+.lg-tab .active:after {
   height: 0;
 }
 .lg-tab .lg-active + .lg-tab-li:after {
   height: 0;
 }
-.lg-tab-bd {
+.lg-tab-body {
   border: 1px solid #5986e1;
   border-top: none;
+  padding: 5px;
 }
-/* 切换页 */
 /* toast & bubble & error & progress*/
 /* toast */
 .lg-toast {
@@ -2030,1534 +2040,19 @@ input:focus + .lg-error-b {
 /* progress */
 .lg-progress {
   height: 30px;
-  min-width: 200px;
-  margin: 0 20px 25px 20px;
+  width: 200px;
+  overflow: hidden;
+  margin: 0 20px;
   display: inline-block;
   position: relative;
-}
-.lg-progress .lg-0 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-0:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 0%;
-}
-.lg-progress .lg-1 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-1:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 1%;
-}
-.lg-progress .lg-2 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-2:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 2%;
-}
-.lg-progress .lg-3 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-3:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 3%;
-}
-.lg-progress .lg-4 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-4:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 4%;
-}
-.lg-progress .lg-5 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-5:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 5%;
-}
-.lg-progress .lg-6 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-6:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 6%;
-}
-.lg-progress .lg-7 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-7:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 7%;
-}
-.lg-progress .lg-8 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-8:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 8%;
-}
-.lg-progress .lg-9 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-9:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 9%;
-}
-.lg-progress .lg-10 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-10:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 10%;
-}
-.lg-progress .lg-11 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-11:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 11%;
-}
-.lg-progress .lg-12 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-12:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 12%;
-}
-.lg-progress .lg-13 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-13:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 13%;
-}
-.lg-progress .lg-14 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-14:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 14%;
-}
-.lg-progress .lg-15 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-15:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 15%;
-}
-.lg-progress .lg-16 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-16:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 16%;
-}
-.lg-progress .lg-17 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-17:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 17%;
-}
-.lg-progress .lg-18 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-18:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 18%;
-}
-.lg-progress .lg-19 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-19:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 19%;
-}
-.lg-progress .lg-20 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-20:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 20%;
-}
-.lg-progress .lg-21 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-21:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 21%;
-}
-.lg-progress .lg-22 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-22:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 22%;
-}
-.lg-progress .lg-23 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-23:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 23%;
-}
-.lg-progress .lg-24 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-24:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 24%;
-}
-.lg-progress .lg-25 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-25:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 25%;
-}
-.lg-progress .lg-26 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-26:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 26%;
-}
-.lg-progress .lg-27 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-27:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 27%;
-}
-.lg-progress .lg-28 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-28:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 28%;
-}
-.lg-progress .lg-29 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-29:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 29%;
-}
-.lg-progress .lg-30 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-30:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 30%;
-}
-.lg-progress .lg-31 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-31:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 31%;
-}
-.lg-progress .lg-32 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-32:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 32%;
-}
-.lg-progress .lg-33 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-33:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 33%;
-}
-.lg-progress .lg-34 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-34:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 34%;
-}
-.lg-progress .lg-35 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-35:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 35%;
-}
-.lg-progress .lg-36 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-36:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 36%;
-}
-.lg-progress .lg-37 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-37:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 37%;
-}
-.lg-progress .lg-38 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-38:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 38%;
-}
-.lg-progress .lg-39 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-39:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 39%;
-}
-.lg-progress .lg-40 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-40:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 40%;
-}
-.lg-progress .lg-41 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-41:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 41%;
-}
-.lg-progress .lg-42 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-42:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 42%;
-}
-.lg-progress .lg-43 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-43:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 43%;
-}
-.lg-progress .lg-44 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-44:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 44%;
-}
-.lg-progress .lg-45 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-45:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 45%;
-}
-.lg-progress .lg-46 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-46:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 46%;
-}
-.lg-progress .lg-47 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-47:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 47%;
-}
-.lg-progress .lg-48 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-48:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 48%;
-}
-.lg-progress .lg-49 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-49:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 49%;
-}
-.lg-progress .lg-50 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-50:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 50%;
-}
-.lg-progress .lg-51 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-51:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 51%;
-}
-.lg-progress .lg-52 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-52:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 52%;
-}
-.lg-progress .lg-53 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-53:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 53%;
-}
-.lg-progress .lg-54 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-54:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 54%;
-}
-.lg-progress .lg-55 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-55:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 55%;
-}
-.lg-progress .lg-56 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-56:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 56%;
-}
-.lg-progress .lg-57 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-57:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 57%;
-}
-.lg-progress .lg-58 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-58:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 58%;
-}
-.lg-progress .lg-59 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-59:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 59%;
-}
-.lg-progress .lg-60 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-60:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 60%;
-}
-.lg-progress .lg-61 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-61:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 61%;
-}
-.lg-progress .lg-62 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-62:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 62%;
-}
-.lg-progress .lg-63 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-63:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 63%;
-}
-.lg-progress .lg-64 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-64:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 64%;
-}
-.lg-progress .lg-65 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-65:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 65%;
-}
-.lg-progress .lg-66 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-66:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 66%;
-}
-.lg-progress .lg-67 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-67:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 67%;
-}
-.lg-progress .lg-68 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-68:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 68%;
-}
-.lg-progress .lg-69 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-69:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 69%;
-}
-.lg-progress .lg-70 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-70:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 70%;
-}
-.lg-progress .lg-71 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-71:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 71%;
-}
-.lg-progress .lg-72 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-72:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 72%;
-}
-.lg-progress .lg-73 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-73:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 73%;
-}
-.lg-progress .lg-74 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-74:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 74%;
-}
-.lg-progress .lg-75 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-75:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 75%;
-}
-.lg-progress .lg-76 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-76:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 76%;
-}
-.lg-progress .lg-77 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-77:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 77%;
-}
-.lg-progress .lg-78 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-78:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 78%;
-}
-.lg-progress .lg-79 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-79:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 79%;
-}
-.lg-progress .lg-80 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-80:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 80%;
-}
-.lg-progress .lg-81 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-81:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 81%;
-}
-.lg-progress .lg-82 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-82:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 82%;
-}
-.lg-progress .lg-83 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-83:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 83%;
-}
-.lg-progress .lg-84 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-84:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 84%;
-}
-.lg-progress .lg-85 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-85:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 85%;
-}
-.lg-progress .lg-86 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-86:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 86%;
-}
-.lg-progress .lg-87 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-87:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 87%;
-}
-.lg-progress .lg-88 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-88:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 88%;
-}
-.lg-progress .lg-89 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-89:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 89%;
-}
-.lg-progress .lg-90 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-90:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 90%;
-}
-.lg-progress .lg-91 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-91:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 91%;
-}
-.lg-progress .lg-92 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-92:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 92%;
-}
-.lg-progress .lg-93 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-93:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 93%;
-}
-.lg-progress .lg-94 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-94:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 94%;
-}
-.lg-progress .lg-95 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-95:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 95%;
-}
-.lg-progress .lg-96 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-96:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 96%;
-}
-.lg-progress .lg-97 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-97:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 97%;
-}
-.lg-progress .lg-98 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-98:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 98%;
-}
-.lg-progress .lg-99 {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
   border-radius: 15px;
   background-color: #ededed;
-}
-.lg-progress .lg-99:after {
-  content: '';
-  background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 99%;
 }
-.lg-progress .lg-100 {
-  position: relative;
-  overflow: hidden;
+.lg-progress > * {
+  display: block;
   height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #ededed;
-}
-.lg-progress .lg-100:after {
-  content: '';
   background-color: #5986e1;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-}
-.lg-progress > label {
-  position: absolute;
-  bottom: -20px;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 0;
 }
-/* 提示 */
 .lg-table {
   width: 100%;
   border-collapse: collapse;
@@ -3622,11 +2117,14 @@ input:focus + .lg-error-b {
 }
 .lg-table td {
   border: none;
+  font-size: 12px;
 }
 .lg-table a.lg-dropdown {
   color: #666;
 }
-/* 表格 */
+.lg-table-scroll {
+  overflow-x: auto;
+}
 .lg-dropdown {
   position: relative;
   display: inline-block;
@@ -3637,6 +2135,11 @@ input:focus + .lg-error-b {
   position: absolute;
   top: 100%;
   width: auto;
+  overflow: hidden;
+}
+.lg-dropdown > ul li {
+  width: 100%;
+  box-sizing: border-box;
 }
 .lg-dropdown:hover > ul {
   display: block;
@@ -3663,7 +2166,6 @@ input:focus + .lg-error-b {
 .lg-dropdown:hover > ul li:last-child {
   border-bottom: none;
 }
-/* 下拉 */
 .lg-tree {
   height: 100%;
   max-height: 100%;
@@ -3776,27 +2278,24 @@ input:focus + .lg-error-b {
 .lg-tree > li > ul > li > ul > li > ul > li > ul > li > ul > li > a > i:after {
   font-size: 10.62882px;
 }
-/* 树 */
-.lg-scrollbar::-webkit-scrollbar {
+.lg-table-scroll::-webkit-scrollbar {
   border: 1px solid #e1e1e1;
-  border-top: none;
-  border-bottom: none;
+  border: none;
   width: 8px;
+  height: 8px;
 }
-.lg-scrollbar::-webkit-scrollbar-thumb {
+.lg-table-scroll::-webkit-scrollbar-thumb {
   background-color: #c1c1c1;
   border-radius: 10px;
 }
-.lg-scrollbar::-webkit-scrollbar-button:start:decrement,
-.lg-scrollbar::-webkit-scrollbar-button:end:increment {
+.lg-table-scroll::-webkit-scrollbar-button:start:decrement,
+.lg-table-scroll::-webkit-scrollbar-button:end:increment {
   display: block;
 }
-.lg-scrollbar::-webkit-scrollbar-button:end:decrement,
-.lg-scrollbar::-webkit-scrollbar-button:start:increment {
+.lg-table-scroll::-webkit-scrollbar-button:end:decrement,
+.lg-table-scroll::-webkit-scrollbar-button:start:increment {
   display: none;
 }
-/* 滚动条 */
-/* 功能组件模块 */
 .lg-breadcrumb {
   width: 100%;
   margin: 0;
@@ -3832,7 +2331,6 @@ input:focus + .lg-error-b {
 .lg-breadcrumb > * a:hover {
   color: #5986e1;
 }
-/* 面包屑 */
 .lg-form-line,
 .lg-form-block,
 .lg-form-box {
@@ -3877,7 +2375,11 @@ input:focus + .lg-error-b {
 .lg-form-box select {
   margin-bottom: 5px;
 }
-/* 表单 */
+.lg-form-line span,
+.lg-form-block span,
+.lg-form-box span {
+  word-break: break-all;
+}
 .lg-condition {
   padding: 0 10px;
   border-top: 1px solid #e1e1e1;

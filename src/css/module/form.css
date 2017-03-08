@@ -29,4 +29,8 @@
     select {
         margin-bottom: 5px;
     }
+
+    span{
+        word-break:break-all;
+    }
 }

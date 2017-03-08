@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legoland</title>
+    <link rel="shortcut icon" type="image/x-icon" href="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+    <link href="../legoland.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wp-wrapper">
+        <div class="head">
+            <div class="wp-nav">
+                <div class="wp-nav-hd"><span class='wp-nav-title'>Legoland Admin</span></div>
+                <div class="wp-nav-by">
+                    <ul>
+                        <li><a>Sunday</a></li>
+                        <li class="active"><a>Monday</a></li>
+                        <li><a>Tuesday</a></li>
+                        <li><a>Wednesday</a></li>
+                        <li><a>Thursday</a></li>
+                        <li><a>Friday</a></li>
+                        <li><a>Saturday</a></li>
+                    </ul>
+                </div>
+                <ul class="wp-nav-right">
+                    <li><a>Quit</a></li>
+                    <li><span>Admin</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-left">
+                <div class="wp-sidebar">
+                    <ul class="lg-tree">
+                        <li>
+                            <a class="wp-sidebar-leaf" href="index.html">
+                                <span>Home</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-right">
+                <div class="lg-grid-container">
+                    <div class="lg-grid-row">
+                        <ul class="lg-breadcrumb lg-grid-12">
+                            <li><a>Home</a></li>
+                            <li><a>Page</a></li>
+                            <li><a>Edit</a></li>
+                        </ul>
+                    </div>
+                    <div class="lg-grid-row">
+                        <div class="lg-grid-12">
+                            <div class="wp-page page-full">
+                                <div class="page-head">
+                                    <p class="lg-title">Edit</p>
+                                    <button class="lg-btn right">Save</button>
+                                    <button class="lg-btn-o right">Back</button>
+                                </div>
+                                <div class="page-body">
+                                    <form class="lg-grid-row">
+                                        <div class="lg-grid-12">
+                                            <div class="lg-form-line">
+                                                <label>text：</label>
+                                                <input type="text" />
+                                                <span>-</span>
+                                                <input type="text" />
+                                                <span>￥/㎡</span>
+                                            </div>
+                                            <div class="lg-form-line">
+                                                <label>select：</label>
+                                                <select>
+                                                    <option>option1</option>
+                                                    <option selected="selected">option2</option>
+                                                    <option>option3</option>
+                                                </select>
+                                                <select>
+                                                    <option>option4</option>
+                                                    <option selected="selected">option5</option>
+                                                    <option>option6</option>
+                                                </select>
+                                            </div>
+                                            <div class="lg-form-line">
+                                                <label class="lg-require">required：</label>
+                                                <input type="text" />
+                                            </div>
+                                            <div class="lg-form-line">
+                                                <label>textarea：</label>
+                                                <textarea></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="lg-grid-6">
+                                            <div class="lg-form-line">
+                                                <label class="lg-require">textarea：</label>
+                                                <textarea></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="lg-grid-6">
+                                            <div class="lg-form-line">
+                                                <label>checkbox：</label>
+                                                <span class="lg-checkbox">
+                                                        <input type="checkbox" name="checkgroup-f" id="cg1-f"/><label for="cg1-f">High</label>
+                                                    </span>
+                                                <span class="lg-checkbox">
+                                                        <input type="checkbox" name="checkgroup-f" id="cg2-f"/><label for="cg2-f">Normal</label>
+                                                    </span>
+                                                <span class="lg-checkbox">
+                                                        <input type="checkbox" name="checkgroup-f" id="cg3-f"/><label for="cg3-f">Low</label>
+                                                    </span>
+                                            </div>
+                                            <div class="lg-form-line">
+                                                <label>radio：</label>
+                                                <span class="lg-radio">
+                                                        <input type="radio" name="radiogroup-g" id="rg2-g"/><label for="rg2-g">open</label>
+                                                    </span>
+                                                <span class="lg-radio">
+                                                        <input type="radio" name="radiogroup-g" id="rg3-g"/><label for="rg3-g">close</label>
+                                                    </span>
+                                            </div>
+                                        </div>
+                                        <div class="lg-grid-12">
+                                            <div class="lg-form-line">
+                                                <label>tag：</label>
+                                                <input type="text" placeholder="请输入标签" />
+                                                <span class="lg-tag">system</span>
+                                                <span class="lg-tag active">selected</span>
+                                                <span class="lg-tag active lg-diy">diy</span>
+                                            </div>
+                                        </div>
+                                         
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="../../node_modules/jquery/dist/jquery.js"></script>
+<script src="../js/slide.js"></script>
+<script src="../js/tree.js"></script>
+<script src="../js/sidebar.js"></script>  
+</html>

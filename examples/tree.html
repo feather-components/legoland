@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legoland</title>
+    <link rel="shortcut icon" type="image/x-icon" href="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+    <link href="../legoland.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wp-wrapper">
+        <div class="head">
+            <div class="wp-nav">
+                <div class="wp-nav-hd"><span class='wp-nav-title'>Legoland Admin</span></div>
+                <div class="wp-nav-by">
+                    <ul>
+                        <li><a>Sunday</a></li>
+                        <li class="active"><a>Monday</a></li>
+                        <li><a>Tuesday</a></li>
+                        <li><a>Wednesday</a></li>
+                        <li><a>Thursday</a></li>
+                        <li><a>Friday</a></li>
+                        <li><a>Saturday</a></li>
+                    </ul>
+                </div>
+                <ul class="wp-nav-right">
+                    <li><a>Quit</a></li>
+                    <li><span>Admin</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-left">
+                <div class="wp-sidebar">
+                    <ul class="lg-tree">
+                        <li>
+                            <a class="wp-sidebar-leaf" href="index.html">
+                                <span>Home</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-right">
+                <div class="lg-grid-container">
+                    <div class="lg-grid-row">
+                        <ul class="lg-breadcrumb lg-grid-12">
+                            <li><a>Home</a></li>
+                            <li><a>Module</a></li>
+                            <li><a>Tree</a></li>
+                        </ul>
+                    </div>
+                    <div class="lg-grid-row">
+                        <div class="lg-grid-12">
+                            <div class="wp-page page-full">
+                                <div class="page-head">
+                                    <p class="lg-title">Tree</p>
+                                </div>
+                                <div class="page-body">
+                                    <div class="lg-grid-row">
+                                        <div class="lg-grid-6">
+                                            <ul class="lg-tree">
+                                                <li>
+                                                    <a class="lg-fn-active">Organization No.1</a>
+                                                    <ul>
+                                                        <li><a>Department No.1</a></li>
+                                                        <li><a>Department No.2</a></li>
+                                                        <li><a>Department No.3</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a>Organization No.1</a>
+                                                    <ul>
+                                                        <li><a>Department No.1</a></li>
+                                                        <li><a>Department No.2</a></li>
+                                                        <li><a>Department No.3</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a>Organization No.1</a>
+                                                    <ul>
+                                                        <li><a>Department No.1</a></li>
+                                                        <li><a>Department No.2</a></li>
+                                                        <li><a>Department No.3</a></li>
+                                                    </ul>
+                                                </li> 
+                                            </ul>
+                                        </div>
+                                        <div class="lg-grid-6">
+                                            <ul class="lg-tree">
+                                                <li>
+                                                    <a style="color:red" class="lg-fn-active">Organization No.1</a>
+                                                    <ul>
+                                                        <li>
+                                                            <a style="color:red" class="lg-fn-active">Department No.1</a>
+                                                            <ul>
+                                                                <li>
+                                                                    <a style="color:red" class="lg-fn-active">Third Lvl.</a>
+                                                                    <ul>
+                                                                        <li><a>More...</a></li>
+                                                                        <li><a>More...</a></li>
+                                                                        <li><a>More...</a></li>
+                                                                        <li><a style="color:red;font-weight:bold">Yes,we are infinite</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a>Third Lvl.</a></li>
+                                                                <li><a>Third Lvl.</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a>Department No.2</a></li>
+                                                        <li><a>Department No.3</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a>Organization No.1</a>
+                                                    <ul>
+                                                        <li><a>Department No.1</a></li>
+                                                        <li><a>Department No.2</a></li>
+                                                        <li><a>Department No.3</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a>Organization No.1</a>
+                                                    <ul>
+                                                        <li><a>Department No.1</a></li>
+                                                        <li><a>Department No.2</a></li>
+                                                        <li><a>Department No.3</a></li>
+                                                    </ul>
+                                                </li> 
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="../../node_modules/jquery/dist/jquery.js"></script>
+<script src="../js/slide.js"></script>
+<script src="../js/tree.js"></script>
+<script src="../js/sidebar.js"></script>
+<script>
+    Tree.init($('.page-body'));
+</script>
+
+</html>

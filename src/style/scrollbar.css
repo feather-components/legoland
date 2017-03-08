@@ -1,14 +1,13 @@
-.lg-scrollbar(@class) { 
-    @{class} { 
+.scrollbar(@class) {
+    @{class} {
         &::-webkit-scrollbar {
             border: 1px solid @color_border;
             border: none; 
             width: 8px;
-            height: 8px;
-        }
+        } 
         &::-webkit-scrollbar-thumb { 
             background-color: #c1c1c1;
-            border-radius: 10px;             
+            border-radius: 10px;
         }
         &::-webkit-scrollbar-button:start:decrement,
         &::-webkit-scrollbar-button:end:increment
@@ -22,4 +21,4 @@
         }
     } 
 }
-.lg-scrollbar(e('.lg-table-scroll'));
+.scrollbar(e('.wp-sidebar'));

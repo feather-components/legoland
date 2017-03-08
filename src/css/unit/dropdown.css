@@ -7,6 +7,11 @@
         position: absolute;
         top: 100%;
         width: auto;
+        overflow: hidden;
+        li{
+            width: 100%;
+            box-sizing:border-box;
+        }
     }
     &:hover > ul {
         display: block;

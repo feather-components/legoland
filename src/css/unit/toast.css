@@ -68,39 +68,20 @@ input:focus + .lg-error {
 input:focus + .lg-error-b{
     visibility: hidden;
 }
-/* progress */
-.lg-progress-loop(@n, @i:0) when (@i <= @n) {
-    .lg-@{i} {
-        position: relative;
-        overflow: hidden;
-        height: 100%;
-        width: 100%;
-        border-radius: 15px;
-        background-color: @color_bg;
-        &:after{
-            content:'';
-            background-color: @color_main;
-            height: 100%;
-            position: absolute;
-            width: percentage((@i/100));
-        } 
-    }
-    .lg-progress-loop(@n, (@i + 1));
-}
+/* progress */ 
 .lg-progress{
     height: 30px;
-    min-width: 200px; 
-    margin:0 20px 25px 20px; 
+    width: 200px; 
+    overflow: hidden;
+    margin:0 20px; 
     display: inline-block; 
-    position: relative;
-    .lg-progress-loop(100);
-
-    & > label{
-        position: absolute;
-        bottom: -20px;
-        width: 100%; 
-        text-align: center;
-        margin-bottom: 0;
+    position: relative; 
+    border-radius: 15px;
+    background-color: @color_bg;
+    & > *{
+        display: block;
+        height: 100%;
+        background-color: @color_main;
     }
 }
 

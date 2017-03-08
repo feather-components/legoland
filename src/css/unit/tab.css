@@ -25,7 +25,7 @@
             height: 0;
         }
     }
-    .lg-active {
+    .lg-active,.lg-fn-active,.active {
         background-color: white;
         border: 1px solid @color_main;
         border-bottom: none;
@@ -40,7 +40,8 @@
     }
 }
 
-.lg-tab-bd {
+.lg-tab-body {
     border: 1px solid @color_main;
     border-top: none;
+    padding:5px;
 }

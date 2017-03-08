@@ -10,7 +10,7 @@
 @base_font:18;
 @font_percent:90;
 
-@level:6;
+@level:6; 
 
 
 .lg-treelevel-loop(@n, @i:1) when (@i <= @n) {     
@@ -71,7 +71,7 @@
             display: block;
         }
     }
-    .lg-treelevel-loop(@level); 
+    .lg-treelevel-loop(@level);  
 }
 
  

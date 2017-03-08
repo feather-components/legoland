@@ -29,6 +29,10 @@
         border-color:darken(@color_main,10%);
         color: white;
     } 
+    .iconfont{
+        font-size: 14px;
+        margin-right: 5px;
+    }
 }
 
   
@@ -38,8 +42,11 @@
     height: 40px; 
     min-width: 176px;
     &:before{
-        font-size: 16px;
+        font-size: 20px;
     } 
+    .iconfont{
+        font-size: 20px;
+    }
 }
 .lg-btn-small{ 
     height: 24px;
@@ -51,6 +58,9 @@
     &:before{
         font-size: 12px;
     } 
+    .iconfont{
+        font-size: 12px;
+    }
 }
 
 /* o */

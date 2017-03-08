@@ -1,26 +1,25 @@
-/* 基础模块 */
-@import (less) 'css/structure/var.css';/* 变量 */
-@import (less) 'css/structure/base.css';/* 全局设置 */
-@import (less) 'css/icon/iconfont.css';/* 图标 */
-@import (less) 'css/structure/color.css';/* 颜色 */
-@import (less) 'css/structure/fn.css';/* 功能 */
+@import (less) 'css/structure/var.css'; 
+@import (less) 'css/structure/base.css'; 
+@import (less) 'css/icon/iconfont.css'; 
+@import (less) 'css/structure/color.css'; 
+@import (less) 'css/structure/fn.css'; 
 
-/* 结构模块 */ 
-@import (less) 'css/structure/grid.css';/* 栅格 */ 
-
-/* 元件 */ 
-@import (less) 'css/unit/typography.css';/* 文字内容 */
-@import (less) 'css/unit/btn.css';/* 按钮 */
-@import (less) 'css/unit/input.css';/* 输入框等 */ 
-@import (less) 'css/unit/tag.css';/* 标签 */  
-@import (less) 'css/unit/tab.css';/* 切换页 */  
-@import (less) 'css/unit/toast.css';/* 提示 */  
-@import (less) 'css/unit/table.css';/* 表格 */ 
-@import (less) 'css/unit/dropdown.css';/* 下拉 */ 
-@import (less) 'css/unit/tree.css';/* 树 */ 
-@import (less) 'css/unit/scrollbar.css';/* 滚动条 */ 
  
-/* 功能组件模块 */ 
-@import (less) 'css/module/breadcrumb.css';/* 面包屑 */ 
-@import (less) 'css/module/form.css';/* 表单 */   
+@import (less) 'css/structure/grid.css'; 
+
+ 
+@import (less) 'css/unit/typography.css'; 
+@import (less) 'css/unit/btn.css'; 
+@import (less) 'css/unit/input.css'; 
+@import (less) 'css/unit/tag.css';   
+@import (less) 'css/unit/tab.css';   
+@import (less) 'css/unit/toast.css';  
+@import (less) 'css/unit/table.css'; 
+@import (less) 'css/unit/dropdown.css'; 
+@import (less) 'css/unit/tree.css'; 
+@import (less) 'css/unit/scrollbar.css'; 
+ 
+ 
+@import (less) 'css/module/breadcrumb.css'; 
+@import (less) 'css/module/form.css';   
 @import (less) 'css/module/condition.css';

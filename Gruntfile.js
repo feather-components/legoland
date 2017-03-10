@@ -21,9 +21,9 @@ module.exports = function(grunt) {
                     dest: 'test/examples'
                 }, {
                     expand: true,
-                    cwd: 'src/js',
+                    cwd: 'examples/js',
                     src: '*.*',
-                    dest: 'test/js'
+                    dest: 'test/examples/js'
                 }]
             },
             release: {
@@ -47,6 +47,11 @@ module.exports = function(grunt) {
                     cwd: 'src/js',
                     src: '*.*',
                     dest: 'dist/js'
+                }, {
+                    expand: true,
+                    cwd: 'examples/js',
+                    src: '*.*',
+                    dest: 'dist/examples/js'
                 }]
             },
         },
@@ -58,7 +63,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     "test/legoland.css": "src/legoland.css",
-                    "test/style.css": "src/style.css"
+                    "test/examples/css/style.css": "examples/css/style.css"
                 }
             },
 
@@ -76,7 +81,8 @@ module.exports = function(grunt) {
         cssmin: {
             release: {
                 files: {
-                    "dist/legoland.min.css": "dist/legoland.css"
+                    "dist/legoland.min.css": "dist/legoland.css",
+                    "dist/examples/css/style.css": "examples/css/style.css" 
                 }
             }
         },

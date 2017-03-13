@@ -73,7 +73,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     "dist/legoland.css": "src/legoland.css",
-                    "dist/style.css": "src/style.css"
+                    "dist/examples/css/style.css": "examples/css/style.css"
                 }
             }
         },
@@ -81,8 +81,7 @@ module.exports = function(grunt) {
         cssmin: {
             release: {
                 files: {
-                    "dist/legoland.min.css": "dist/legoland.css",
-                    "dist/examples/css/style.css": "examples/css/style.css" 
+                    "dist/legoland.min.css": "dist/legoland.css" 
                 }
             }
         },

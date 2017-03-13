@@ -9,6 +9,7 @@
     & > * {
         float: left;
         color: @color_text;
+        display: tabel;
 
         &:before {
             content: ">";
@@ -20,9 +21,8 @@
         &:first-child {
             padding-left: 0;
 
-            &:before {
-                content: '';
-                padding: 0;
+            &:before { 
+                display: none;
             }
         }
 
@@ -33,6 +33,7 @@
         & > * {
             cursor: pointer;
             color: @color_text;
+            line-height: 24px;
         }
 
         a:hover {

@@ -1,6 +1,6 @@
 {
-  "name": "legoland",
-  "desc": "适用于管理后台的前端css框架", 
-  "version": "0.3.1",
-  "main": "dist/legoland.css"  
+  "name": "legoland", 
+  "desc": "适用于管理后台的前端css框架",
+  "version": "0.3.2",
+  "main": "dist/legoland.css" 
 }

@@ -2307,6 +2307,7 @@ input:focus + .lg-error-b {
 .lg-breadcrumb > * {
   float: left;
   color: #666;
+  display: tabel;
 }
 .lg-breadcrumb > *:before {
   content: ">";
@@ -2318,8 +2319,7 @@ input:focus + .lg-error-b {
   padding-left: 0;
 }
 .lg-breadcrumb > *:first-child:before {
-  content: '';
-  padding: 0;
+  display: none;
 }
 .lg-breadcrumb > *:last-child {
   padding-right: 0;
@@ -2327,6 +2327,7 @@ input:focus + .lg-error-b {
 .lg-breadcrumb > * > * {
   cursor: pointer;
   color: #666;
+  line-height: 24px;
 }
 .lg-breadcrumb > * a:hover {
   color: #5986e1;

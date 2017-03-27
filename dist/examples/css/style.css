@@ -40,17 +40,22 @@
   width: 200px;
   height: 100%;
   position: absolute;
+  border-right: 1px solid #e1e1e1;
+}
+.wp-wrapper .content .content-left .lg-tree {
+  border-right: none;
 }
 .wp-wrapper .content .content-right {
   background-color: #ededed;
   margin-left: 200px;
   height: 100%;
   overflow: auto;
-  padding-left: 10px;
+  padding-left: 9px;
+  padding-right: 9px;
 }
 .wp-page {
   background-color: white;
-  padding: 10px;
+  padding: 6px;
   border-radius: 3px;
   min-height: 500px;
   overflow: hidden;
@@ -59,6 +64,7 @@
   clear: both;
   margin: 0 10px;
   padding: 5px 0;
+  padding-top: 0px;
   border-bottom: 1px solid #464e78;
   min-height: 40px;
 }
@@ -77,32 +83,44 @@
   width: 100%;
   clear: both;
 }
+/* btn reset*/
+.wp-wrapper .lg-btn:hover,
+.wp-wrapper .lg-btn-main:hover {
+  background-color: #3E6BC5;
+  border-color: #3E6BC5;
+}
+.wp-wrapper .lg-btn-o-main:hover,
+.wp-wrapper .lg-btn-o:hover {
+  background-color: #F4F8FF;
+  border-color: #3E6BC5;
+  color: #5986E1;
+}
 .wp-nav {
   height: 100%;
   background-color: #464e78;
 }
 .wp-nav .wp-nav-hd {
-  width: 200px;
+  width: 220px;
   height: 100%;
-  background-position: center 10px;
-  background-repeat: no-repeat;
   display: inline-block;
   position: relative;
   float: left;
 }
-.wp-nav .wp-nav-hd img {
-  width: 64%;
-  margin-left: 18%;
+.wp-nav .wp-nav-hd logo {
+  width: 84px;
+  height: 30px;
+  margin-top: 15px;
+  margin-left: 20px;
+  background-image: url('logo.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
 }
 .wp-nav .wp-nav-hd .wp-nav-title {
   color: white;
-  text-align: center;
-  letter-spacing: 7px;
   font-size: 12px;
   position: absolute;
-  bottom: 5px;
-  right: 0;
-  left: 0;
+  bottom: 15px;
 }
 .wp-nav .wp-nav-by {
   position: absolute;
@@ -120,16 +138,14 @@
 .wp-nav .wp-nav-by li a {
   cursor: pointer;
   color: white;
+  display: block;
+  line-height: 73px;
+  height: 57px;
 }
+.wp-nav .wp-nav-by li:hover,
 .wp-nav .wp-nav-by li.active,
 .wp-nav .wp-nav-by li.lg-fn-active {
   border-bottom: 3px solid #5986e1;
-}
-.wp-nav .wp-nav-by li:hover {
-  border-bottom: 3px solid #ff8447;
-}
-.wp-nav .wp-nav-by li:hover a {
-  color: #ff8447;
 }
 .wp-nav .wp-nav-tl {
   display: none;
@@ -178,15 +194,21 @@
 .wp-nav .wp-nav-right {
   position: absolute;
   padding: 10px;
+  padding-top: 22px;
+  line-height: 28px;
   right: 0;
+}
+.wp-nav .wp-nav-right:before {
+  content: url('avatar.png');
 }
 .wp-nav .wp-nav-right * {
   color: white;
   font-size: 12px;
   float: right;
+  padding-right: 3px;
+  padding-left: 3px;
 }
 .wp-nav .wp-nav-right li:before {
-  content: '|';
   color: white;
   padding: 0 5px;
 }
@@ -252,6 +274,9 @@
   color: #333;
   font-size: 16px;
 }
+.wp-sidebar > ul > li > a > * {
+  font-size: 16px;
+}
 .wp-sidebar > ul > li > ul > li {
   /* level 3 */
 }
@@ -287,7 +312,7 @@
 }
 .wp-sidebar-hand {
   position: absolute;
-  right: -12px;
+  right: -16px;
   top: 50%;
   line-height: 50px;
   height: 50px;
@@ -299,11 +324,14 @@
 .wp-sidebar-hand:after {
   content: "\e62d";
   font-family: "iconfont" !important;
-  font-size: 12px;
+  font-size: 16px;
   color: white;
 }
 .wp-sidebar-hand.lg-fn-close:after {
   content: "\e66a";
+}
+.wp-sidebar .lastlevel:before {
+  content: '' !important;
 }
 .wp-sidebar::-webkit-scrollbar {
   border: 1px solid #e1e1e1;

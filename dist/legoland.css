@@ -49,7 +49,7 @@ p {
 label,
 span {
   color: #666;
-  font-size: 14px;
+  font-size: 12px;
 }
 @font-face {
   font-family: "iconfont";
@@ -429,7 +429,7 @@ span {
 .lg-title,
 .lg-title-m,
 .lg-title-r {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 40px;
   color: #333;
   display: inline;
@@ -508,7 +508,7 @@ span {
   vertical-align: middle;
   margin: 5px;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 12px;
   font-family: Arial, "Microsoft Yahei", "Helvetica Neue", "Hiragino Sans GB", sans-serif;
   height: 30px;
   min-width: 100px;
@@ -1552,6 +1552,7 @@ select,
 textarea {
   outline: none;
   border-radius: 3px;
+  font-size: 12px;
 }
 input,
 select {
@@ -1559,6 +1560,12 @@ select {
   width: 120px;
   margin-right: 5px;
   line-height: 22px;
+  -moz-appearance: textfield;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 label {
   font-weight: normal;
@@ -1569,15 +1576,21 @@ label.lg-require:before {
   color: red;
 }
 /* text */
-input[type='text'] {
+input[type='text'],
+input[type='number'],
+input[type='telephone'] {
   border: 1px solid #e1e1e1;
   padding: 3px 5px;
-  font-size: 14px;
+  font-size: 12px;
   color: #666;
   height: 30px;
 }
 input[type='text']:active,
-input[type='text']:focus {
+input[type='number']:active,
+input[type='telephone']:active,
+input[type='text']:focus,
+input[type='number']:focus,
+input[type='telephone']:focus {
   border: 1px solid #5986e1;
 }
 /* textarea */
@@ -1598,8 +1611,8 @@ textarea:focus {
 select {
   border: 1px solid #e1e1e1;
   appearance: none;
-  padding: 5px;
-  font-size: 14px;
+  padding: 6px 5px;
+  font-size: 12px;
   color: #666;
 }
 select:active,
@@ -1642,7 +1655,7 @@ input[type='radio'] {
 .lg-checkbox-all input[type='checkbox'] + label:hover,
 .lg-checkbox-part input[type='checkbox'] + label:hover,
 .lg-checkbox-plain input[type='checkbox'] + label:hover {
-  color: #5986e1;
+  color: #ff8447;
 }
 .lg-checkbox input[type='checkbox'] + label:before,
 .lg-checkbox-all input[type='checkbox'] + label:before,
@@ -1652,11 +1665,12 @@ input[type='radio'] {
   border: 1px solid #999;
   border-radius: 4px;
   margin-right: 6px;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   display: inline-block;
   vertical-align: text-top;
   box-sizing: border-box;
+  font-size: 12px;
 }
 .lg-checkbox input[type='checkbox']:checked + label,
 .lg-checkbox-all input[type='checkbox']:checked + label,
@@ -1738,7 +1752,7 @@ input[type='radio'] {
 }
 .lg-radio input[type='radio'] + label:hover,
 .lg-radio-plain input[type='radio'] + label:hover {
-  color: #5986e1;
+  color: #ff8447;
 }
 .lg-radio input[type='radio'] + label:before,
 .lg-radio-plain input[type='radio'] + label:before {
@@ -1746,8 +1760,8 @@ input[type='radio'] {
   border: 1px solid #999;
   border-radius: 8px;
   margin-right: 6px;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   display: inline-block;
   vertical-align: text-top;
   box-sizing: border-box;
@@ -1764,8 +1778,8 @@ input[type='radio'] {
 .lg-radio input[type='radio']:checked + label:after,
 .lg-radio-plain input[type='radio']:checked + label:after {
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background-color: #5986e1;
   border-radius: 5px;
   position: absolute;
@@ -1921,19 +1935,20 @@ input[type='radio'] {
 .lg-tab {
   display: block;
   list-style: none;
-  height: 40px;
+  height: 38px;
   line-height: 40px;
   background-color: #f7f9fe;
-  font-size: 16px;
-  border-bottom: 1px solid #5986e1;
+  font-size: 14px;
+  border-bottom: 1px solid #ccdaf7;
   box-sizing: content-box;
 }
 .lg-tab .lg-tab-li {
   float: left;
-  color: #333;
-  padding: 0 20px;
+  color: #666;
+  padding: 0 27px;
   position: relative;
   cursor: pointer;
+  height: 38px;
 }
 .lg-tab .lg-tab-li:after {
   content: '';
@@ -1946,13 +1961,16 @@ input[type='radio'] {
 .lg-tab .lg-tab-li:first-child:after {
   height: 0;
 }
+.lg-tab .lg-tab-li * {
+  color: #666;
+}
 .lg-tab .lg-active,
 .lg-tab .lg-fn-active,
 .lg-tab .active {
   background-color: white;
-  border: 1px solid #5986e1;
+  border: 1px solid #ccdaf7;
   border-bottom: none;
-  color: #6973a9;
+  color: #6D77AA;
   font-weight: bold;
 }
 .lg-tab .lg-active:after,
@@ -1960,11 +1978,18 @@ input[type='radio'] {
 .lg-tab .active:after {
   height: 0;
 }
-.lg-tab .lg-active + .lg-tab-li:after {
+.lg-tab .lg-active *,
+.lg-tab .lg-fn-active *,
+.lg-tab .active * {
+  color: #6D77AA;
+}
+.lg-tab .lg-active + .lg-tab-li:after,
+.lg-tab .active + .lg-tab-li:after,
+.lg-tab .lg-fn-active + .lg-tab-li:after {
   height: 0;
 }
 .lg-tab-body {
-  border: 1px solid #5986e1;
+  border: 1px solid #ccdaf7;
   border-top: none;
   padding: 5px;
 }
@@ -2061,8 +2086,9 @@ input:focus + .lg-error-b {
   color: #666;
 }
 .lg-table thead tr {
-  background-color: #464e78;
+  background-color: #6d77aa;
   color: white;
+  height: 40px;
 }
 .lg-table thead tr.lg-color-danger-bg {
   background-color: #d05538;
@@ -2081,6 +2107,7 @@ input:focus + .lg-error-b {
   position: relative;
   text-align: center;
   border: none;
+  font-size: 14px;
 }
 .lg-table thead th.lg-asc {
   cursor: pointer;
@@ -2113,7 +2140,7 @@ input:focus + .lg-error-b {
   border: none;
 }
 .lg-table tbody tr:nth-child(2n) {
-  background-color: #f8f8f8;
+  background-color: #f4f4f8;
 }
 .lg-table td {
   border: none;
@@ -2325,9 +2352,11 @@ input:focus + .lg-error-b {
   padding-right: 0;
 }
 .lg-breadcrumb > * > * {
+  line-height: 24px;
+}
+.lg-breadcrumb > * > a {
   cursor: pointer;
   color: #666;
-  line-height: 24px;
 }
 .lg-breadcrumb > * a:hover {
   color: #5986e1;
@@ -2349,6 +2378,7 @@ input:focus + .lg-error-b {
   left: 0;
   line-height: 30px;
   text-align: right;
+  font-size: 12px;
 }
 .lg-form-line input + span,
 .lg-form-block input + span,
@@ -2380,12 +2410,14 @@ input:focus + .lg-error-b {
 .lg-form-block span,
 .lg-form-box span {
   word-break: break-all;
+  margin-right: 5px;
 }
 .lg-condition {
   padding: 0 10px;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
   background-color: #f8f8f8;
+  font-size: 12px;
 }
 .lg-condition .lg-condition-box,
 .lg-condition .lg-condition-block {
@@ -2427,10 +2459,9 @@ input:focus + .lg-error-b {
 .lg-condition .lg-condition-block .lg-radio-plain label,
 .lg-condition .lg-condition-box .lg-checkbox-plain label,
 .lg-condition .lg-condition-block .lg-checkbox-plain label {
-  color: #5986e1;
   display: inline-block;
   line-height: 30px;
-  margin: 0 5px;
+  margin: 0 15px 0 5px;
   cursor: pointer;
 }
 .lg-condition .lg-condition-box .lg-radio input[type='radio']:checked + label,

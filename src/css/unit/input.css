@@ -5,6 +5,7 @@ select,
 textarea {
     outline: none;
     border-radius: 3px;
+    font-size: 12px;
 }
 
 input,
@@ -13,6 +14,13 @@ select {
     width: 120px;
     margin-right: 5px;
     line-height: 22px;
+    -moz-appearance:textfield;
+}
+
+input::-webkit-inner-spin-button,  
+input::-webkit-outer-spin-button {  
+    -webkit-appearance: none;  
+    margin: 0;  
 }
 
 label{
@@ -29,10 +37,10 @@ label.lg-require {
 
 /* text */
 
-input[type='text'] {
+input[type='text'],input[type='number'],input[type='telephone'] {
     border: 1px solid @color_border;
     padding: 3px 5px;
-    font-size: 14px;
+    font-size: 12px;
     color: @color_text;
     height: 30px;
     &:active,
@@ -67,8 +75,8 @@ textarea {
 select {
     border: 1px solid @color_border;
     appearance: none;
-    padding: 5px;
-    font-size: 14px;
+    padding: 6px 5px;
+    font-size: 12px;
     color: @color_text;
     &:active,
     &:focus {
@@ -109,18 +117,19 @@ input[type='radio'] {
         position: static;
         display: inline !important; 
         &:hover {
-            color: @color_main;
+            color: @color_highlight;
         }
         &:before {
             content: '';
             border: 1px solid @color_subtext;
             border-radius: 4px;
             margin-right: 6px;
-            width: 16px;
-            height: 16px;
+            width: 14px;
+            height: 14px;
             display: inline-block;
             vertical-align: text-top;
             box-sizing:border-box;
+            font-size: 12px;
         }
     }
     input[type='checkbox']:checked + label {
@@ -187,15 +196,15 @@ input[type='radio'] {
         position: static;
         display: inline !important; 
         &:hover {
-            color: @color_main;
+            color: @color_highlight;
         }
         &:before {
             content: '';
             border: 1px solid @color_subtext;
             border-radius: 8px;
             margin-right: 6px;
-            width: 16px;
-            height: 16px;
+            width: 14px;
+            height: 14px;
             display: inline-block;
             vertical-align: text-top;
             box-sizing:border-box;
@@ -209,8 +218,8 @@ input[type='radio'] {
         }
         &:after {
             content: "";
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             background-color: @color_main;
             border-radius: 5px;
             position: absolute;

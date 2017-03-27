@@ -1,4 +1,4 @@
-.lg-breadcrumb {
+.lg-breadcrumb { 
     width: 100%;
     margin: 0;
     padding-left: (@gap/2);
@@ -31,9 +31,11 @@
         }
 
         & > * {
-            cursor: pointer;
-            color: @color_text;
             line-height: 24px;
+        }
+        & > a{
+            cursor: pointer;
+            color: @color_text; 
         }
 
         a:hover {

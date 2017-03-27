@@ -3,6 +3,7 @@
     border-top: 1px solid @color_border;
     border-bottom: 1px solid @color_border;
     background-color: @color_bglight;
+    font-size: 12px;
     .lg-condition-box, .lg-condition-block {
         border-top: 1px solid @color_border;
         padding: 10px 0;
@@ -30,11 +31,10 @@
         .lg-radio label,
         .lg-checkbox label,
         .lg-radio-plain label,
-        .lg-checkbox-plain label {
-            color: @color_main;
+        .lg-checkbox-plain label { 
             display: inline-block;
             line-height: 30px;
-            margin: 0 5px;
+            margin: 0 15px 0 5px;
             cursor: pointer;
         }
         .lg-radio input[type='radio']:checked+label,

@@ -2,27 +2,27 @@
     height: 100%;
     background-color: @color_sys;
     .wp-nav-hd{
-        width: @menuW;
-        height: 100%;
-        background-position:center 10px;
-        background-repeat: no-repeat;
+        width: @menuW + 20;
+        height: 100%; 
         display: inline-block;
         position: relative;
         float: left;
 
-        img{
-            width: 64%;
-            margin-left:18%;
+        logo{
+            width: 84px;
+            height: 30px;
+            margin-top:15px;
+            margin-left: 20px;
+            background-image: url('./logo.png'); 
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: inline-block;
         }
         .wp-nav-title{
-            color: white; 
-            text-align: center;
-            letter-spacing: 7px;
+            color: white;   
             font-size: 12px;
             position: absolute;
-            bottom: 5px;
-            right: 0;
-            left: 0;
+            bottom: 15px; 
         }
     }
     .wp-nav-by{
@@ -39,20 +39,18 @@
             a{ 
                 cursor: pointer;
                 color: @navTcolor; 
+                display: block;
+                line-height:  @navH + 13;
+                height:  @navH - 3;
             } 
-            &.active,&.lg-fn-active{ 
+            &:hover,&.active,&.lg-fn-active{ 
                 border-bottom: 3px solid @color_main; 
             }
-            &:hover{
-                border-bottom: 3px solid @color_highlight; 
-                & a{
-                   color: @color_highlight; 
-                }
-            }      
+                   
         }
     }
     .wp-nav-tl{
-        display: none;
+        display: none; 
         float: right;
         height: 100%;
         line-height: @navH;
@@ -99,14 +97,20 @@
     .wp-nav-right{
         position: absolute;
         padding:10px;
+        padding-top:22px;
+        line-height: 28px;
         right: 0;
+        &:before{
+            content:url('./avatar.png');
+        }
         & *{
             color: @navTcolor;
             font-size: 12px;
             float: right;
+            padding-right: 3px;
+            padding-left: 3px;
         }
-        li:before{
-            content: '|';
+        li:before{ 
             color: white;
             padding:0 5px;
         }

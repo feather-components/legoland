@@ -1,18 +1,19 @@
 .lg-tab {
     display: block;
     list-style: none;
-    height: @font_height_L;
+    height: 38px;
     line-height: @font_height_L;
     background-color: rgb(247, 249, 254);
-    font-size: @font_size_L;
-    border-bottom: 1px solid @color_main;
+    font-size: @font_size_M;
+    border-bottom: 1px solid #ccdaf7;
     box-sizing: content-box;
     .lg-tab-li {
         float: left;
-        color: @color_title;
-        padding: 0 20px;
+        color: @color_text;
+        padding: 0 27px;
         position: relative;
         cursor: pointer;
+        height: 38px;
         &:after {
             content: '';
             border-right: 1px solid @color_border;
@@ -24,24 +25,30 @@
         &:first-child:after {
             height: 0;
         }
+        & *{
+            color:@color_text;
+        }
     }
     .lg-active,.lg-fn-active,.active {
         background-color: white;
-        border: 1px solid @color_main;
+        border: 1px solid #ccdaf7;
         border-bottom: none;
-        color: rgb(105, 115, 169);
+        color: #6D77AA;
         font-weight: bold;
         &:after {
             height: 0;
         }
+        & *{
+            color:#6D77AA;
+        }
     }
-    .lg-active + .lg-tab-li:after {
+    .lg-active + .lg-tab-li:after,.active + .lg-tab-li:after,.lg-fn-active + .lg-tab-li:after {
         height: 0;
     }
 }
 
 .lg-tab-body {
-    border: 1px solid @color_main;
+    border: 1px solid #ccdaf7;
     border-top: none;
     padding:5px;
 }

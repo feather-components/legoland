@@ -20,20 +20,25 @@
             width: @menuW;
             height: 100%;
             position: absolute;
+            border-right:1px solid #e1e1e1;
+            & .lg-tree{
+                border-right:none;
+            } 
         }
         .content-right{
             background-color: @color_bg; 
             margin-left: @menuW; 
             height: 100%;
             overflow: auto;
-            padding-left: 10px;
+            padding-left: 9px;
+            padding-right: 9px; 
         } 
     } 
 }
 
 .wp-page{
     background-color: white;
-    padding:10px;
+    padding:6px;
     border-radius: 3px;
     min-height: 500px; 
     overflow: hidden;
@@ -42,12 +47,17 @@
         clear: both;
         margin:0 10px;
         padding:5px 0;
+        padding-top:0px;
         border-bottom:1px solid @color_sys;
         min-height: 40px;
+        
     }
     .page-body{
         clear: both;
-        margin:0 10px;  
+        margin:0 10px;
+        .lg-condition .lg-btn{
+
+        }  
     }
     .page-tail{
         clear: both;
@@ -62,4 +72,14 @@
     }
 }
  
- 
+
+ /* btn reset*/
+.wp-wrapper .lg-btn:hover,.wp-wrapper .lg-btn-main:hover{
+    background-color:#3E6BC5;
+    border-color:#3E6BC5;
+}
+.wp-wrapper .lg-btn-o-main:hover,.wp-wrapper .lg-btn-o:hover{
+    background-color:#F4F8FF;
+    border-color:#3E6BC5; 
+    color:#5986E1;
+}

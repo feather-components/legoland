@@ -1,5 +1,5 @@
 .lg-title{
-    font-size: @font_size_xL;
+    font-size: @font_size_L;
     line-height: @font_height_L; 
     color: @color_title;
     display: inline;

@@ -5,11 +5,14 @@
     list-style: none;
     font-size: 14px;
     z-index: 1000;
+    span{
+        font-size: 14px;
+    }
 
     & > * {
         float: left;
         color: @color_text;
-        display: tabel;
+        display: table;
 
         &:before {
             content: ">";

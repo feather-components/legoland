@@ -4,6 +4,7 @@
     line-height: 36px;
     text-align: center;
     color: @color_text;
+    border-bottom:1px solid @color_border; 
 
     thead {
         tr {
@@ -29,6 +30,7 @@
             text-align: center;
             border: none;
             font-size: 14px;
+            white-space: nowrap;
             &.lg-asc {
                 cursor: pointer;
                 &:after {

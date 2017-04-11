@@ -1,5 +1,5 @@
 /* ------- color -------*/
-/*蓝*/
+/*蓝1*/
 /*深蓝*/
 /*橙*/
 /*红*/
@@ -2084,6 +2084,7 @@ input:focus + .lg-error-b {
   line-height: 36px;
   text-align: center;
   color: #666;
+  border-bottom: 1px solid #e1e1e1;
 }
 .lg-table thead tr {
   background-color: #6d77aa;
@@ -2108,6 +2109,7 @@ input:focus + .lg-error-b {
   text-align: center;
   border: none;
   font-size: 14px;
+  white-space: nowrap;
 }
 .lg-table thead th.lg-asc {
   cursor: pointer;
@@ -2331,10 +2333,13 @@ input:focus + .lg-error-b {
   font-size: 14px;
   z-index: 1000;
 }
+.lg-breadcrumb span {
+  font-size: 14px;
+}
 .lg-breadcrumb > * {
   float: left;
   color: #666;
-  display: tabel;
+  display: table;
 }
 .lg-breadcrumb > *:before {
   content: ">";
@@ -2398,14 +2403,6 @@ input:focus + .lg-error-b {
   margin-top: 0;
   margin-bottom: 0;
 }
-.lg-form-line input[type='text'],
-.lg-form-block input[type='text'],
-.lg-form-box input[type='text'],
-.lg-form-line select,
-.lg-form-block select,
-.lg-form-box select {
-  margin-bottom: 5px;
-}
 .lg-form-line span,
 .lg-form-block span,
 .lg-form-box span {
@@ -2413,16 +2410,48 @@ input:focus + .lg-error-b {
   margin-right: 5px;
 }
 .lg-condition {
-  padding: 0 10px;
+  padding: 0 16px;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
   background-color: #f8f8f8;
   font-size: 12px;
+  margin-bottom: 16px;
 }
 .lg-condition .lg-condition-box,
 .lg-condition .lg-condition-block {
   border-top: 1px solid #e1e1e1;
   padding: 10px 0;
+}
+.lg-condition .lg-condition-box .lg-condition-cell,
+.lg-condition .lg-condition-block .lg-condition-cell {
+  display: table-cell;
+}
+.lg-condition .lg-condition-box .lg-condition-cell .lg-form-line,
+.lg-condition .lg-condition-block .lg-condition-cell .lg-form-line,
+.lg-condition .lg-condition-box .lg-condition-cell .lg-form-block,
+.lg-condition .lg-condition-block .lg-condition-cell .lg-form-block,
+.lg-condition .lg-condition-box .lg-condition-cell .lg-form-box,
+.lg-condition .lg-condition-block .lg-condition-cell .lg-form-box {
+  position: static;
+  padding-left: 0;
+}
+.lg-condition .lg-condition-box .lg-condition-cell .lg-form-line > label,
+.lg-condition .lg-condition-block .lg-condition-cell .lg-form-line > label,
+.lg-condition .lg-condition-box .lg-condition-cell .lg-form-block > label,
+.lg-condition .lg-condition-block .lg-condition-cell .lg-form-block > label,
+.lg-condition .lg-condition-box .lg-condition-cell .lg-form-box > label,
+.lg-condition .lg-condition-block .lg-condition-cell .lg-form-box > label {
+  position: static;
+  height: 35px;
+  white-space: nowrap;
+}
+.lg-condition .lg-condition-box .lg-condition-cell:first-child,
+.lg-condition .lg-condition-block .lg-condition-cell:first-child {
+  text-align: right;
+}
+.lg-condition .lg-condition-box .lg-condition-cell:last-child,
+.lg-condition .lg-condition-block .lg-condition-cell:last-child {
+  width: 100%;
 }
 .lg-condition .lg-condition-box:first-child,
 .lg-condition .lg-condition-block:first-child {

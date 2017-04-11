@@ -25,12 +25,7 @@
     & *[class^='lg-btn'] {
         margin-top: 0;
         margin-bottom: 0;
-    }
-    input[type='text'],
-    select {
-        margin-bottom: 5px;
-    }
-
+    } 
     span{
         word-break:break-all;
         margin-right: 5px;

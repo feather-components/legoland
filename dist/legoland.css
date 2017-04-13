@@ -2422,37 +2422,6 @@ input:focus + .lg-error-b {
   border-top: 1px solid #e1e1e1;
   padding: 10px 0;
 }
-.lg-condition .lg-condition-box .lg-condition-cell,
-.lg-condition .lg-condition-block .lg-condition-cell {
-  display: table-cell;
-}
-.lg-condition .lg-condition-box .lg-condition-cell .lg-form-line,
-.lg-condition .lg-condition-block .lg-condition-cell .lg-form-line,
-.lg-condition .lg-condition-box .lg-condition-cell .lg-form-block,
-.lg-condition .lg-condition-block .lg-condition-cell .lg-form-block,
-.lg-condition .lg-condition-box .lg-condition-cell .lg-form-box,
-.lg-condition .lg-condition-block .lg-condition-cell .lg-form-box {
-  position: static;
-  padding-left: 0;
-}
-.lg-condition .lg-condition-box .lg-condition-cell .lg-form-line > label,
-.lg-condition .lg-condition-block .lg-condition-cell .lg-form-line > label,
-.lg-condition .lg-condition-box .lg-condition-cell .lg-form-block > label,
-.lg-condition .lg-condition-block .lg-condition-cell .lg-form-block > label,
-.lg-condition .lg-condition-box .lg-condition-cell .lg-form-box > label,
-.lg-condition .lg-condition-block .lg-condition-cell .lg-form-box > label {
-  position: static;
-  height: 35px;
-  white-space: nowrap;
-}
-.lg-condition .lg-condition-box .lg-condition-cell:first-child,
-.lg-condition .lg-condition-block .lg-condition-cell:first-child {
-  text-align: right;
-}
-.lg-condition .lg-condition-box .lg-condition-cell:last-child,
-.lg-condition .lg-condition-block .lg-condition-cell:last-child {
-  width: 100%;
-}
 .lg-condition .lg-condition-box:first-child,
 .lg-condition .lg-condition-block:first-child {
   border-top: none;
@@ -2479,6 +2448,12 @@ input:focus + .lg-error-b {
   text-align: right;
   line-height: 30px;
   width: 100px;
+}
+.lg-condition .lg-condition-box tr td:first-child,
+.lg-condition .lg-condition-block tr td:first-child {
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
 }
 .lg-condition .lg-condition-box .lg-radio label,
 .lg-condition .lg-condition-block .lg-radio label,

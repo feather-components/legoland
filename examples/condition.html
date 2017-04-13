@@ -125,39 +125,22 @@
                                             <span class="lg-title">新结构</span><span class="lg-subtitle lg-color-highlight">(请使用新结构，旧结构已弃用)</span>
                                             <form class="lg-condition">
                                                 <div class="lg-condition-box">
-                                                    <div class="lg-condition-cell">
-                                                        <div class="lg-form-line">
-                                                            <label>input：</label>
-                                                        </div> 
-                                                        <div class="lg-form-line">
-                                                            <label>select：</label> 
-                                                        </div> 
-                                                        <div class="lg-form-line">
-                                                            <label>radio：</label> 
-                                                        </div> 
-                                                        <div class="lg-form-line">
-                                                            <label>tags：</label> 
-                                                        </div> 
-                                                        <div class="lg-form-line">
-                                                            <label>checkbox：</label> 
-                                                        </div> 
-                                                        <div class="lg-form-line">
-                                                            <label>Date：</label> 
-                                                        </div>
-                                                    </div>
-                                                    <div class="lg-condition-cell">
-                                                        <div class="lg-form-line"> 
-                                                            <input type="text" />
-                                                        </div> 
-                                                        <div class="lg-form-line"> 
-                                                            <select>
+                                                    <table>
+                                                        <tr>
+                                                            <td><label>input：</label></td>
+                                                            <td><input type="text" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><label>select：</label> </td>
+                                                            <td><select>
                                                                 <option>pen</option>
                                                                 <option>apple</option>
                                                                 <option>pinapple</option>
-                                                            </select>
-                                                        </div>  
-                                                        <div class="lg-form-line"> 
-                                                            <span class="lg-radio">
+                                                            </select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><label>radio：</label> </td>
+                                                            <td><span class="lg-radio">
                                                                 <input type="radio" name="radiogroup" id="rg1"/><label for="rg1">All</label>
                                                             </span>
                                                             <span class="lg-radio">
@@ -168,10 +151,11 @@
                                                             </span>
                                                             <span class="lg-radio">
                                                                 <input type="radio" name="radiogroup" id="rg4"/><label for="rg4">Mar.</label>
-                                                            </span>
-                                                        </div> 
-                                                        <div class="lg-form-line"> 
-                                                            <span class="lg-checkbox-plain">
+                                                            </span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><label>tags：</label></td>
+                                                            <td><span class="lg-checkbox-plain">
                                                                 <input type="checkbox" name="checkgroup-plain" id="cgp1"/><label for="cgp1">All</label>
                                                             </span>
                                                             <span class="lg-checkbox-plain">
@@ -185,10 +169,11 @@
                                                             </span>
                                                             <span class="lg-checkbox-plain">
                                                                 <input type="checkbox" name="checkgroup-plain" id="cgp5"/><label for="cgp5">Oct.</label>
-                                                            </span>
-                                                        </div> 
-                                                        <div class="lg-form-line"> 
-                                                            <span class="lg-checkbox">
+                                                            </span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><label>checkbox：</label></td>
+                                                            <td><span class="lg-checkbox">
                                                                 <input type="checkbox" name="checkgroup" id="cg1"/><label for="cg1">All</label>
                                                             </span>
                                                             <span class="lg-checkbox">
@@ -202,15 +187,16 @@
                                                             </span>
                                                             <span class="lg-checkbox">
                                                                 <input type="checkbox" name="checkgroup" id="cg5"/><label for="cg5">Oct.</label>
-                                                            </span>
-                                                        </div>
-                                                        <div class="lg-form-line"> 
-                                                            <input type="text" />
+                                                            </span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><label>Date：</label></td>
+                                                            <td><input type="text" />
                                                             <span>-</span>
                                                             <input type="text" />
-                                                            <button class="lg-btn" type="button">clean</button>
-                                                        </div>
-                                                    </div>
+                                                            <button class="lg-btn" type="button">clean</button></td>
+                                                        </tr>
+                                                    </table> 
                                                 </div>
                                                 <div class="lg-condition-box">
                                                     <input type="text" placeholder="name here" />

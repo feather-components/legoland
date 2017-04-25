@@ -12,6 +12,11 @@ module.exports = function(grunt) {
                 }, {
                     expand: true,
                     cwd: 'src/css/icon',
+                    src: 'icondemo.html',
+                    dest: 'test'
+                }, {
+                    expand: true,
+                    cwd: 'src/css/icon',
                     src: 'iconfont.woff',
                     dest: 'test'
                 }, {
@@ -33,6 +38,12 @@ module.exports = function(grunt) {
                     src: 'iconfont.ttf',
                     dest: 'dist'
                 }, {
+                    expand: true,
+                    cwd: 'src/css/icon',
+                    src: 'icondemo.html',
+                    dest: 'dist'
+                }, {
+
                     expand: true,
                     cwd: 'src/css/icon',
                     src: 'iconfont.woff',

@@ -1597,7 +1597,7 @@ input[type='telephone']:focus {
 textarea {
   border: 1px solid #e1e1e1;
   padding: 3px 5px;
-  font-size: 14px;
+  font-size: 12px;
   color: #666;
   width: 80%;
   min-height: 100px;

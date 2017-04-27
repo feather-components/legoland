@@ -58,7 +58,7 @@ input[type='text'],input[type='number'],input[type='telephone'] {
 textarea {
     border: 1px solid @color_border;
     padding: 3px 5px;
-    font-size: 14px;
+    font-size: 12px;
     color: @color_text;
     width: 80%;
     min-height: 100px;
